@@ -30,10 +30,10 @@
     "Web.html": ".\\AnimeJS Web\\Web.html"
   },
   "App": {
-    "cv": {
-      "CV.html": ".\\App\\cv\\CV.html"
-    },
     "Web.html": ".\\App\\Web.html"
+  },
+  "cv": {
+    "CV.html": ".\\App\\cv\\CV.html"
   },
   "Audio Player": {
     "au.html": ".\\Audio Player\\au.html"
@@ -141,7 +141,6 @@
     "Wheel.html": ".\\Colourful Wheel\\Wheel.html"
   },
   "Contact Form": {
-    "img": {},
     "index.html": ".\\Contact Form\\index.html"
   },
   "Cool Section": {
@@ -196,7 +195,6 @@
   },
   "Flex Image Gallery": {
     "Image.html": ".\\Flex Image Gallery\\Image.html",
-    "img": {}
   },
   "Focus on Studies": {
     "focus.html": ".\\Focus on Studies\\focus.html"
@@ -227,8 +225,6 @@
   },
   "Grid": {
     "Animated-Grid.html": ".\\Grid\\Animated-Grid.html",
-    "Basic-Grid.html": ".\\Grid\\Basic-Grid.html",
-    "Photo-Grid.html": ".\\Grid\\Photo-Grid.html"
   },
   "Hacked Text": {
     "Text.html": ".\\Hacked Text\\Text.html"
@@ -389,10 +385,7 @@
     "mouses.html": ".\\Mouse moves(advanced)\\mouses.html"
   },
   "Mouse Parallax": {
-    "img": {},
     "index.html": ".\\Mouse Parallax\\index.html",
-    "js": {},
-    "Original Images": {}
   },
   "Mouse Super Advanced": {
     "moves.html": ".\\Mouse Super Advanced\\moves.html"
@@ -470,8 +463,6 @@
     "Footer.html": ".\\Responsive Footer\\Footer.html"
   },
   "Responsive Image": {
-    "css": {},
-    "Images": {},
     "index.html": ".\\Responsive Image\\index.html"
   },
   "Responsive Nav": {
