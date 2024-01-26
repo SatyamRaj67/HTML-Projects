@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="Smart.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="trailer">
+      <i id="trailer-icon" class="fa-solid fa-arrow-up-right"></i>
+    </div>
+
+    <div
+      class="interactable"
+      data-type="link"
+      style="
+        background-image: url(Image.jpeg);
+        background-size: cover;
+      "
+    ></div>
+
+    <div
+      class="interactable"
+      data-type="video"
+      style="
+        background-image: url(Img.jpeg);
+        background-size: cover;
+      "
+    ></div>
+    <script>
+      const trailer = document.getElementById("trailer");
+
+      const animateTrailer = (e, interacting) => {
+        const x = e.clientX - trailer.offsetWidth / 2,
+          y = e.clientY - trailer.offsetHeight / 2;
+
+        const keyframes = {
+          transform: `translate(${x}px, ${y}px) scale(${interacting ? 8 : 1})`,
+        };
+
+        trailer.animate(keyframes, {
+          duration: 800,
+          fill: "forwards",
+        });
+      };
+
+      const getTrailerClass = (type) => {
+        switch (type) {
+          case "video":
+            return "fa-solid fa-play";
+          default:
+            return "fa-solid fa-arrow-right";
+        }
+      };
+
+      window.onmousemove = (e) => {
+        const interactable = e.target.closest(".interactable"),
+          interacting = interactable !== null;
+
+        const icon = document.getElementById("trailer-icon");
+
+        animateTrailer(e, interacting);
+
+        trailer.dataset.type = interacting ? interactable.dataset.type : "";
+
+        if (interacting) {
+          icon.className = getTrailerClass(interactable.dataset.type);
+        }
+      };
+    </script>
+  </body>
+</html>

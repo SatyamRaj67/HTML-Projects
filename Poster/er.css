@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --clr: #4fb6ff
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--clr);
+}
+
+.box{
+    position: relative;
+    width: 400px;
+    height: 320px;
+    background: #fff radial-gradient(
+        var(--clr) 0px,
+        var(--clr) 7px,
+        transparent 7px
+    );
+    background-size: 20px 20px;
+    background-position: -10px;
+}
+
+.box::before{
+    content: ' ';
+    position: absolute;
+    inset: 20px;
+    background: url(bg.jpg);
+    background-size: cover;
+    box-shadow: 0 0 0 10px #fff;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="scratch.css">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <div class="content">
+            <h2>Scratch Off Reveal</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat aliquid vel mollitia eaque tempora tempore adipisci vero quo sed praesentium cum inventore eveniet commodi, esse ea consequatur nulla totam officia? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi ducimus laboriosam vitae sed tempore sit sapiente ea quasi numquam veritatis eaque sint eligendi asperiores tenetur sunt, dolor quibusdam maxime placeat. </p>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.3.0/lib/p5.js"></script>
+    <script>
+        function setup(){
+            createCanvas(windowWidth, windowHeight);
+        }
+
+        function draw(){
+            strokeWeight(100);
+            if (mouseIsPressed === true){
+                line(mouseX, mouseY, pmouseX, pmouseY)
+            }
+        }
+    </script>
+</body>
+</html>

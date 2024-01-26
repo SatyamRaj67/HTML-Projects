@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #131316;
+}
+
+.container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.container a{
+    position: relative;
+    width: 160px;
+    height: 60px;
+    background: #1f1f23;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    font-size: 1.2em;
+    outline: none;
+    border: 2px solid #0c0c0c;
+}
+
+.container a span{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    transition: 0.5s;
+}
+
+.container a span:nth-child(1){
+    top: -2px;
+    left: -2px;
+    background: #131316;
+    border-bottom: 2px solid #23a7f2;
+    border-right: 2px solid #23a7f2;
+    transition-delay: 0s;
+}
+
+.container a span:nth-child(2){
+    top: -2px;
+    right: -2px;
+    background: #131316;
+    transform: rotate(90deg);
+    border-bottom: 2px solid #23a7f2;
+    border-right: 2px solid #23a7f2;
+    transition-delay: 0.25s;
+}
+
+.container a span:nth-child(3){
+    bottom: -2px;
+    right: -2px;
+    background: #131316;
+    transform: rotate(180deg);
+    border-bottom: 2px solid #23a7f2;
+    border-right: 2px solid #23a7f2;
+    transition-delay: 0.5s;
+}
+
+.container a span:nth-child(4){
+    bottom: -2px;
+    left: -2px;
+    background: #131316;
+    transform: rotate(270deg);
+    border-bottom: 2px solid #23a7f2;
+    border-right: 2px solid #23a7f2;
+    transition-delay: 0.75s;
+}
+
+.container a:nth-child(3n):hover span:nth-child(1){
+    transform: rotate(180deg);
+    background: transparent;
+}
+
+.container a:nth-child(3n):hover span:nth-child(2){
+    transform: rotate(270deg);
+    background: transparent;
+}
+
+.container a:nth-child(3n):hover span:nth-child(3){
+    transform: rotate(0deg);
+    background: transparent;
+}
+
+.container a:nth-child(3n):hover span:nth-child(4){
+    transform: rotate(90deg);
+    background: transparent;
+}
+
+.container a:nth-child(3n + 1):hover span:nth-child(1){
+    top: calc(100% - 8px);
+    left: calc(100% - 8px);
+    background: transparent;
+    transition-delay: 0s;
+}
+
+.container a:nth-child(3n + 1):hover span:nth-child(2){
+    top: calc(100% - 8px);
+    right: calc(100% - 8px);
+    background: transparent;
+    transition-delay: 0.25s;
+}
+
+.container a:nth-child(3n + 1):hover span:nth-child(3){
+    bottom: calc(100% - 8px);
+    right: calc(100% - 8px);
+    background: transparent;
+    transition-delay: 0.5s;
+}
+
+.container a:nth-child(3n + 1):hover span:nth-child(4){
+    bottom: calc(100% - 8px);
+    left: calc(100% - 8px);
+    background: transparent;
+    transition-delay: 0.75s;
+}
+
+.container a:nth-child(3n + 2):hover span:nth-child(1){
+    top: 2px;
+    left: 2px;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    transition-delay: 0s;
+}
+
+.container a:nth-child(3n + 2):hover span:nth-child(2){
+    top: -9px;
+    right: -9px;
+    background: transparent;
+    transition-delay: 0.25s;
+}
+
+.container a:nth-child(3n + 2):hover span:nth-child(3){
+    bottom: 2px;
+    right: 2px;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    transition-delay: 0.5s;
+}
+
+.container a:nth-child(3n + 2):hover span:nth-child(4){
+    bottom: -9px;
+    left: -9px;
+    background: transparent;
+    transition-delay: 0.75s;
+}

@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #ac53ec;
+}
+
+.card{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background: #ac53ec;
+    border-radius: 40px;
+    box-shadow: inset 5px 5px 15px rgba(0,0,0,0.15)
+    inset -5px -#ac53ec 15px rgba(0,0,0,0.15);;
+}

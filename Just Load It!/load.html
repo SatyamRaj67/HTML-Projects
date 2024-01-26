@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="load.css">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <div>
+            <h2 id="rangeValue">0</h2>
+            <div id="fillRangeTopLeft"></div>
+            <div id="fillRangeTopRight"></div>
+            <div id="fillRangeBottomLeft"></div>
+            <div id="fillRangeBottomRight"></div>
+            <input type="range" class="range" value="0" min="0" max="100" onmousemove="rangeSlider(this.value)" onchange="rangeSlider(this.value)">
+        </div>
+    </section>
+    <script>
+        function rangeSlider(value){
+            document.getElementById('rangeValue').innerHTML = value
+            document.getElementById('fillRangeTopLeft').style.width = +value/2+'%';
+            document.getElementById('fillRangeTopRight').style.height = +value/0.75+'%';
+            document.getElementById('fillRangeBottomLeft').style.height = +value/1.5+'%';
+            document.getElementById('fillRangeBottomRight').style.width = +value/2+'%';
+        };
+
+    </script>
+</body>
+</html>

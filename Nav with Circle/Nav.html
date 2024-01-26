@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Circle.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="tab">
+        <div class="menuToggle">+</div>
+        <div class="circularbg1"></div>
+        <div class="circularbg2"></div>
+        <div class="circular">
+            <ul class="circle">
+                <li><a href="#"><ion-icon name="camera-outline"></ion-icon></a></li>
+                <li><a href="#"><ion-icon name="qr-code-outline"></a></li>
+                <li><a href="#"><ion-icon name="videocam-outline"></a></li>
+            </ul>
+        </div>
+        <ul class="menu">
+            <li><a href="#"><ion-icon name="home"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="person"></ion-icon></a></li>
+            <li></li>
+            <li><a href="#"><ion-icon name="chatbubble"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="settings"></ion-icon></a></li>
+        </ul>
+    </div>
+</body>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script>
+    let menuToggle = document.querySelector('.menuToggle');
+    let tab = document.querySelector('.tab');
+    menuToggle.onclick = function(){
+        tab.classList.toggle('active')
+    }
+</script>
+</html>
