@@ -1,0 +1,63 @@
+body {
+  background-color: rgb(20, 20, 20);
+  height: 100vh;
+  margin: 0px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(10px, 4vw, 100px);
+}
+
+body:hover>#trailer {
+  opacity: 1;
+}
+
+#trailer {
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  border-radius: 20px;
+
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: 10000;
+
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 500ms ease;
+
+  display: grid;
+  place-items: center;
+}
+
+#trailer:not([data-type=""])>#trailer-icon {
+  opacity: 1;
+}
+
+#trailer-icon {
+  font-size: 6px;
+  line-height: 4px;
+  opacity: 0;
+  transition: opacity 400ms ease;
+}
+
+#trailer-icon.fa-arrow-right{
+  transform: rotate(-45deg);
+}
+
+.interactable {
+  aspect-ratio: 1 / 1.5;
+  width: clamp(120px, 40vmin, 600px);
+  background-position: center 50%;
+  background-size: 100%;
+  opacity: 0.4;
+
+  transition: background-size 400ms ease, opacity 400ms ease;
+}
+
+.interactable:hover {
+  background-size: 105%;
+  opacity: 0.8;
+}

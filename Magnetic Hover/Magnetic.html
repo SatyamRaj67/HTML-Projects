@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Hover.css" />
+    <title>Magnetic Effect</title>
+  </head>
+  <body>
+    <div class="box">Magnetic</div>
+  </body>
+  <script>
+    let box = document.querySelector(".box");
+    box.addEventListener("mousemove", (e) => {
+      let x = e.offsetX;
+      let y = e.offsetY;
+      let boxWidth = box.clientWidth;
+      let boxHeight = box.clientHeight;
+
+      let moveX = x - boxWidth / 2;
+      let moveY = y - boxHeight / 2;
+
+      box.style.transform = `translate(${moveX}px, ${moveY}px)`;
+    });
+
+    box.addEventListener("mouseout", (e) => {
+      box.style.transform = "translate(0,0)";
+    });
+  </script>
+</html>

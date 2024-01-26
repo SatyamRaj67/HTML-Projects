@@ -1,0 +1,584 @@
+{
+  "+ Box": {
+    "+.html": ".\\+ Box\\+.html"
+  },
+  "2024 Countdown": {
+    "2024.html": ".\\2024 Countdown\\2024.html"
+  },
+  "9 Apps": {
+    "9.html": ".\\9 Apps\\9.html"
+  },
+  "A building Picture": {
+    "build.html": ".\\A building Picture\\build.html"
+  },
+  "Account Valid": {
+    "a.html": ".\\Account Valid\\a.html"
+  },
+  "Aeroplane Getsetfly": {
+    "aero.html": ".\\Aeroplane Getsetfly\\aero.html"
+  },
+  "Animated Heart": {
+    "an.html": ".\\Animated Heart\\an.html"
+  },
+  "Animated Progress Bar": {
+    "Animated.html": ".\\Animated Progress Bar\\Animated.html"
+  },
+  "AnimeJS Playes": {
+    "js.html": ".\\AnimeJS Playes\\js.html"
+  },
+  "AnimeJS Web": {
+    "Web.html": ".\\AnimeJS Web\\Web.html"
+  },
+  "App": {
+    "cv": {
+      "CV.html": ".\\App\\cv\\CV.html"
+    },
+    "Web.html": ".\\App\\Web.html"
+  },
+  "Audio Player": {
+    "au.html": ".\\Audio Player\\au.html"
+  },
+  "Background Button": {
+    "Button.html": ".\\Background Button\\Button.html"
+  },
+  "Background Design": {
+    "bac.html": ".\\Background Design\\bac.html"
+  },
+  "Background Square": {
+    "Square.html": ".\\Background Square\\Square.html"
+  },
+  "Balance the ball": {
+    "Balance.html": ".\\Balance the ball\\Balance.html"
+  },
+  "Better Nav": {
+    "nav.html": ".\\Better Nav\\nav.html"
+  },
+  "Bg-Icon Change": {
+    "Bg.html": ".\\Bg-Icon Change\\Bg.html"
+  },
+  "BGMI": {
+    "bgmi.html": ".\\BGMI\\bgmi.html"
+  },
+  "Bike Web": {
+    "b.html": ".\\Bike Web\\b.html"
+  },
+  "Book": {
+    "Bo.html": ".\\Book\\Bo.html"
+  },
+  "Border Effect": {
+    "Border.html": ".\\Border Effect\\Border.html"
+  },
+  "Box Menu": {
+    "menu.html": ".\\Box Menu\\menu.html"
+  },
+  "Breaking Image in 4": {
+    "Break.html": ".\\Breaking Image in 4\\Break.html"
+  },
+  "Bubbles!": {
+    "Bub.html": ".\\Bubbles!\\Bub.html"
+  },
+  "Button": {
+    "b.html": ".\\Button\\b.html"
+  },
+  "Button Corner": {
+    "Button.html": ".\\Button Corner\\Button.html"
+  },
+  "Button Ripple": {
+    "ripple.html": ".\\Button Ripple\\ripple.html"
+  },
+  "Calander": {
+    "cal.html": ".\\Calander\\cal.html"
+  },
+  "Calculator": {
+    "calculator.html": ".\\Calculator\\calculator.html"
+  },
+  "Card Border Glow": {
+    "Card.html": ".\\Card Border Glow\\Card.html"
+  },
+  "Card Profile": {
+    "Card.html": ".\\Card Profile\\Card.html"
+  },
+  "Card with Ribbion": {
+    "ca.html": ".\\Card with Ribbion\\ca.html"
+  },
+  "Cards": {
+    "card.html": ".\\Cards\\card.html"
+  },
+  "Change Background": {
+    "ch.html": ".\\Change Background\\ch.html"
+  },
+  "Changing Buttons": {
+    "l.html": ".\\Changing Buttons\\l.html"
+  },
+  "Character Counter": {
+    "Counter.html": ".\\Character Counter\\Counter.html"
+  },
+  "Circle Card": {
+    "card.html": ".\\Circle Card\\card.html"
+  },
+  "Circle Line Loading": {
+    "ci.html": ".\\Circle Line Loading\\ci.html"
+  },
+  "Circles revolving Circles": {
+    "cir.html": ".\\Circles revolving Circles\\cir.html"
+  },
+  "Clock": {
+    "Clock.html": ".\\Clock\\Clock.html"
+  },
+  "Clock Time": {
+    "clock.html": ".\\Clock Time\\clock.html"
+  },
+  "Coca-Cola Web": {
+    "cocacola.html": ".\\Coca-Cola Web\\cocacola.html"
+  },
+  "Coffee Switch": {
+    "coffee.html": ".\\Coffee Switch\\coffee.html"
+  },
+  "Colourful Line": {
+    "Line.html": ".\\Colourful Line\\Line.html"
+  },
+  "Colourful Wheel": {
+    "Wheel.html": ".\\Colourful Wheel\\Wheel.html"
+  },
+  "Contact Form": {
+    "img": {},
+    "index.html": ".\\Contact Form\\index.html"
+  },
+  "Cool Section": {
+    "Section.html": ".\\Cool Section\\Section.html"
+  },
+  "Country change": {
+    "country.html": ".\\Country change\\country.html"
+  },
+  "CSS IS AWESOME": {
+    "css.html": ".\\CSS IS AWESOME\\css.html"
+  },
+  "Devices": {
+    "de.html": ".\\Devices\\de.html"
+  },
+  "Distortion": {
+    "Dist.html": ".\\Distortion\\Dist.html"
+  },
+  "Dropdown Navigation Bar": {
+    "drop.html": ".\\Dropdown Navigation Bar\\drop.html"
+  },
+  "Dynamic Calender": {
+    "Dynamic.html": ".\\Dynamic Calender\\Dynamic.html"
+  },
+  "Emoji Trail": {
+    "Emoji.html": ".\\Emoji Trail\\Emoji.html"
+  },
+  "Energy Ball": {
+    "Energy.html": ".\\Energy Ball\\Energy.html"
+  },
+  "Errors": {
+    "Draggable Thingy": {
+      "drag.html": ".\\Errors\\Draggable Thingy\\drag.html"
+    },
+    "My Circling Text": {
+      "circle.html": ".\\Errors\\My Circling Text\\circle.html"
+    },
+    "Shooting Stars(Work)": {
+      "shoot.html": ".\\Errors\\Shooting Stars(Work)\\shoot.html"
+    },
+    "Solution Of Problems": {
+      "sol.html": ".\\Errors\\Solution Of Problems\\sol.html"
+    }
+  },
+  "Eyes": {
+    "eye.html": ".\\Eyes\\eye.html"
+  },
+  "Falling Leaves": {
+    "Falling.html": ".\\Falling Leaves\\Falling.html"
+  },
+  "Fingerprint Scanner": {
+    "fingerprint.html": ".\\Fingerprint Scanner\\fingerprint.html"
+  },
+  "Flex Image Gallery": {
+    "Image.html": ".\\Flex Image Gallery\\Image.html",
+    "img": {}
+  },
+  "Focus on Studies": {
+    "focus.html": ".\\Focus on Studies\\focus.html"
+  },
+  "Focus On Words": {
+    "Focus.html": ".\\Focus On Words\\Focus.html"
+  },
+  "Folding Designs": {
+    "fold.html": ".\\Folding Designs\\fold.html"
+  },
+  "Folding Image": {
+    "Folding.html": ".\\Folding Image\\Folding.html"
+  },
+  "Food Web": {
+    "bl.html": ".\\Food Web\\bl.html"
+  },
+  "Gaming Web": {
+    "Game.html": ".\\Gaming Web\\Game.html"
+  },
+  "Glassmorphin buttons": {
+    "glass.html": ".\\Glassmorphin buttons\\glass.html"
+  },
+  "Glowing Cards": {
+    "card.html": ".\\Glowing Cards\\card.html"
+  },
+  "Glowing Cards 3D": {
+    "card.html": ".\\Glowing Cards 3D\\card.html"
+  },
+  "Grid": {
+    "Animated-Grid.html": ".\\Grid\\Animated-Grid.html",
+    "Basic-Grid.html": ".\\Grid\\Basic-Grid.html",
+    "Photo-Grid.html": ".\\Grid\\Photo-Grid.html"
+  },
+  "Hacked Text": {
+    "Text.html": ".\\Hacked Text\\Text.html"
+  },
+  "Halloween": {
+    "index.html": ".\\Halloween\\index.html"
+  },
+  "Heart": {
+    "heart.html": ".\\Heart\\heart.html"
+  },
+  "Heart Throw": {
+    "Heart.html": ".\\Heart Throw\\Heart.html"
+  },
+  "Hinge Animation": {
+    "hinge.html": ".\\Hinge Animation\\hinge.html"
+  },
+  "Hole has surprise": {
+    "ho.html": ".\\Hole has surprise\\ho.html"
+  },
+  "Holi Offer": {
+    "Happy.html": ".\\Holi Offer\\Happy.html"
+  },
+  "Hover Cubes": {
+    "Cubes.html": ".\\Hover Cubes\\Cubes.html"
+  },
+  "Hover Login": {
+    "Hover.html": ".\\Hover Login\\Hover.html"
+  },
+  "Hover Trace": {
+    "hover.html": ".\\Hover Trace\\hover.html"
+  },
+  "Image Shadow": {
+    "Image.html": ".\\Image Shadow\\Image.html"
+  },
+  "Image Slide": {
+    "index.html": ".\\Image Slide\\index.html"
+  },
+  "Image Slider": {
+    "Images": {},
+    "Slider.html": ".\\Image Slider\\Slider.html"
+  },
+  "Import": {
+    "Click-to-send (Work)": {
+      "dist": {
+        "index.html": ".\\Import\\Click-to-send (Work)\\dist\\index.html"
+      },
+      "src": {
+        "index.html": ".\\Import\\Click-to-send (Work)\\src\\index.html"
+      }
+    },
+    "CodePen_Export_vYmEpyj": {
+      "dist": {
+        "index.html": ".\\Import\\CodePen_Export_vYmEpyj\\dist\\index.html"
+      },
+      "src": {
+        "index.html": ".\\Import\\CodePen_Export_vYmEpyj\\src\\index.html"
+      }
+    },
+    "impossible-checkbox-v2": {
+      "dist": {
+        "index.html": ".\\Import\\impossible-checkbox-v2\\dist\\index.html"
+      },
+      "src": {}
+    },
+    "Personal Website #4": {
+      "Personal Website": {
+        "css": {},
+        "images": {
+          "works": {}
+        },
+        "index.html": ".\\Import\\Personal Website #4\\Personal Website\\index.html",
+        "js": {}
+      }
+    },
+    "Solar Explorer": {
+      "index.html": ".\\Import\\Solar Explorer\\index.html"
+    },
+    "Tic Tac Toe": {
+      "tic.html": ".\\Import\\Tic Tac Toe\\tic.html"
+    },
+    "Windows 11": {
+      "index.html": ".\\Import\\Windows 11\\index.html"
+    }
+  },
+  "Independence Day": {
+    "India.html": ".\\Independence Day\\India.html"
+  },
+  "Infinite Line": {
+    "Line.html": ".\\Infinite Line\\Line.html"
+  },
+  "Infinity": {
+    "Infi.html": ".\\Infinity\\Infi.html"
+  },
+  "Instagram": {
+    "in.html": ".\\Instagram\\in.html"
+  },
+  "Intersecting Circle": {
+    "Circle.html": ".\\Intersecting Circle\\Circle.html"
+  },
+  "Intersection Magic": {
+    "Magic.html": ".\\Intersection Magic\\Magic.html"
+  },
+  "Intro Text": {
+    "intro.html": ".\\Intro Text\\intro.html"
+  },
+  "Inv Border Profile": {
+    "profile.html": ".\\Inv Border Profile\\profile.html"
+  },
+  "IPhone Call": {
+    "Call.html": ".\\IPhone Call\\Call.html"
+  },
+  "Just keep rotating": {
+    "l.html": ".\\Just keep rotating\\l.html"
+  },
+  "Just Load It!": {
+    "load.html": ".\\Just Load It!\\load.html"
+  },
+  "Levitating Bg": {
+    "Levitating.html": ".\\Levitating Bg\\Levitating.html"
+  },
+  "Light and Night modes": {
+    "light.html": ".\\Light and Night modes\\light.html"
+  },
+  "List of people": {
+    "li.html": ".\\List of people\\li.html"
+  },
+  "Loader": {
+    "lo.html": ".\\Loader\\lo.html"
+  },
+  "Loading Page": {
+    "loading.html": ".\\Loading Page\\loading.html"
+  },
+  "Login": {
+    "login.html": ".\\Login\\login.html"
+  },
+  "Login and Loading": {
+    "lo.html": ".\\Login and Loading\\lo.html"
+  },
+  "Love Face Balls": {
+    "Love.html": ".\\Love Face Balls\\Love.html"
+  },
+  "Magnetic Hover": {
+    "Magnetic.html": ".\\Magnetic Hover\\Magnetic.html"
+  },
+  "Memory Game": {
+    "Game.html": ".\\Memory Game\\Game.html"
+  },
+  "MOuse lOoks Covid-I9": {
+    "corona.html": ".\\MOuse lOoks Covid-I9\\corona.html"
+  },
+  "Mouse moves": {
+    "move.html": ".\\Mouse moves\\move.html"
+  },
+  "Mouse Moves Node": {
+    "mouse.html": ".\\Mouse Moves Node\\mouse.html"
+  },
+  "Mouse moves(advanced)": {
+    "mouses.html": ".\\Mouse moves(advanced)\\mouses.html"
+  },
+  "Mouse Parallax": {
+    "img": {},
+    "index.html": ".\\Mouse Parallax\\index.html",
+    "js": {},
+    "Original Images": {}
+  },
+  "Mouse Super Advanced": {
+    "moves.html": ".\\Mouse Super Advanced\\moves.html"
+  },
+  "Mouse Word moves": {
+    "mouse.html": ".\\Mouse Word moves\\mouse.html"
+  },
+  "My mother's profile": {
+    "profiles.html": ".\\My mother's profile\\profiles.html"
+  },
+  "My Profile Card": {
+    "profile.html": ".\\My Profile Card\\profile.html"
+  },
+  "Nav with Circle": {
+    "Nav.html": ".\\Nav with Circle\\Nav.html"
+  },
+  "Neon button": {
+    "neon.html": ".\\Neon button\\neon.html"
+  },
+  "Nice Work": {
+    "nice.html": ".\\Nice Work\\nice.html"
+  },
+  "Password Meter": {
+    "Password.html": ".\\Password Meter\\Password.html"
+  },
+  "Password Valid": {
+    "Pass.html": ".\\Password Valid\\Pass.html"
+  },
+  "Photo Card": {
+    "Card.html": ".\\Photo Card\\Card.html"
+  },
+  "Picture Gallery": {
+    "Picture.html": ".\\Picture Gallery\\Picture.html"
+  },
+  "Planets": {
+    "planets.html": ".\\Planets\\planets.html"
+  },
+  "Play Video": {
+    "Play.html": ".\\Play Video\\Play.html"
+  },
+  "Poster": {
+    "post.html": ".\\Poster\\post.html"
+  },
+  "Progress Bar Report": {
+    "pro.html": ".\\Progress Bar Report\\pro.html"
+  },
+  "Push Notification": {
+    "Notification.html": ".\\Push Notification\\Notification.html"
+  },
+  "Radar": {
+    "ra.html": ".\\Radar\\ra.html"
+  },
+  "Radial Menu": {
+    "Radial.html": ".\\Radial Menu\\Radial.html"
+  },
+  "Radial Team": {
+    "Team.html": ".\\Radial Team\\Team.html"
+  },
+  "Rain Colours": {
+    "Colour.html": ".\\Rain Colours\\Colour.html"
+  },
+  "Rain Letter": {
+    "Letter.html": ".\\Rain Letter\\Letter.html"
+  },
+  "Rain Rain Go Away!": {
+    "r.html": ".\\Rain Rain Go Away!\\r.html"
+  },
+  "Rain Snow": {
+    "Rain.html": ".\\Rain Snow\\Rain.html"
+  },
+  "Range Slider": {
+    "Range.html": ".\\Range Slider\\Range.html"
+  },
+  "Responsive Footer": {
+    "Footer.html": ".\\Responsive Footer\\Footer.html"
+  },
+  "Responsive Image": {
+    "css": {},
+    "Images": {},
+    "index.html": ".\\Responsive Image\\index.html"
+  },
+  "Responsive Nav": {
+    "Responsive.html": ".\\Responsive Nav\\Responsive.html"
+  },
+  "Rocket Science": {
+    "ro.html": ".\\Rocket Science\\ro.html"
+  },
+  "Rotator": {
+    "ro.html": ".\\Rotator\\ro.html"
+  },
+  "Scratch It!": {
+    "scratch.html": ".\\Scratch It!\\scratch.html"
+  },
+  "Scroll Anime": {
+    "Scroll.html": ".\\Scroll Anime\\Scroll.html"
+  },
+  "Scroll Cards": {
+    "Card.html": ".\\Scroll Cards\\Card.html"
+  },
+  "Search Box": {
+    "search.html": ".\\Search Box\\search.html"
+  },
+  "Shoe Buy": {
+    "shoe.html": ".\\Shoe Buy\\shoe.html"
+  },
+  "Slide Login": {
+    "s.html": ".\\Slide Login\\s.html"
+  },
+  "Smart Cursor": {
+    "Cursor.html": ".\\Smart Cursor\\Cursor.html"
+  },
+  "Smoke the words": {
+    "smoke.html": ".\\Smoke the words\\smoke.html"
+  },
+  "So Many Colors": {
+    "color.html": ".\\So Many Colors\\color.html"
+  },
+  "Soft Card": {
+    "so.html": ".\\Soft Card\\so.html"
+  },
+  "Softy Card": {
+    "so.html": ".\\Softy Card\\so.html"
+  },
+  "Specialized Words": {
+    "words.html": ".\\Specialized Words\\words.html"
+  },
+  "Spin Wheel": {
+    "Wheel.html": ".\\Spin Wheel\\Wheel.html"
+  },
+  "Spliting Video": {
+    "Split.html": ".\\Spliting Video\\Split.html"
+  },
+  "Spread Ink": {
+    "ink.html": ".\\Spread Ink\\ink.html"
+  },
+  "Squid Games": {
+    "squid.html": ".\\Squid Games\\squid.html"
+  },
+  "Sticky Navigation": {
+    "st.html": ".\\Sticky Navigation\\st.html"
+  },
+  "Text Box Design": {
+    "Text.html": ".\\Text Box Design\\Text.html"
+  },
+  "text-morph": {
+    "dist": {
+      "index.html": ".\\text-morph\\dist\\index.html"
+    },
+    "src": {
+      "index.html": ".\\text-morph\\src\\index.html"
+    }
+  },
+  "Textual Face": {
+    "text.html": ".\\Textual Face\\text.html"
+  },
+  "Thanos Snap": {
+    "Thanos.html": ".\\Thanos Snap\\Thanos.html"
+  },
+  "Thunderbolt": {
+    "thunder.html": ".\\Thunderbolt\\thunder.html"
+  },
+  "Tic Tac Toe": {
+    "Tic.html": ".\\Tic Tac Toe\\Tic.html"
+  },
+  "Tour Web": {
+    "tour.html": ".\\Tour Web\\tour.html"
+  },
+  "Turn the Lights": {
+    "on.html": ".\\Turn the Lights\\on.html"
+  },
+  "Water Drop": {
+    "Water.html": ".\\Water Drop\\Water.html"
+  },
+  "Wavy Texts 1": {
+    "wavy.html": ".\\Wavy Texts 1\\wavy.html"
+  },
+  "Wavy Texts 2": {
+    "wave.html": ".\\Wavy Texts 2\\wave.html"
+  },
+  "Wavy Texts 3": {
+    "waves.html": ".\\Wavy Texts 3\\waves.html"
+  },
+  "Winter Parallax": {
+    "Winter.html": ".\\Winter Parallax\\Winter.html"
+  },
+  "World Tour": {
+    "world.html": ".\\World Tour\\world.html"
+  }
+}

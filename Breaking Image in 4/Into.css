@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #222;
+}
+
+.box{
+    position: relative;
+    width: 400px;
+    height: 300px;
+    background: #fff;
+}
+
+.box span{
+    position: absolute;
+    inset: 0;
+    transition: 0.5s;
+    background: url(img.jpg);
+    background-size: cover;
+}
+
+.box span:nth-child(1){
+    clip-path: polygon(0 0, 50% 0, 50% 50%, 0 50%);
+    /* background: #a00; */
+}
+
+.box span:nth-child(2){
+    clip-path: polygon(50% 0, 100% 0, 100% 50%, 50% 50%);
+    /* background: #0a0; */
+}
+
+.box span:nth-child(3){
+    clip-path: polygon(0 50%, 50% 50%, 50% 100%, 0 100%);
+    /* background: #00a; */
+}
+
+.box span:nth-child(4){
+    clip-path: polygon(50% 50%, 100% 50%, 100% 100%, 50% 100%);
+    /* background: #aa0; */
+}
+
+.box:hover span:nth-child(1){
+    transform: translate(-40px, -60px) rotate(-15deg);
+    transition-delay: 0s;
+}
+
+.box:hover span:nth-child(2){
+    transform: translate(40px, -100px) rotate(25deg);
+    transition-delay: 0.25s;
+}
+
+.box:hover span:nth-child(3){
+    transform: translate(-40px, 80px) rotate(15deg);
+    transition-delay: 0.5s;
+}
+
+.box:hover span:nth-child(4){
+    transform: translate(40px, 80px) rotate(-15deg);
+    transition-delay: 0.75s;
+}

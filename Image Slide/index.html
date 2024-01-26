@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+<!-- ---------------------Navbar---------------------- -->
+    <header>
+        <a href="#" class="logo">HERBS</a>
+        <div class="group">
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="search">
+                <span class="icon">
+                    <ion-icon name="search-outline" class="searchBtn"></ion-icon>
+                    <ion-icon name="close-outline" class="closeBtn"></ion-icon>
+                </span>
+            </div>
+            <ion-icon name="menu-outline" class="menuToggle"></ion-icon>
+        </div>
+        <div class="searchBox">
+            <input type="text" placeholder="Search Here . . .">
+        </div>
+    </header>
+<!-- ---------------------Home---------------------- -->
+    <section class="home">
+        <img src="Ashwagandha.webp" class="img-slide active">
+        <img src="Boswellia.jpg" class="img-slide">
+        <img src="Cumin.webp" class="img-slide">
+        <img src="PepperMint.webp" class="img-slide">
+        <img src="Turmeric.jpg" class="img-slide">
+        <div class="content active">
+            <h1>Ashwa<br><span>Gandha</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At quaerat labore similique vitae soluta. Quis, reprehenderit ipsum voluptatibus, assumenda quisquam incidunt repellat nulla ullam vitae ducimus molestias sequi dignissimos vero?</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="content">
+            <h1>Boswellia<br><span>Sacra</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At quaerat labore similique vitae soluta. Quis, reprehenderit ipsum voluptatibus, assumenda quisquam incidunt repellat nulla ullam vitae ducimus molestias sequi dignissimos vero?</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="content">
+            <h1>Cuminum<br><span>Cyminum</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At quaerat labore similique vitae soluta. Quis, reprehenderit ipsum voluptatibus, assumenda quisquam incidunt repellat nulla ullam vitae ducimus molestias sequi dignissimos vero?</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="content">
+            <h1>Pepper<br><span>Mint</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At quaerat labore similique vitae soluta. Quis, reprehenderit ipsum voluptatibus, assumenda quisquam incidunt repellat nulla ullam vitae ducimus molestias sequi dignissimos vero?</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="content">
+            <h1>Powder<br><span>Turmeric</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At quaerat labore similique vitae soluta. Quis, reprehenderit ipsum voluptatibus, assumenda quisquam incidunt repellat nulla ullam vitae ducimus molestias sequi dignissimos vero?</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="media-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <div class="slider-navigation">
+            <div class="nav-btn active"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+        </div>
+    </section>
+
+</body>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script>
+    // -------------------Navbar---------------->
+    let searchBtn = document.querySelector('.searchBtn');
+    let closeBtn = document.querySelector('.closeBtn');
+    let searchBox = document.querySelector('.searchBox');
+    let navigation = document.querySelector('.navigation');
+    let menuToggle = document.querySelector('.menuToggle');
+    let header = document.querySelector('header');
+
+    searchBtn.onclick = function(){
+        searchBox.classList.add('active');
+        closeBtn.classList.add('active');
+        searchBtn.classList.add('active');
+        menuToggle.classList.add('hide');
+        header.classList.remove('open')
+    }
+    closeBtn.onclick = function(){
+        searchBox.classList.remove('active');
+        closeBtn.classList.remove('active');
+        searchBtn.classList.remove('active');
+        menuToggle.classList.remove('hide');
+    }
+    menuToggle.onclick = function(){
+        header.classList.toggle('open');
+        closeBtn.classList.remove('active');
+        searchBtn.classList.remove('active');
+        menuToggle.classList.remove('hide');
+    }
+
+    // ---------------Image Slider------------>
+    const btns = document.querySelectorAll('.nav-btn');
+    const slides = document.querySelectorAll('.img-slide');
+    const contents = document.querySelectorAll('.content');
+
+    var sliderNav = function(manual){
+        btns.forEach((btn) => {
+            btn.classList.remove("active");
+        })
+        
+        slides.forEach((slide) => {
+            slide.classList.remove("active");
+        })
+
+        contents.forEach((content) => {
+            content.classList.remove("active");
+        })
+
+        btns[manual].classList.add("active");
+        slides[manual].classList.add("active");
+        contents[manual].classList.add("active");
+    }
+
+    btns.forEach((btn, i) => {
+        btn.addEventListener("click", () => {
+            sliderNav(i)
+        })
+    })
+
+//Automation for manual
+var repeat = function(activeClass){
+    let active = document.getElementsByClassName('active');
+    let i = 1;
+
+    var repeater = () => {
+        setTimeout(function(){
+                [...active].forEach((activeSlide) => {
+                    activeSlide.classList.remove('active')
+                })
+
+            slides[i].classList.add('active');
+            btns[i].classList.add('active');
+            contents[i].classList.add('active');
+            i++;
+
+            if(slides.length == i){
+                i = 0;
+            }
+            if(i >= slides.length){
+                return;
+            }
+            repeater();
+        }, 7500);
+    }
+    repeater();
+}
+repeat();
+</script>
+</html>

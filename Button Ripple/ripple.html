@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="button.css">
+    <title>Document</title>
+</head>
+<body>
+    <a href="#" class="btn">Awesome</a>
+    <a href="#" class="btn">Button</a>
+</body>
+<script>
+    let btn = document.querySelectorAll('.btn');
+    btn.forEach(btn => {
+        btn.onclick = function(e){
+            let x = e.pageX - e.target.offsetLeft;
+            let y = e.pageY - e.target.offsetTop;
+
+            let color = "#" + Math.floor(Math.random() * 0xFFFFFF).toString(16)
+
+            let ripples = document.createElement('span');
+            ripples.style.left = x + 'px';
+            ripples.style.top = y + 'px';
+            ripples.style.borderColor = color;
+            this.appendChild(ripples);
+            setTimeout(() => {
+                ripples.remove()
+            }, 2000)
+        }
+    })
+</script>
+</html>

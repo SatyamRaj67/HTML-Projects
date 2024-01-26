@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Character.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <input type="text" placeholder="Write Your Name ..." required class="textBx" maxlength="24">
+        <span class="counter">24</span>
+    </div>
+</body>
+<script>
+    let textBx = document.querySelector('.textBx');
+    let counter = document.querySelector('.counter');
+    maxLength = textBx.getAttribute('maxlength')
+    textBx.onkeyup = () => {
+        counter.innerHTML = maxLength - textBx.value.length
+    }
+</script>
+</html>

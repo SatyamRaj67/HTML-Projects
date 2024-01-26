@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bgmi.css">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <audio src="sound.wav" id="audio" autostart="false"></audio>
+    </section>
+
+    <script>
+        document.addEventListener('click', function(e){
+            let body = document.querySelector('body');
+            let bullet = document.createElement('span');
+            bullet.classList.add('bullet');
+            let x = e.offsetX;
+            let y = e.offsetY;
+            bullet.style.left = x+'px';
+            bullet.style.top = y+'px';
+            body.appendChild(bullet);
+
+            let sound = document.getElementById('audio');
+            sound.play()
+
+            let images = [
+                'url("blood.png")',
+                'url("blood1.png")',
+                'url("blood2.png")',
+                'url("blood3.png")'
+            ];
+
+            let blood = document.createElement('span');
+            blood.classList.add('blood');
+
+            let bg = images[Math.floor(Math.random() * images.length)];
+            blood.style.backgroundImage = bg;
+
+            blood.style.left = Math.random()* innerWidth + 'px';
+            blood.style.top = Math.random()* innerHeight + 'px';
+            body.appendChild(blood);
+
+            setTimeout (function(){
+                bullet.remove();
+                blood.remove();
+                },4000);
+            })
+    </script>
+</body>
+</html>

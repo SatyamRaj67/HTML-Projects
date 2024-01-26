@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="au.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="music">
+        <h2 class="title">Music Name</h2>
+        <div class="player">
+            <audio src=""></audio>
+            <div class="btns">
+                <span class="prev">
+                    <ion-icon name="play-back-outline"></ion-icon>
+                </span>
+                <span class="playPause">
+                    <ion-icon name="play-outline"></ion-icon>
+                </span>
+                <span class="next">
+                    <ion-icon name="play-forward-outline"></ion-icon>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        const title = document.querySelector('.title');
+        const prev = document.querySelector('.prev');
+        const playPause = document.querySelector('.playPause');
+        const next = document.querySelector('.next');
+        const audio = document.querySelector('audio');
+
+        const songList = [
+            {
+                path: "For7ius.mp3",
+                songName: "For7ius"
+            },
+            {
+                path: "Happy_Birthday.mp3",
+                songName: "Happy Birthday "
+            },
+            {
+                path: "Kala.mp3",
+                songName: "Kala Chashma "
+            }
+        ];
+
+        let song_Playing = false;
+
+        function playSong(){
+            song_Playing = true;
+            audio.play();
+            playPause.classList.add('active');
+            playPause.innerHTML = '<ion-icon name="pause-outline"></ion-icon>';
+        }
+        
+        function pauseSong(){
+            song_Playing = false;
+            audio.pause();
+            playPause.classList.remove('active');
+            playPause.innerHTML = '<ion-icon name="play-outline"></ion-icon>'
+        }
+
+        playPause.addEventListener("click", () => (song_Playing ? pauseSong() : playSong()));
+
+        function loadSong(songList){
+            title.textContent = songList.songName;
+            audio.src = songList.path;
+        }
+
+        let i = 0;
+
+        loadSong(songList[i])
+
+        function prevSong(){
+            i--;
+            if (i < 0){
+                i = songList.length - 1;
+            }
+            loadSong(songList[i])
+            playSong();
+        }
+        prev.addEventListener("click", prevSong)
+
+        function nextSong(){
+            i++;
+            if (i > songList.length - 1){
+                i = 0 ;
+            }
+            loadSong(songList[i])
+            playSong();
+        }
+        next.addEventListener("click", nextSong)
+    </script>
+</body>
+</html>

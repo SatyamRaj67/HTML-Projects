@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON File Fetch</title>
+  </head>
+  <body>
+    <h1>Links to HTML files:</h1>
+    <div id="jsonLinks"></div>
+
+    <script>
+      function fetchJsonFile() {
+        fetch("htmlFiles.json")
+          .then((response) => response.json())
+          .then((data) => displayJsonLinks(data))
+          .catch((error) => console.error("Error fetching JSON file:", error));
+      }
+
+      function displayJsonLinks(jsonData) {
+        const jsonLinksElement = document.getElementById("jsonLinks");
+
+        for (const category in jsonData) {
+          if (jsonData.hasOwnProperty(category)) {
+            const files = jsonData[category];
+            for (const file in files) {
+              if (files.hasOwnProperty(file)) {
+                const filePath = files[file];
+                const anchorTag = document.createElement("a");
+                anchorTag.textContent = `${category} - ${file}`;
+                anchorTag.href = filePath;
+                anchorTag.target = "_blank"; // Open link in a new tab
+                const lineBreak = document.createElement("br");
+                jsonLinksElement.appendChild(anchorTag);
+                jsonLinksElement.appendChild(lineBreak);
+              }
+            }
+          }
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", fetchJsonFile);
+    </script>
+  </body>
+</html>

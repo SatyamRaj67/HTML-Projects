@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="night.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <div class="toggle"></div>
+    <div class="container">
+        <div class="card">
+            <div class="box">
+                <div class="content">
+                    <div class="icon"><i class="fa fa-paper-plane" aria-hidden="true"></i></div>
+                    <h3>Basic</h3>
+                    <h4><sup>$</sup>Free</h4>
+                    <ul>
+                        <li><i class="fa fa-check" aria-hidden="true"></i>100 KB Space</li>
+                        <li><i class="fa fa-times" aria-hidden="true"></i>3 Domain Names</li>
+                        <li><i class="fa fa-times" aria-hidden="true"></i>10 Email Address</li>
+                        <li><i class="fa fa-times" aria-hidden="true"></i>Live Support</li>
+                    </ul>
+                    <a href="#">Order Now</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="box">
+                <div class="content">
+                    <div class="icon"><i class="fa fa-plane" aria-hidden="true"></i></div>
+                    <h3>Standard</h3>
+                    <h4><sup>$</sup>50</h4>
+                    <ul>
+                        <li><i class="fa fa-check" aria-hidden="true"></i>1 MB Space</li>
+                        <li><i class="fa fa-check" aria-hidden="true"></i>3 Domain Names</li>
+                        <li><i class="fa fa-check" aria-hidden="true"></i>3 Email Address</li>
+                        <li><i class="fa fa-times" aria-hidden="true"></i>Live Support</li>
+                    </ul>
+                    <a href="#">Order Now</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="box">
+                <div class="content">
+                    <div class="icon"><i class="fa fa-rocket" aria-hidden="true"></i></div>
+                    <h3>Premium</h3>
+                    <h4><sup>$</sup>50,000</h4>
+                    <ul>
+                        <li><i class="fa fa-check" aria-hidden="true"></i>100 GB Space</li>
+                        <li><i class="fa fa-check" aria-hidden="true"></i>300 Domain Names</li>
+                        <li><i class="fa fa-check" aria-hidden="true"></i>100 Email Address</li>
+                        <li><i class="fa fa-check" aria-hidden="true"></i>Live Support</li>
+                    </ul>
+                    <a href="#">Order Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const body = document.querySelector('body');
+        document.querySelector('.toggle').onclick = function(){
+            body.classList.toggle('light')
+        }
+    </script>
+</body>
+</html>

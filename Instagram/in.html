@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="in.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="card">
+        <div class="top">
+            <div class="userDetails">
+                <div class="profile_img">
+                    <img src="logo (2).jpg" class="cover">
+                </div>
+                <h2>Satyam Raj <br><span>Gaya, India</span></h2>
+            </div>
+            <div>
+                <img src="dot.png" class="dot">
+            </div>
+        </div>
+        <div class="imgBx">
+            <img src="bg.jpg" class="cover">
+        </div>
+        <div class="actionBtns">
+            <div class="left">
+                <img src="heart.png" class="heart" onclick="likeButton()">
+                <img src="comment.png">
+                <img src="share.png">
+            </div>
+            <div class="right">
+                <img src="bookmark.png">
+            </div>
+        </div>
+        <h4 class="likes">999,999,999 likes</h4>
+        <h4 class="message"><b>Satyam Raj</b> Thanks for your love and supports <span>#cards</span> <span>#html</span> <span>#css</span></h4>
+        <h4 class="comments">View all 2,456 Comments</h4>
+        <div class="addComments">
+            <div class="userImg">
+                <img src="user.jpg" class="cover">
+            </div>
+            <input type="text" class="text" placeholder="Add a comment . . .">
+        </div>
+        <h5 class="postTime">4 hours ago</h5>
+    </div>
+
+    <script>
+        function likeButton(){
+            let heart = document.querySelector('.heart');
+            let likes = document.querySelector('.likes')
+            if (heart.src.match("heart.png")){
+                heart.src = "heart_red.png";
+                likes.innerHTML = "10,000,000,000 likes"
+            }
+            else{
+                heart.src = "heart.png";
+                likes.innerHTML = "9,999,999,999 likes"
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Telugu:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    background: #222;
+}
+
+header{
+    position: fixed;
+    padding: 30px 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+header .logo{
+    color: #fff;
+    font-size: 2em;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+header ul{
+    display: flex;
+    gap: 40px;
+}
+
+header ul li{
+    list-style: none;
+}
+
+header ul li a{
+    text-decoration: none;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    transition: 0.5s;
+}
+
+header ul li a:hover,
+header ul li a.active{
+    color: #fff;
+}
+
+section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100;
+    padding: 100px;
+    gap: 100px;
+}
+
+section .content{
+    max-width: 700px;
+}
+
+section .content h2{
+    font-size: 3.5em;
+    color: #fff;
+    font-weight: 500;
+    font-family: 'Noto Serif Telugu', serif;
+}
+
+section .content h2 b{
+    color: #0f0;
+    font-family: 'Noto Serif Telugu', serif;
+}
+
+section .content p{
+    color: #999;
+    font-size: 1.1em;
+}
+
+section .content .btn{
+    padding: 10px 15px;
+    background: #fff;
+    color: #222;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: inline-block;
+    margin-top: 25px;
+    letter-spacing: 0.25em;
+    transition: 0.5s ease-in-out;
+}
+
+section .content .btn:hover{
+    letter-spacing: 0.4em;
+}
+
+section .container{
+    position: relative;
+    right: 100px;
+    min-width: 400px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    scale: 0.75;
+}
+
+section .container .element{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    scale: 0.75;
+}

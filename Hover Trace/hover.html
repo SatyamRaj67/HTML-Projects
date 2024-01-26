@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="trace.css">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.addEventListener('mousemove', function(e){
+            let body = document.querySelector('body');
+            let particles = document.createElement('span');
+            let x = e.offsetX;
+            let y = e.offsetY;
+            particles.style.left = x+'px';
+            particles.style.top = y+'px';
+
+            let size = Math.random()*8;
+            particles.style.width = 2 + size + 'px';
+            particles.style.height = 2+ size + 'px';
+
+            let transform = Math.random() * 360;
+            particles.style.transform = 'rotate('+transform+'deg)';
+
+
+            body.appendChild(particles);
+
+            setTimeout(function(){
+                particles.remove()
+            },2000)
+        })
+    </script>
+</body>
+</html>

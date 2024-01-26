@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="video.css">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <div class="side" id="side1">
+            <video src="pexels-taryn-elliott-6473321.mp4" type="video/mp4" autoplay loop muted></video>
+        </div>
+        <div class="side" id="side2">
+            <video src="pexels-taryn-elliott-6473321.mp4" type="video/mp4" autoplay loop muted></video>
+        </div>
+    </section>
+    <div class="content">
+        <h2>Split Video On Page Scroll</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, molestias at. At earum et, magnam animi nisi, commodi quo corporis nulla sint quisquam eveniet ea laudantium veritatis esse excepturi ut quam doloremque repudiandae non nam! Assumenda consequatur pariatur, eius consequuntur labore vel cupiditate nam saepe magni alias quae nihil libero enim quam inventore aperiam facilis. Repellendus ex possimus amet numquam libero temporibus, assumenda dicta earum. Culpa velit, mollitia repellendus autem consequatur magnam odio doloribus esse aliquid dolorum explicabo repellat ducimus voluptatum non facere nesciunt eos itaque iure exercitationem. In perspiciatis maiores, optio dolore odit nobis. Veritatis distinctio porro, reiciendis et, beatae, autem consectetur maiores magnam unde corporis cumque error voluptate tempore. Ea esse asperiores nemo placeat deserunt perspiciatis, autem praesentium sequi magnam quidem repudiandae tenetur obcaecati nesciunt unde repellat incidunt quas! Officiis exercitationem nisi consequatur corrupti, ipsam velit culpa beatae dolor unde ratione rem! Expedita unde voluptatem autem assumenda sint.</p>
+    </div>
+
+    <script>
+        let side1 = document.getElementById('side1');
+        let side2 = document.getElementById('side2');
+
+        window.addEventListener('scroll', function(){
+            side1.style.left = -window.pageYOffset+'px';
+            side2.style.left = window.pageYOffset+'px';
+        })
+    </script>
+</body>
+</html>

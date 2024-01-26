@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Day.css">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Happy<br>Independence<br>Day</h2>
+    <script>
+        function circle(){
+            let amount = 100;
+            let body = document.querySelector('body');
+            let i = 0;
+            while(i < amount){
+                let element = document.createElement('i');
+                let posX = Math.floor(Math.random() * window.innerWidth)
+                let delay = Math.random() * -20;
+                let duration = Math.random() * 10;
+
+                let size = Math.random() * 250;
+                element.style.width = 10 + size + 'px';
+                element.style.height = 10 + size + 'px';
+                element.style.left = posX + 'px';
+                element.style.animationDelay = delay + 's';
+                element.style.animationDuration = 5 + duration + 's';
+                element.style.webkitBoxShadow = '0 30px 50px #0002'
+
+                body.appendChild(element);
+                i++
+            }
+        }
+        circle()
+    </script>
+</body>
+</html>

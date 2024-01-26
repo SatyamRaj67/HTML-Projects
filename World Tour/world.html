@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="world.css">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <div class="bannerVideo" id="slideShow">
+            <video src="production ID_3942468.mp4" autoplay muted loop class="active"></video>
+            <video src="pexels-pat-whelen-6547634.mp4" autoplay muted loop></video>
+            <video src="pexels-tima-miroshnichenko-5977196.mp4" autoplay muted loop></video>
+            <video src="pexels-taryn-elliott-6473321.mp4" autoplay muted loop></video>
+        </div>
+        <div class="container">
+            <header id="navbar">
+                <a href="#" class="logo">World</a>
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Destination</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </header>
+            <div class="content">
+                <div class="bannerText" id="slideShowText">
+                    <div class="active">
+                        <h2>Tokyo</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam quaerat facilis ipsam consequuntur repellendus nobis sunt ipsum culpa dolore ut? Ipsam dolores maiores ullam voluptatum id voluptate voluptas soluta corporis!</p>
+                    </div>
+                    <div>
+                        <h2>Paris</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam quaerat facilis ipsam consequuntur repellendus nobis sunt ipsum culpa dolore ut? Ipsam dolores maiores ullam voluptatum id voluptate voluptas soluta corporis!</p>
+                    </div>
+                    <div>
+                        <h2>Egypt</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam quaerat facilis ipsam consequuntur repellendus nobis sunt ipsum culpa dolore ut? Ipsam dolores maiores ullam voluptatum id voluptate voluptas soluta corporis!</p>
+                    </div>
+                    <div>
+                        <h2>Maldives</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam quaerat facilis ipsam consequuntur repellendus nobis sunt ipsum culpa dolore ut? Ipsam dolores maiores ullam voluptatum id voluptate voluptas soluta corporis!</p>
+                    </div>
+                </div>
+            </div>
+            <ul class="sci">
+                <li><a href="#"><img src="facebook.png"></a></li>
+                <li><a href="#"><img src="twitter.png"></a></li>
+                <li><a href="#"><img src="instagram.png"></a></li>
+            </ul>
+
+            <ul class="controls">
+                <li onclick="prevSlide(); nextSlideText();"><img src="left.png"></li>
+                <li onclick="nextSlide(); prevSlideText()"><img src="right.png"></li>
+            </ul>
+        </div>
+    </section>
+
+    <script>
+        const slideShow = document.getElementById('slideShow');
+        const slides = slideShow.getElementsByTagName('video');
+        var index = 0;
+
+        function nextSlide(){
+            slides[index].classList.remove('active');
+            index = (index + 1) % slides.length;
+            slides[index].classList.add('active');
+        }
+
+        function prevSlide(){
+            slides[index].classList.remove('active');
+            index = (index - 1 + slides.length) % slides.length;
+            slides[index].classList.add('active');
+        }
+
+        const slideShow = document.getElementById('slideShowText');
+        const slidesText = slideShowText.getElementsByTagName('div');
+        var i = 0;
+
+        function nextSlideText(){
+            slidesText[i].classList.remove('active');
+            i = (i + 1) % slidesText.length;
+            slidesText[i].classList.add('active');
+        }
+
+        function prevSlideText(){
+            slidesText[i].classList.remove('active');
+            i = (i - 1 + slides.length) % slidesText.length;
+            slidesText[i].classList.add('active');
+        }
+    </script>
+</body>
+</html>

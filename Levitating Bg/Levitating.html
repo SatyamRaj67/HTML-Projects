@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Bg.css" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    function lines() {
+      let sizeW = Math.random() * 12;
+      let duration = Math.random() * 3;
+      let delay = Math.random() * 5;
+      let e = document.createElement("div");
+      e.setAttribute("class", "circle");
+      document.body.appendChild(e);
+      e.style.width = 2 + sizeW + "px";
+      e.style.left = Math.random() * +innerWidth + "px";
+      e.style.animationDuration = 2 + duration + "s";
+
+      setTimeout(function () {
+        document.body.removeChild(e);
+      }, 5000);
+    }
+
+    setInterval(function () {
+      lines();
+    }, 200);
+  </script>
+</html>
