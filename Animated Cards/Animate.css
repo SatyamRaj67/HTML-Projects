@@ -6,3 +6,138 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
+:root{
+    --clr: #222
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--clr);
+}
+
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+
+.container .card{
+    position: relative;
+    width: 320px;
+    height: 250px;
+    background: #fff;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.container .card:hover{
+    height: 350px;
+}
+
+.container .card .imgBx{
+    position: absolute;
+    inset: 20px 20px 50px 20px;
+    background: transparent;
+    border-radius: 15px;
+    transition: 0.5s;
+    z-index: 1000;
+}
+
+.container .card:hover .imgBx{
+    inset:  -50px 60px 250px 60px;
+    box-shadow: 0 0 0 10px var(--clr);
+}
+
+.container .card .imgBx::before{
+    content: ' ';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    left: -30px;
+    border-top-right-radius: 20px;
+    transform: translateY(-100px);
+    opacity: 0;
+    box-shadow: 5px -5px 0 4px var(--clr);
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.container .card:hover .imgBx::before{
+    opacity: 1;
+    transform: translateY(50px);
+}
+
+.container .card .imgBx::after{
+    content: ' ';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    right: -30px;
+    border-top-left-radius: 20px;
+    transform: translateY(-100px);
+    opacity: 0;
+    box-shadow: -5px -5px 0 4px var(--clr);
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.container .card:hover .imgBx::after{
+    opacity: 1;
+    transform: translateY(50px);
+}
+
+.container .card .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.container .card p{
+    position: relative;
+    padding: 20px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-50px);
+    transition: 0.5s;
+}
+
+.container .card:hover p{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(40px);
+}
+
+.container .card h2{
+    position: absolute;
+    bottom: 8px;
+    color: #333;
+    transition: 0.5s;
+    font-weight: 600;
+}
+
+.container .card:hover h2{
+    padding: 5px 25px;
+    background: #65ff50;
+    bottom: -25px;
+    border-radius: 15px;
+    box-shadow: 0 0 0 10px var(--clr);
+}
