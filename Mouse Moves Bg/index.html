@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Bg.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Bg.css" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <div id="container"></div>
+    <div id="cursor"></div>
+  </body>
+  <script>
+    for (var i = 0; i < 150; i++) {
+      let box = document.createElement("span");
+      document.getElementById("container").appendChild(box);
+    }
+    let cursor = document.getElementById("cursor");
+    window.onmousemove = function (e) {
+      cursor.style.left = e.clientX + "px";
+      cursor.style.top = e.clientY + "px";
+    };
+  </script>
 </html>
