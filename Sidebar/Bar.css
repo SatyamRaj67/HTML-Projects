@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --clr: #14161e;
+}
+
+body{
+    min-height: 100vh;
+    background: var(--clr);
+}
+
+.sidebar{
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    background: #fff;
+    transition: 0.5s;
+    padding-left: 10px;
+}
+
+.sidebar ul{
+    position: relative;
+    height: 100vh;
+}
+
+.sidebar ul li{
+    position: relative;
+    list-style: none;
+}
+
+.sidebar ul li.logo{
+    margin-bottom: 50px;
+}
+
+.sidebar ul li.logo .icon{
+    font-size: 2em;
+    color: var(--clr);
+}
+
+.sidebar ul li.logo .text{
+    font-size: 1.2em;
+    font-weight: 500;
+    color: var(--clr);
+}
+
+.sidebar ul li a{
+    position: relative;
+    display: flex;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.sidebar ul li a .icon{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 60px;
+    height: 70px;
+    font-size: 1.5em;
+    color: #333;
+    transition: 0.5s;
+}
+
+.sidebar ul li a .text{
+    position: relative;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+}
