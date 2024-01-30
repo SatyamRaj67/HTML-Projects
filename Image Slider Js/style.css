@@ -199,19 +199,19 @@ header a {
 }
 
 .carousel .list .item:nth-child(1) .content .title {
-    animation-delay: 1.2s !important;
+    animation-delay: .25s !important;
 }
 
 .carousel .list .item:nth-child(1) .content .topic {
-    animation-delay: 1.4s !important;
+    animation-delay: .5s !important;
 }
 
 .carousel .list .item:nth-child(1) .content .des {
-    animation-delay: 1.6s !important;
+    animation-delay: .75s !important;
 }
 
 .carousel .list .item:nth-child(1) .content .buttons {
-    animation-delay: 1.8s !important;
+    animation-delay: 1s !important;
 }
 
 /* create animation when next click */
