@@ -7,6 +7,7 @@
     <title>Document</title>
   </head>
   <body>
+    <div class="menuToggle"></div>
     <div class="sidebar">
       <ul>
         <li class="logo" style="--bg: #333">
@@ -16,7 +17,7 @@
           </a>
         </li>
         <div class="Menulist">
-          <li style="--bg: #f44336">
+          <li style="--bg: #f44336" class="active">
             <a href="#">
               <div class="icon"><ion-icon name="home-outline"></ion-icon></div>
               <div class="text">Home</div>
@@ -64,10 +65,12 @@
         <div class="bottom">
           <li style="--bg: #333">
             <a href="#">
-              <div class="icon"></div>
-              <div class="imgBx">
-                <img src="img.jpg" alt="Profile" />
+              <div class="icon">
+                <div class="imgBx">
+                  <img src="img.jpg" alt="Profile" />
+                </div>
               </div>
+              <div class="text">Satyam Raj</div>
             </a>
           </li>
           <li style="--bg: #333">
@@ -90,4 +93,20 @@
     nomodule
     src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
   ></script>
+  <script>
+    let menuToggle = document.querySelector(".menuToggle");
+    let sidebar = document.querySelector(".sidebar");
+    menuToggle.onclick = function () {
+      menuToggle.classList.toggle("active");
+      sidebar.classList.toggle("active");
+    };
+
+    let Menulist = document.querySelectorAll(".Menulist li");
+    function activeLink() {
+      Menulist.forEach((item) => item.classList.remove("active"));
+      this.classList.add("active");
+    }
+
+    Menulist.forEach((item) => item.addEventListener('click', activeLink ))
+  </script>
 </html>
