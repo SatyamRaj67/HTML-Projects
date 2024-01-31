@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Drop.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">My Logo</a>
+      <div class="menuToggle"></div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li>
+            <a href="#">Dropdown<b>▼</b></a>
+            <ul>
+              <li><a href="#">Product 01</a></li>
+              <li><a href="#">Product 02</a></li>
+              <li>
+                <a href="#">Product 03 <b>+</b></a>
+                <ul>
+                  <li>
+                    <a href="#">HTML</a>
+                  </li>
+                  <li><a href="#">CSS</a></li>
+                  <li><a href="#">JavaScript</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#">Portfolio</a></li>
+          <li>
+            <a href="#">Blog<b>▼</b></a>
+            <ul>
+              <li><a href="#">Post 01</a></li>
+              <li><a href="#">Post 02</a></li>
+              <li><a href="#">Post 03</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+  </body>
+  <script>
+    let menuToggle = document.querySelector('.menuToggle')
+    let header = document.querySelector('header')
+    menuToggle.onclick = function(){
+        header.classList.toggle('active')
+    }
+  </script>
+</html>
