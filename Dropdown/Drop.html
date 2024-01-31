@@ -10,14 +10,24 @@
     <div class="dropdown">
       <input type="text" class="textBox" placeholder="Dropdown Menu" readonly />
       <div class="option">
-        <div><ion-icon name="logo-html5"></ion-icon>HTML</div>
-        <div><ion-icon name="logo-css3"></ion-icon>CSS</div>
-        <div><ion-icon name="logo-javascript"></ion-icon>Javascript</div>
-        <div><ion-icon name="logo-figma"></ion-icon>Figma</div>
-        <div><ion-icon name="logo-react"></ion-icon>ReactJS</div>
+        <div onclick="show('HTML')"><ion-icon name="logo-html5"></ion-icon>HTML</div>
+        <div onclick="show('CSS')"><ion-icon name="logo-css3"></ion-icon>CSS</div>
+        <div onclick="show('Javascipt')"><ion-icon name="logo-javascript"></ion-icon>Javascript</div>
+        <div onclick="show('Figma')"><ion-icon name="logo-figma"></ion-icon>Figma</div>
+        <div onclick="show('React')"><ion-icon name="logo-react"></ion-icon>React</div>
       </div>
     </div>
   </body>
+  <script>
+    function show(text){
+        document.querySelector('.textBox').value = text
+    }
+
+    let dropdown = document.querySelector('.dropdown')
+    dropdown.onclick = function(){
+        dropdown.classList.toggle('active')
+    }
+  </script>
   <script
     type="module"
     src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
