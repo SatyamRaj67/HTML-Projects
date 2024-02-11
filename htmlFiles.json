@@ -541,5 +541,8 @@
   },
   "World Tour": {
     "world.html": ".\\World Tour\\world.html"
+  },
+  "404":{
+    "404": ".\\I don't know what are you searching for?.html"
   }
 }
