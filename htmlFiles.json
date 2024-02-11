@@ -170,19 +170,17 @@
   "Energy Ball": {
     "Energy.html": ".\\Energy Ball\\Energy.html"
   },
-  "Errors": {
-    "Draggable Thingy": {
-      "drag.html": ".\\Errors\\Draggable Thingy\\drag.html"
-    },
-    "My Circling Text": {
-      "circle.html": ".\\Errors\\My Circling Text\\circle.html"
-    },
-    "Shooting Stars(Work)": {
-      "shoot.html": ".\\Errors\\Shooting Stars(Work)\\shoot.html"
-    },
-    "Solution Of Problems": {
-      "sol.html": ".\\Errors\\Solution Of Problems\\sol.html"
-    }
+  "Draggable Thingy": {
+    "drag.html": ".\\Errors\\Draggable Thingy\\drag.html"
+  },
+  "My Circling Text": {
+    "circle.html": ".\\Errors\\My Circling Text\\circle.html"
+  },
+  "Shooting Stars(Work)": {
+    "shoot.html": ".\\Errors\\Shooting Stars(Work)\\shoot.html"
+  },
+  "Solution Of Problems": {
+    "sol.html": ".\\Errors\\Solution Of Problems\\sol.html"
   },
   "Eyes": {
     "eye.html": ".\\Eyes\\eye.html"
@@ -263,51 +261,28 @@
     "index.html": ".\\Image Slide\\index.html"
   },
   "Image Slider": {
-    "Images": {},
     "Slider.html": ".\\Image Slider\\Slider.html"
   },
-  "Import": {
-    "Click-to-send (Work)": {
-      "dist": {
-        "index.html": ".\\Import\\Click-to-send (Work)\\dist\\index.html"
-      },
-      "src": {
-        "index.html": ".\\Import\\Click-to-send (Work)\\src\\index.html"
-      }
-    },
-    "CodePen_Export_vYmEpyj": {
-      "dist": {
-        "index.html": ".\\Import\\CodePen_Export_vYmEpyj\\dist\\index.html"
-      },
-      "src": {
-        "index.html": ".\\Import\\CodePen_Export_vYmEpyj\\src\\index.html"
-      }
-    },
-    "impossible-checkbox-v2": {
-      "dist": {
-        "index.html": ".\\Import\\impossible-checkbox-v2\\dist\\index.html"
-      },
-      "src": {}
-    },
-    "Personal Website #4": {
-      "Personal Website": {
-        "css": {},
-        "images": {
-          "works": {}
-        },
-        "index.html": ".\\Import\\Personal Website #4\\Personal Website\\index.html",
-        "js": {}
-      }
-    },
-    "Solar Explorer": {
-      "index.html": ".\\Import\\Solar Explorer\\index.html"
-    },
-    "Tic Tac Toe": {
-      "tic.html": ".\\Import\\Tic Tac Toe\\tic.html"
-    },
-    "Windows 11": {
-      "index.html": ".\\Import\\Windows 11\\index.html"
-    }
+  "Click-to-send (Work)": {
+    "index.html": ".\\Import\\Click-to-send (Work)\\src\\index.html"
+  },
+  "CodePen": {
+    "index.html": ".\\Import\\CodePen_Export_vYmEpyj\\src\\index.html"
+  },
+  "impossible-checkbox-v2": {
+    "index.html": ".\\Import\\impossible-checkbox-v2\\dist\\index.html"
+  },
+  "Personal Website": {
+    "index.html": ".\\Import\\Personal Website #4\\Personal Website\\index.html"
+  },
+  "Solar Explorer": {
+    "index.html": ".\\Import\\Solar Explorer\\index.html"
+  },
+  "Tic Tac Toe Imported": {
+    "tic.html": ".\\Import\\Tic Tac Toe\\tic.html"
+  },
+  "Windows 11": {
+    "index.html": ".\\Import\\Windows 11\\index.html"
   },
   "Independence Day": {
     "India.html": ".\\Independence Day\\India.html"
@@ -529,12 +504,7 @@
     "Text.html": ".\\Text Box Design\\Text.html"
   },
   "text-morph": {
-    "dist": {
-      "index.html": ".\\text-morph\\dist\\index.html"
-    },
-    "src": {
-      "index.html": ".\\text-morph\\src\\index.html"
-    }
+    "index.html": ".\\text-morph\\src\\index.html"
   },
   "Textual Face": {
     "text.html": ".\\Textual Face\\text.html"
