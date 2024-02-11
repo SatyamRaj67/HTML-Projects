@@ -283,15 +283,19 @@ span {
   text-transform: uppercase;
 }
 
-#cards {
+#cards,
+.cards {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  margin: 4px;
   max-width: 916px;
   width: calc(100% - 20px);
 }
 
-#cards:hover > .card::after {
+#cards,
+.cards:hover > .card::after {
   opacity: 1;
 }
 
@@ -412,7 +416,8 @@ span {
     letter-spacing: -0.3rem;
   }
 
-  #cards {
+  #cards,
+  .cards {
     max-width: 1000px;
     padding: 10px 0px;
   }
@@ -427,4 +432,17 @@ span {
   .card {
     width: 100%;
   }
+}
+
+.copyrightText {
+  width: 100%;
+  background: var(--background);
+  padding: 70px 100px 20px;
+  text-align: center;
+  color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.copyrightText p{
+  padding-top: 10px;
 }
