@@ -9,6 +9,7 @@
     "9.html": ".\\9 Apps\\9.html"
   },
   "A building Picture": {
+    "warning": true,
     "build.html": ".\\A building Picture\\build.html"
   },
   "Account Valid": {
@@ -32,7 +33,7 @@
   "App": {
     "Web.html": ".\\App\\Web.html"
   },
-  "cv": {
+  "CV": {
     "CV.html": ".\\App\\cv\\CV.html"
   },
   "Audio Player": {
@@ -367,9 +368,6 @@
   },
   "Mouse Word moves": {
     "mouse.html": ".\\Mouse Word moves\\mouse.html"
-  },
-  "My mother's profile": {
-    "profiles.html": ".\\My mother's profile\\profiles.html"
   },
   "My Profile Card": {
     "profile.html": ".\\My Profile Card\\profile.html"
