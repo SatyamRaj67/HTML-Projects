@@ -212,17 +212,6 @@ span {
   opacity: 50%;
 }
 
-@media screen and (max-width: 1000px) {
-  .title {
-    font-size: 4rem;
-  }
-
-  .title > p {
-    line-height: 5rem;
-    letter-spacing: -0.3rem;
-  }
-}
-
 .container {
   display: flex;
   justify-content: center;
@@ -412,6 +401,15 @@ span {
   body {
     align-items: flex-start;
     overflow: auto;
+  }
+
+  .title {
+    font-size: 4rem;
+  }
+
+  .title > p {
+    line-height: 5rem;
+    letter-spacing: -0.3rem;
   }
 
   #cards {
