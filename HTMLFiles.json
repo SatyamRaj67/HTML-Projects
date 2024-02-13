@@ -140,7 +140,8 @@
   },
   "Card Profile": {
     "name": "Card.html",
-    "path": ".\\Card Profile\\Card.html"
+    "path": ".\\Card Profile\\Card.html",
+    "class": "best"
   },
   "Card Tabs": {
     "name": "Card.html",

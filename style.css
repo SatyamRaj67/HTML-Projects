@@ -8,20 +8,20 @@
 }
 
 :root {
-  --bg-color: rgb(20, 20, 20);
-  --card-color: rgb(23, 23, 23);
-  --text: hsl(0, 0%, 99%);
-  --textDim: hsl(0, 0%, 60%);
-  --background: hsl(0, 0%, 7%);
-  --primary: hsl(155, 100%, 65%);
-  --primaryBg: hsla(155, 100%, 65%, 1%);
-  --primaryHi: hsla(155, 100%, 75%, 25%);
-  --primaryFg: hsl(155, 100%, 85%);
-  --secondary: hsl(156, 51%, 14%);
-  --secondaryFg: hsl(156, 51%, 75%);
-  --secondaryBg: hsla(156, 51%, 14%, 5%);
-  --secondaryHi: hsla(156, 51%, 30%, 50%);
-  --accent: hsl(155, 100%, 94%);
+  --bg-color: #141414;
+  --card-color: #171717;
+  --text: #fff;
+  --light-text: #ccc;
+  --dark-text: #333;
+  /* Top */
+  --primaryButton: hsl(155, 100%, 65%);
+  --primaryButtonBg: hsla(155, 100%, 65%, 1%);
+  --primaryButtonHi: hsla(155, 100%, 75%, 25%);
+  --primaryButtonFg: hsl(155, 100%, 85%);
+  --secondaryButton: hsl(156, 51%, 14%);
+  --secondaryButtonFg: hsl(156, 51%, 75%);
+  --secondaryButtonBg: hsla(156, 51%, 14%, 5%);
+  --secondaryButtonHi: hsla(156, 51%, 30%, 50%);
   --accentBg: hsla(155, 100%, 94%, 1%);
   --accentHi: hsla(155, 100%, 100%, 25%);
 }
@@ -62,7 +62,7 @@ section {
 .blur {
   height: 12rem;
   width: 12rem;
-  background-color: var(--primary);
+  background-color: var(--primaryButton);
   filter: blur(100px);
   border-radius: 100px;
   z-index: 0;
@@ -93,7 +93,7 @@ section {
 }
 
 .title > p:nth-child(2) {
-  color: var(--primary);
+  color: var(--primaryButton);
   align-self: flex-end;
 }
 
@@ -128,9 +128,9 @@ button {
   );
   border: none;
   border-radius: 13px;
-  background-color: var(--primaryBg);
-  box-shadow: 0px -3px 15px 0px var(--primaryHi) inset;
-  color: var(--primaryFg);
+  background-color: var(--primaryButtonBg);
+  box-shadow: 0px -3px 15px 0px var(--primaryButtonHi) inset;
+  color: var(--primaryButtonFg);
   font-family: "Manrope";
   font-size: 1rem;
   display: flex;
@@ -142,10 +142,10 @@ button {
   transition: all 0.2s ease;
 }
 
-span {
+.button > span {
   width: 100px;
   height: 60px;
-  background-color: var(--primaryHi);
+  background-color: var(--primaryButtonHi);
   border-radius: 100%;
   filter: blur(20px);
   position: absolute;
@@ -187,13 +187,13 @@ span {
 }
 
 .button.third > button {
-  background-color: var(--secondaryBg);
-  box-shadow: 0px -3px 15px 0px var(--secondary) inset;
-  color: var(--secondaryFg);
+  background-color: var(--secondaryButtonBg);
+  box-shadow: 0px -3px 15px 0px var(--secondaryButton) inset;
+  color: var(--secondaryButtonFg);
 }
 
 .button.third > span {
-  background-color: var(--secondaryHi);
+  background-color: var(--secondaryButtonHi);
 }
 
 .top-right {
@@ -212,7 +212,7 @@ span {
   opacity: 50%;
 }
 
-.container {
+.container-chevron {
   display: flex;
   justify-content: center;
   text-align: center;
@@ -285,6 +285,7 @@ span {
 
 #cards {
   position: relative;
+  padding-bottom: 4em;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
@@ -411,6 +412,125 @@ h2.status {
   width: 100%;
 }
 
+footer {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 50px 100px;
+  background: var(--bg-color);
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  z-index: -1;
+}
+
+footer .container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+footer .container .sec h2 {
+  position: relative;
+  color: var(--text);
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+footer .container .sec p {
+  color: var(--light-text);
+}
+
+footer .container .sci {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 50px);
+}
+
+footer .container .sci li {
+  list-style: none;
+}
+
+footer .container .sci li a {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  background: var(--text);
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+footer .container .sci li a i {
+  color: var(--card-color);
+  font-size: 20px;
+}
+
+footer .container .quicklinks {
+  position: relative;
+}
+
+footer .container .quicklinks ul li {
+  list-style: none;
+}
+
+footer .container .quicklinks ul li a {
+  color: var(--light-text);
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+footer .container .contact .info {
+  position: relative;
+}
+
+footer .container .contact .info li {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  margin-bottom: 16px;
+}
+
+footer .container .contact .info li span {
+  color: var(--light-text);
+  font-size: 20px;
+}
+
+footer .container .contact .info li a {
+  color: var(--light-text);
+  text-decoration: none;
+}
+
+.copyrightText {
+  position: relative;
+  top: 0px;
+  width: 100%;
+  background: var(--bg-color);
+  padding: 20px 100px 30px;
+  text-align: center;
+  color: var(--text);
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+a.best {
+  background: linear-gradient(45deg, #0ce36a, #69007f, #fc0987);
+}
+
+a.best::after {
+  content: " ";
+  background: linear-gradient(45deg, #0ce36a, #69007f, #fc0987);
+  transition: 0.5s;
+}
+
+a.best:hover::after {
+  filter: blur(20px);
+}
+
+a.no {
+  background: #f00;
+}
+
 /* -- ↓ ↓ ↓ some responsiveness ↓ ↓ ↓ -- */
 
 @media (max-width: 1000px) {
@@ -437,41 +557,32 @@ h2.status {
     flex-shrink: 1;
     width: calc(50% - 4px);
   }
-}
 
-@media (max-width: 500px) {
-  .card {
+  footer {
+    padding: 40px;
+  }
+
+  footer .container {
     width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+
+  .copyrightText {
+    padding: 20px 40px 30px;
   }
 }
 
-.copyrightText {
-  width: 100%;
-  background: var(--background);
-  padding: 70px 100px 20px;
-  text-align: center;
-  color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-}
+@media (max-width: 650px) {
+  .card {
+    width: 100%;
+  }
 
-.copyrightText p {
-  padding-top: 10px;
-}
-
-a.best {
-  background: linear-gradient(45deg, #0ce36a, #69007f, #fc0987);
-}
-
-a.best::after {
-  content: " ";
-  background: linear-gradient(45deg, #0ce36a, #69007f, #fc0987);
-  transition: 0.5s;
-}
-
-a.best:hover::after {
-  filter: blur(20px);
-}
-
-a.no {
-  background: #f00;
+  footer .container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+  }
 }
