@@ -372,6 +372,12 @@ span {
   margin: 0px;
 }
 
+h2.status {
+  font-size: 1em;
+  font-weight: 200;
+  color: #f00;
+}
+
 .card-info-wrapper {
   align-items: center;
   display: flex;
@@ -395,13 +401,13 @@ span {
   margin-top: 8px;
 }
 
-.imgBx{
+.imgBx {
   position: absolute;
   right: 15px;
   width: 50px;
 }
 
-.imgBx img{
+.imgBx img {
   width: 100%;
 }
 
@@ -450,4 +456,22 @@ span {
 
 .copyrightText p {
   padding-top: 10px;
+}
+
+a.best {
+  background: linear-gradient(45deg, #0ce36a, #69007f, #fc0987);
+}
+
+a.best::after {
+  content: " ";
+  background: linear-gradient(45deg, #0ce36a, #69007f, #fc0987);
+  transition: 0.5s;
+}
+
+a.best:hover::after {
+  filter: blur(20px);
+}
+
+a.no {
+  background: #f00;
 }
