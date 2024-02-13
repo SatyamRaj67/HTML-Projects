@@ -376,25 +376,33 @@ span {
   align-items: center;
   display: flex;
   flex-grow: 1;
-  justify-content: flex-start;
   padding: 0px 20px;
 }
 
 .card-info {
-  align-items: flex-start;
   display: flex;
   gap: 10px;
 }
 
-.card-info-title > h3 {
+.card-info-title h3 {
   font-size: 1.1em;
   line-height: 20px;
 }
 
-.card-info-title > h4 {
+.card-info-title h4 {
   color: rgba(255, 255, 255, 0.5);
   font-size: 0.85em;
   margin-top: 8px;
+}
+
+.imgBx{
+  position: absolute;
+  right: 15px;
+  width: 50px;
+}
+
+.imgBx img{
+  width: 100%;
 }
 
 /* -- ↓ ↓ ↓ some responsiveness ↓ ↓ ↓ -- */

@@ -13,6 +13,11 @@ fetch("HTML Files.json")
         html_code += `          <h3>${category}</h3>\n`;
         html_code += `          <h4>${info.name}</h4>\n`;
         html_code += "        </div>\n";
+        if (info.type) {
+          html_code += '<div class="imgBx">';
+          html_code += `     <img src="${info.type}" alt="Image">`;
+          html_code += "</div>"
+        }
         html_code += "      </div>\n";
         html_code += "    </div>\n";
         html_code += "  </div>\n";

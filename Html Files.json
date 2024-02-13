@@ -13,7 +13,8 @@
   },
   "A building Picture": {
     "name": "build.html",
-    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\A building Picture\\build.html"
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\A building Picture\\build.html",
+    "type": "warning-icon.svg"
   },
   "Account Valid": {
     "name": "a.html",
