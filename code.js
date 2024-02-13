@@ -1,4 +1,4 @@
-fetch("HTML Files.json")
+fetch("HTMLFiles.json")
   .then((response) => response.json())
   .then((data) => {
     let html_code = "";
