@@ -1,0 +1,779 @@
+{
+  "+ Box": {
+    "name": "+.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\+ Box\\+.html"
+  },
+  "2024 Countdown": {
+    "name": "2024.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\2024 Countdown\\2024.html"
+  },
+  "9 Apps": {
+    "name": "9.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\9 Apps\\9.html"
+  },
+  "A building Picture": {
+    "name": "build.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\A building Picture\\build.html"
+  },
+  "Account Valid": {
+    "name": "a.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Account Valid\\a.html"
+  },
+  "Aeroplane Getsetfly": {
+    "name": "aero.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Aeroplane Getsetfly\\aero.html"
+  },
+  "Animated Cards": {
+    "name": "Card.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Animated Cards\\Card.html"
+  },
+  "Animated Heart": {
+    "name": "an.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Animated Heart\\an.html"
+  },
+  "Animated Progress Bar": {
+    "name": "Animated.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Animated Progress Bar\\Animated.html"
+  },
+  "AnimeJS Playes": {
+    "name": "js.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\AnimeJS Playes\\js.html"
+  },
+  "AnimeJS Web": {
+    "name": "Web.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\AnimeJS Web\\Web.html"
+  },
+  "App": {
+    "name": "Web.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\App\\Web.html"
+  },
+  "CV": {
+    "name": "CV.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\App\\cv\\CV.html"
+  },
+  "Audio Player": {
+    "name": "au.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Audio Player\\au.html"
+  },
+  "Background Button": {
+    "name": "Button.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Background Button\\Button.html"
+  },
+  "Background Design": {
+    "name": "bac.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Background Design\\bac.html"
+  },
+  "Background Square": {
+    "name": "Square.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Background Square\\Square.html"
+  },
+  "Balance the ball": {
+    "name": "Balance.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Balance the ball\\Balance.html"
+  },
+  "Better Nav": {
+    "name": "nav.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Better Nav\\nav.html"
+  },
+  "Bg-Icon Change": {
+    "name": "Bg.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Bg-Icon Change\\Bg.html"
+  },
+  "BGMI": {
+    "name": "bgmi.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\BGMI\\bgmi.html"
+  },
+  "Bike Web": {
+    "name": "b.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Bike Web\\b.html"
+  },
+  "Book": {
+    "name": "Bo.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Book\\Bo.html"
+  },
+  "Border Effect": {
+    "name": "Border.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Border Effect\\Border.html"
+  },
+  "Box Menu": {
+    "name": "menu.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Box Menu\\menu.html"
+  },
+  "Breaking Image in 4": {
+    "name": "Break.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Breaking Image in 4\\Break.html"
+  },
+  "Bubbles!": {
+    "name": "Bub.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Bubbles!\\Bub.html"
+  },
+  "Button": {
+    "name": "b.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Button\\b.html"
+  },
+  "Button Corner": {
+    "name": "Button.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Button Corner\\Button.html"
+  },
+  "Button Ripple": {
+    "name": "ripple.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Button Ripple\\ripple.html"
+  },
+  "Calander": {
+    "name": "cal.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Calander\\cal.html"
+  },
+  "Calculator": {
+    "name": "calculator.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Calculator\\calculator.html"
+  },
+  "Card Border Glow": {
+    "name": "Card.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Card Border Glow\\Card.html"
+  },
+  "Card Hover": {
+    "name": "Card.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Card Hover\\Card.html"
+  },
+  "Card Profile": {
+    "name": "Card.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Card Profile\\Card.html"
+  },
+  "Card Tabs": {
+    "name": "Card.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Card Tabs\\Card.html"
+  },
+  "Card with Ribbion": {
+    "name": "ca.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Card with Ribbion\\ca.html"
+  },
+  "Cards": {
+    "name": "card.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Cards\\card.html"
+  },
+  "Change Background": {
+    "name": "ch.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Change Background\\ch.html"
+  },
+  "Changing Buttons": {
+    "name": "l.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Changing Buttons\\l.html"
+  },
+  "Character Counter": {
+    "name": "Counter.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Character Counter\\Counter.html"
+  },
+  "Circle Card": {
+    "name": "card.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Circle Card\\card.html"
+  },
+  "Circle Line Loading": {
+    "name": "ci.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Circle Line Loading\\ci.html"
+  },
+  "Circles revolving Circles": {
+    "name": "cir.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Circles revolving Circles\\cir.html"
+  },
+  "Clock": {
+    "name": "Clock.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Clock\\Clock.html"
+  },
+  "Clock Time": {
+    "name": "clock.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Clock Time\\clock.html"
+  },
+  "Coca-Cola Web": {
+    "name": "cocacola.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Coca-Cola Web\\cocacola.html"
+  },
+  "Coffee Switch": {
+    "name": "coffee.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Coffee Switch\\coffee.html"
+  },
+  "Colourful Line": {
+    "name": "Line.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Colourful Line\\Line.html"
+  },
+  "Colourful Wheel": {
+    "name": "Wheel.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Colourful Wheel\\Wheel.html"
+  },
+  "Contact Form": {
+    "name": "index.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Contact Form\\index.html"
+  },
+  "Cool Section": {
+    "name": "Section.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Cool Section\\Section.html"
+  },
+  "Country change": {
+    "name": "country.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Country change\\country.html"
+  },
+  "CSS IS AWESOME": {
+    "name": "css.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\CSS IS AWESOME\\css.html"
+  },
+  "Devices": {
+    "name": "de.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Devices\\de.html"
+  },
+  "Distortion": {
+    "name": "Dist.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Distortion\\Dist.html"
+  },
+  "Double Drop": {
+    "name": "Double.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Double Drop\\Double.html"
+  },
+  "Dropdown": {
+    "name": "Drop.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Dropdown\\Drop.html"
+  },
+  "Dropdown Navigation Bar": {
+    "name": "drop.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Dropdown Navigation Bar\\drop.html"
+  },
+  "Dynamic Calender": {
+    "name": "Dynamic.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Dynamic Calender\\Dynamic.html"
+  },
+  "Emoji Trail": {
+    "name": "Emoji.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Emoji Trail\\Emoji.html"
+  },
+  "Energy Ball": {
+    "name": "Energy.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Energy Ball\\Energy.html"
+  },
+  "Draggable Thingy": {
+    "name": "drag.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Errors\\Draggable Thingy\\drag.html"
+  },
+  "My Circling Text": {
+    "name": "circle.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Errors\\My Circling Text\\circle.html"
+  },
+  "Shooting Stars(Work)": {
+    "name": "shoot.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Errors\\Shooting Stars(Work)\\shoot.html"
+  },
+  "Solution Of Problems": {
+    "name": "sol.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Errors\\Solution Of Problems\\sol.html"
+  },
+  "Eyes": {
+    "name": "eye.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Eyes\\eye.html"
+  },
+  "Falling Leaves": {
+    "name": "Falling.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Falling Leaves\\Falling.html"
+  },
+  "Fingerprint Scanner": {
+    "name": "fingerprint.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Fingerprint Scanner\\fingerprint.html"
+  },
+  "Flex Image Gallery": {
+    "name": "Image.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Flex Image Gallery\\Image.html",
+    "img": {}
+  },
+  "Focus on Studies": {
+    "name": "focus.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Focus on Studies\\focus.html"
+  },
+  "Focus On Words": {
+    "name": "Focus.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Focus On Words\\Focus.html"
+  },
+  "Folding Designs": {
+    "name": "fold.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Folding Designs\\fold.html"
+  },
+  "Folding Image": {
+    "name": "Folding.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Folding Image\\Folding.html"
+  },
+  "Food Web": {
+    "name": "bl.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Food Web\\bl.html"
+  },
+  "Gaming Web": {
+    "name": "Game.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Gaming Web\\Game.html"
+  },
+  "Glassmorphin buttons": {
+    "name": "glass.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Glassmorphin buttons\\glass.html"
+  },
+  "Glowing Cards": {
+    "name": "card.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Glowing Cards\\card.html"
+  },
+  "Glowing Cards 3D": {
+    "name": "card.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Glowing Cards 3D\\card.html"
+  },
+  "Grid": {
+    "name": "Photo-Grid.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Grid\\Photo-Grid.html"
+  },
+  "Hacked Text": {
+    "name": "Text.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Hacked Text\\Text.html"
+  },
+  "Hacking Text": {
+    "name": "Hacking.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Hacking Text\\Hacking.html"
+  },
+  "Halloween": {
+    "name": "index.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Halloween\\index.html"
+  },
+  "Heart": {
+    "name": "heart.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Heart\\heart.html"
+  },
+  "Heart Throw": {
+    "name": "Heart.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Heart Throw\\Heart.html"
+  },
+  "Hinge Animation": {
+    "name": "hinge.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Hinge Animation\\hinge.html"
+  },
+  "Hole has surprise": {
+    "name": "ho.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Hole has surprise\\ho.html"
+  },
+  "Holi Offer": {
+    "name": "Happy.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Holi Offer\\Happy.html"
+  },
+  "Hover Cubes": {
+    "name": "Cubes.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Hover Cubes\\Cubes.html"
+  },
+  "Hover Login": {
+    "name": "Hover.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Hover Login\\Hover.html"
+  },
+  "Hover Trace": {
+    "name": "hover.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Hover Trace\\hover.html"
+  },
+  "Image Card": {
+    "name": "Card.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Image Card\\Card.html"
+  },
+  "Image Shadow": {
+    "name": "Image.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Image Shadow\\Image.html"
+  },
+  "Image Slide": {
+    "name": "index.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Image Slide\\index.html"
+  },
+  "Image Slider": {
+    "name": "Slider.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Image Slider\\Slider.html"
+  },
+  "Image Slider Js": {
+    "name": "index.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Image Slider Js\\index.html"
+  },
+  "Image Slider Slide": {
+    "name": "Image.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Image Slider Slide\\Image.html"
+  },
+  "Click-to-send (Work)": {
+    "name": "index.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Import\\Click-to-send (Work)\\dist\\index.html"
+  },
+  "CodePen_Export_vYmEpyj": {
+    "name": "index.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Import\\CodePen_Export_vYmEpyj\\dist\\index.html"
+  },
+  "impossible-checkbox-v2": {
+    "name": "index.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Import\\impossible-checkbox-v2\\dist\\index.html"
+  },
+  "Personal Website": {
+    "name": "index.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Import\\Personal Website #4\\Personal Website\\index.html"
+  },
+  "Solar Explorer": {
+    "name": "index.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Import\\Solar Explorer\\index.html"
+  },
+  "Tic Tac Toe Working": {
+    "name": "tic.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Import\\Tic Tac Toe\\tic.html"
+  },
+  "Windows 11": {
+    "name": "index.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Import\\Windows 11\\index.html"
+  },
+  "Independence Day": {
+    "name": "India.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Independence Day\\India.html"
+  },
+  "Infinite Line": {
+    "name": "Line.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Infinite Line\\Line.html"
+  },
+  "Infinity": {
+    "name": "Infi.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Infinity\\Infi.html"
+  },
+  "Instagram": {
+    "name": "in.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Instagram\\in.html"
+  },
+  "Intersecting Circle": {
+    "name": "Circle.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Intersecting Circle\\Circle.html"
+  },
+  "Intersection Magic": {
+    "name": "Magic.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Intersection Magic\\Magic.html"
+  },
+  "Intro Text": {
+    "name": "intro.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Intro Text\\intro.html"
+  },
+  "Inv Border Profile": {
+    "name": "profile.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Inv Border Profile\\profile.html"
+  },
+  "IPhone Call": {
+    "name": "Call.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\IPhone Call\\Call.html"
+  },
+  "Just keep rotating": {
+    "name": "l.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Just keep rotating\\l.html"
+  },
+  "Just Load It!": {
+    "name": "load.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Just Load It!\\load.html"
+  },
+  "Levitating Bg": {
+    "name": "Levitating.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Levitating Bg\\Levitating.html"
+  },
+  "Light and Night modes": {
+    "name": "light.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Light and Night modes\\light.html"
+  },
+  "List of people": {
+    "name": "li.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\List of people\\li.html"
+  },
+  "Loader": {
+    "name": "lo.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Loader\\lo.html"
+  },
+  "Loading Page": {
+    "name": "loading.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Loading Page\\loading.html"
+  },
+  "Login": {
+    "name": "login.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Login\\login.html"
+  },
+  "Login and Loading": {
+    "name": "lo.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Login and Loading\\lo.html"
+  },
+  "Love Face Balls": {
+    "name": "Love.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Love Face Balls\\Love.html"
+  },
+  "Magnetic Hover": {
+    "name": "Magnetic.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Magnetic Hover\\Magnetic.html"
+  },
+  "Memory Game": {
+    "name": "Game.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Memory Game\\Game.html"
+  },
+  "MOuse lOoks Covid-I9": {
+    "name": "corona.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\MOuse lOoks Covid-I9\\corona.html"
+  },
+  "Mouse Moves": {
+    "name": "move.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Mouse Moves\\move.html"
+  },
+  "Mouse Moves Bg": {
+    "name": "index.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Mouse Moves Bg\\index.html"
+  },
+  "Mouse Moves Node": {
+    "name": "mouse.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Mouse Moves Node\\mouse.html"
+  },
+  "Mouse Moves(advanced)": {
+    "name": "mouses.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Mouse Moves(advanced)\\mouses.html"
+  },
+  "Mouse Parallax": {
+    "name": "index.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Mouse Parallax\\index.html"
+  },
+  "Mouse Super Advanced": {
+    "name": "moves.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Mouse Super Advanced\\moves.html"
+  },
+  "Mouse Word moves": {
+    "name": "mouse.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Mouse Word moves\\mouse.html"
+  },
+  "My Profile Card": {
+    "name": "profile.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\My Profile Card\\profile.html"
+  },
+  "Nav Powered": {
+    "name": "Nav.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Nav Powered\\Nav.html"
+  },
+  "Nav with Circle": {
+    "name": "Nav.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Nav with Circle\\Nav.html"
+  },
+  "Neon button": {
+    "name": "neon.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Neon button\\neon.html"
+  },
+  "Nice Work": {
+    "name": "nice.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Nice Work\\nice.html"
+  },
+  "Password Meter": {
+    "name": "Password.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Password Meter\\Password.html"
+  },
+  "Password Valid": {
+    "name": "Pass.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Password Valid\\Pass.html"
+  },
+  "Photo Card": {
+    "name": "Card.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Photo Card\\Card.html"
+  },
+  "Picture Gallery": {
+    "name": "Picture.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Picture Gallery\\Picture.html"
+  },
+  "Planets": {
+    "name": "planets.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Planets\\planets.html"
+  },
+  "Play Video": {
+    "name": "Play.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Play Video\\Play.html"
+  },
+  "Poster": {
+    "name": "post.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Poster\\post.html"
+  },
+  "Progress Bar Report": {
+    "name": "pro.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Progress Bar Report\\pro.html"
+  },
+  "Push Notification": {
+    "name": "Notification.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Push Notification\\Notification.html"
+  },
+  "Radar": {
+    "name": "ra.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Radar\\ra.html"
+  },
+  "Radial Menu": {
+    "name": "Radial.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Radial Menu\\Radial.html"
+  },
+  "Radial Team": {
+    "name": "Team.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Radial Team\\Team.html"
+  },
+  "Rain Colours": {
+    "name": "Colour.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Rain Colours\\Colour.html"
+  },
+  "Rain Letter": {
+    "name": "Letter.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Rain Letter\\Letter.html"
+  },
+  "Rain Rain Go Away!": {
+    "name": "r.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Rain Rain Go Away!\\r.html"
+  },
+  "Rain Snow": {
+    "name": "Rain.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Rain Snow\\Rain.html"
+  },
+  "Range Slider": {
+    "name": "Range.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Range Slider\\Range.html"
+  },
+  "Responsive Footer": {
+    "name": "Footer.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Responsive Footer\\Footer.html"
+  },
+  "Responsive Image": {
+    "name": "index.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Responsive Image\\index.html"
+  },
+  "Responsive Nav": {
+    "name": "Responsive.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Responsive Nav\\Responsive.html"
+  },
+  "Ribbon Card": {
+    "name": "Card.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Ribbon Card\\Card.html"
+  },
+  "Rocket Science": {
+    "name": "ro.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Rocket Science\\ro.html"
+  },
+  "Rotator": {
+    "name": "ro.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Rotator\\ro.html"
+  },
+  "Scratch It!": {
+    "name": "scratch.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Scratch It!\\scratch.html"
+  },
+  "Scroll Anime": {
+    "name": "Scroll.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Scroll Anime\\Scroll.html"
+  },
+  "Scroll Cards": {
+    "name": "Card.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Scroll Cards\\Card.html"
+  },
+  "Search Box": {
+    "name": "search.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Search Box\\search.html"
+  },
+  "Shoe Buy": {
+    "name": "shoe.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Shoe Buy\\shoe.html"
+  },
+  "Sidebar": {
+    "name": "Side.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Sidebar\\Side.html"
+  },
+  "Slide Login": {
+    "name": "s.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Slide Login\\s.html"
+  },
+  "Smart Cursor": {
+    "name": "Cursor.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Smart Cursor\\Cursor.html"
+  },
+  "Smoke the words": {
+    "name": "smoke.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Smoke the words\\smoke.html"
+  },
+  "So Many Colors": {
+    "name": "color.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\So Many Colors\\color.html"
+  },
+  "Soft Card": {
+    "name": "so.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Soft Card\\so.html"
+  },
+  "Softy Card": {
+    "name": "so.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Softy Card\\so.html"
+  },
+  "Specialized Words": {
+    "name": "words.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Specialized Words\\words.html"
+  },
+  "Spin Wheel": {
+    "name": "Wheel.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Spin Wheel\\Wheel.html"
+  },
+  "Spliting Video": {
+    "name": "Split.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Spliting Video\\Split.html"
+  },
+  "Spread Ink": {
+    "name": "ink.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Spread Ink\\ink.html"
+  },
+  "Squid Games": {
+    "name": "squid.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Squid Games\\squid.html"
+  },
+  "Sticky Navigation": {
+    "name": "st.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Sticky Navigation\\st.html"
+  },
+  "Text Box Design": {
+    "name": "Text.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Text Box Design\\Text.html"
+  },
+  "text-morph": {
+    "name": "index.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\text-morph\\dist\\index.html"
+  },
+  "Textual Face": {
+    "name": "text.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Textual Face\\text.html"
+  },
+  "Thanos Snap": {
+    "name": "Thanos.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Thanos Snap\\Thanos.html"
+  },
+  "Thunderbolt": {
+    "name": "thunder.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Thunderbolt\\thunder.html"
+  },
+  "Tic Tac Toe": {
+    "name": "Tic.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Tic Tac Toe\\Tic.html"
+  },
+  "Tour Web": {
+    "name": "tour.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Tour Web\\tour.html"
+  },
+  "Turn the Lights": {
+    "name": "on.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Turn the Lights\\on.html"
+  },
+  "Water Drop": {
+    "name": "Water.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Water Drop\\Water.html"
+  },
+  "Wavy Texts 1": {
+    "name": "wavy.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Wavy Texts 1\\wavy.html"
+  },
+  "Wavy Texts 2": {
+    "name": "wave.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Wavy Texts 2\\wave.html"
+  },
+  "Wavy Texts 3": {
+    "name": "waves.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Wavy Texts 3\\waves.html"
+  },
+  "Winter Parallax": {
+    "name": "Winter.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\Winter Parallax\\Winter.html"
+  },
+  "World Tour": {
+    "name": "world.html",
+    "path": "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\World Tour\\world.html"
+  },
+  "404": {
+    "name": "404",
+    "path" : "C:\\Users\\HP\\OneDrive\\Documents\\Visual Studio Code\\Project\\404.html"
+  }
+}
