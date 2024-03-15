@@ -181,7 +181,8 @@
         <div class="sec aboutus">
           <h2>About Us</h2>
           <p>
-            This website is made by <b>Satyam Raj</b>. This is only created as a place to store all my works. It might contain some broken sites.
+            This website is made by <b>Satyam Raj</b>. This is only created as a
+            place to store all my works. It might contain some broken sites.
           </p>
           <ul class="sci">
             <li>
@@ -241,15 +242,20 @@
   </body>
   <script src="code.js"></script>
   <script>
-    document.getElementById("cards").onmousemove = (e) => {
-      for (const card of document.getElementsByClassName("card")) {
-        const rect = card.getBoundingClientRect(),
-          x = e.clientX - rect.left,
-          y = e.clientY - rect.top;
+    let timeoutId;
 
-        card.style.setProperty("--mouse-x", `${x}px`);
-        card.style.setProperty("--mouse-y", `${y}px`);
-      }
+    document.getElementById("cards").onmousemove = (e) => {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => {
+        for (const card of document.getElementsByClassName("card")) {
+          const rect = card.getBoundingClientRect(),
+            x = e.clientX - rect.left,
+            y = e.clientY - rect.top;
+
+          card.style.setProperty("--mouse-x", `${x}px`);
+          card.style.setProperty("--mouse-y", `${y}px`);
+        }
+      }, 2); // Adjust the debounce delay as needed (e.g., 10 milliseconds)
     };
   </script>
 </html>
