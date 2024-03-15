@@ -46,9 +46,17 @@
     "name": "Web.html",
     "path": ".\\AnimeJS Web\\Web.html"
   },
+  "Another Assignment": {
+    "name": "index.html",
+    "path": ".\\Another Assignment\\index.html"
+  },
   "App": {
     "name": "Web.html",
     "path": ".\\App\\Web.html"
+  },
+  "Assignment":{
+    "name": "Assignment.html",
+    "path": ".\\Assignment\\assignment.html"
   },
   "CV": {
     "name": "CV.html",
@@ -57,6 +65,10 @@
   "Audio Player": {
     "name": "au.html",
     "path": ".\\Audio Player\\au.html"
+  },
+  "Ayurvedic Website": {
+    "name": "index.html",
+    "path": ".\\Ayurvedic Website\\index.html"
   },
   "Background Button": {
     "name": "Button.html",
@@ -278,6 +290,10 @@
   "Fingerprint Scanner": {
     "name": "fingerprint.html",
     "path": ".\\Fingerprint Scanner\\fingerprint.html"
+  },
+  "Fire Ecology": {
+    "name": "Web.html",
+    "path": ".\\Fire Ecology\\Web.html"
   },
   "Flex Image Gallery": {
     "name": "Image.html",
@@ -579,6 +595,10 @@
   "Play Video": {
     "name": "Play.html",
     "path": ".\\Play Video\\Play.html"
+  },
+  "Portfolio": {
+    "name": "index.html",
+    "path": ".\\Portfolio\\index.html"
   },
   "Poster": {
     "name": "post.html",
