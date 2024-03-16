@@ -642,11 +642,6 @@ section.faq {
     font-family: fontAwesome;
 }
 
-.dark .themeSwitch::before {
-    content: '\f185';
-    font-family: fontAwesome;
-}
-
 .themeSwitch::after {
     content: 'Switch to Dark Web';
     position: absolute;
@@ -657,6 +652,11 @@ section.faq {
     font-weight: 300;
     letter-spacing: 1px;
     pointer-events: none;
+}
+
+.dark .themeSwitch::before {
+    content: '\f185';
+    font-family: fontAwesome;
 }
 
 .dark .themeSwitch::after {
