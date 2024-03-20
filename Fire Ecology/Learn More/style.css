@@ -214,18 +214,6 @@ hr{
     letter-spacing: 1px;
 }
 
-.main .topbar .toggle {
-    position: relative;
-    width: 60px;
-    height: 60px;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    color: var(--black);
-}
-
 /* new */
 .toggle{
     position: relative;
@@ -233,8 +221,7 @@ hr{
     left: 0;
     width: 100px;
     height: 100px;
-    background: var(--white2);
-    color: #333;
+    color: var(--black);
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -366,7 +353,7 @@ ol>li {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: #111;
+    color: var(--black);
 }
 
 ol {
