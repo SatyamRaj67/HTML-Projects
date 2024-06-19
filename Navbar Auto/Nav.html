@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header id="navbar">
+      <a href="#" class="logo">Your Logo</a>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </header>
+    <section>
+      <h2>
+        Scroll Aware Navigation Bar <br />
+        <span>Hide Header on Scroll Down, Show on Scroll Up</span>
+      </h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia velit modi
+        perspiciatis molestias, impedit sed nesciunt molestiae libero fugiat
+        dicta architecto similique tempore dignissimos exercitationem harum,
+        repellat voluptates maxime labore a soluta quidem! Ducimus consequuntur
+        maiores, laudantium molestiae laborum nisi minus eligendi officiis
+        tempore hic culpa, debitis dolor suscipit repellat non aut
+        reprehenderit, accusantium libero modi? Doloribus, totam in veritatis
+        amet et illo molestiae provident aperiam quos quod vel nam temporibus
+        harum ratione. Fugiat dolor dolores accusantium eligendi explicabo
+        corrupti doloremque perferendis similique iste voluptatibus velit,
+        expedita officia tenetur mollitia rerum at consequuntur aliquam possimus
+        asperiores. Repellat alias commodi placeat, accusamus eligendi iste
+        asperiores distinctio doloribus, magnam ipsa facilis modi nisi veniam.
+        Quasi, magni quae expedita quaerat ratione at est laboriosam ipsa totam?
+        Rem in ullam aspernatur beatae, illum recusandae deleniti accusamus eum
+        vel dolorum architecto eaque? Distinctio dicta nam reprehenderit libero
+        cupiditate possimus fugit nesciunt consequuntur ipsum velit magni magnam
+        doloremque architecto laboriosam porro maiores eveniet ad, quam dolores.
+        Necessitatibus, ipsam enim placeat magnam accusamus unde officiis
+        inventore labore eaque amet veritatis quidem aspernatur fugit earum
+        neque vel beatae blanditiis veniam quia. Sit est fugit perspiciatis
+        inventore itaque, beatae pariatur id delectus, incidunt repudiandae
+        aspernatur dolore ex tenetur nihil?
+        <br /><br />
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius enim
+        dolore, quos, molestiae voluptatibus deleniti recusandae corrupti
+        laudantium ab, ducimus odio eligendi autem error amet? Ullam reiciendis
+        soluta corporis qui, voluptatem maxime illo quisquam cumque! Provident
+        officiis dolore repudiandae. Repudiandae corrupti ex est deleniti. Quos
+        placeat obcaecati ad ratione unde quibusdam. Sed modi eum ipsum
+        aspernatur minus praesentium. Sunt molestias, esse sit voluptas fuga
+        reprehenderit nulla voluptatem illo distinctio cumque placeat aut quo
+        facilis rem officia dolore non tempora reiciendis! Necessitatibus error
+        soluta neque sint eius facere enim ducimus, sed voluptate veritatis!
+        Dolores pariatur eaque officiis! Eligendi ipsum hic iure error eum?
+        Aliquam tenetur vitae perferendis nam excepturi, ab suscipit doloribus
+        sed odit deleniti quisquam ut recusandae cumque temporibus explicabo
+        assumenda itaque unde vel expedita possimus animi culpa maiores! Dolorem
+        nisi quidem modi exercitationem, doloribus dignissimos sit alias iusto
+        molestiae excepturi nam fugit nihil qui eos deleniti expedita ratione
+        provident! Corrupti maxime tempora dicta ratione itaque laboriosam,
+        quasi ipsam voluptatum autem eius culpa quia a officia laudantium amet
+        nesciunt tempore! Cum, veritatis! Nulla adipisci odio, quisquam nostrum
+        optio facere dolores impedit, repudiandae laborum minus, nobis modi
+        laboriosam nam at eos inventore. Accusamus dolorem veniam eos, eaque
+        tempore commodi sunt sequi.
+      </p>
+    </section>
+  </body>
+  <script>
+    let lastScrollTop = 0;
+    navbar = document.getElementById("navbar");
+    window.addEventListener("scroll", function () {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      if (scrollTop > lastScrollTop) {
+        navbar.classList.add("active");
+      } else {
+        navbar.classList.remove("active");
+      }
+      lastScrollTop = scrollTop
+    });
+  </script>
+</html>
