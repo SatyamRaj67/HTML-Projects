@@ -54,7 +54,7 @@
     "name": "Web.html",
     "path": ".\\App\\Web.html"
   },
-  "Assignment":{
+  "Assignment": {
     "name": "Assignment.html",
     "path": ".\\Assignment\\assignment.html"
   },
@@ -563,6 +563,10 @@
   "Nav with Circle": {
     "name": "Nav.html",
     "path": ".\\Nav with Circle\\Nav.html"
+  },
+  "Navbar Auto": {
+    "name": "Nav.html",
+    "path": ".\\Navbar Auto\\Nav.html"
   },
   "Neon button": {
     "name": "neon.html",
