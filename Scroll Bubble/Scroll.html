@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Bubble.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section data-start="0" data-end="1000">
+      <img src="Pic (1).jpg" />
+    </section>
+    <section data-start="1000" data-end="2000">
+      <img src="Pic (2).jpg" />
+    </section>
+    <section data-start="2000" data-end="3000">
+      <img src="Pic (3).jpg" />
+    </section>
+    <section data-start="3000" data-end="4000">
+      <img src="Pic (4).jpg" />
+    </section>
+    <section data-start="4000" data-end="5000">
+      <img src="Pic (5).jpg" />
+    </section>
+    <section data-start="5000" data-end="6000">
+      <img src="Pic (6).jpg" />
+    </section>
+  </body>
+  <script>
+    document.addEventListener("scroll", () => {
+      let sections = document.querySelectorAll("section");
+      let scrollPosition = window.scrollY;
+      sections.forEach((section) => {
+        let start = parseInt(section.getAttribute("data-start"));
+        let end = parseInt(section.getAttribute("data-end"));
+
+        if (scrollPosition >= start && scrollPosition <= end) {
+          let progress = (scrollPosition - start) / (end - start);
+          let clipPathSize = Math.max(0, 1000 * progress);
+          section.style.clipPath = `circle(${clipPathSize}px at center)`;
+        } else if (scrollPosition < start){
+            section.style.clipPath = `circle(0px at center)`
+        } else if (scrollPosition > end){
+            section.style.clipPath = `circle(1000px at center)`
+        }
+      });
+    });
+  </script>
+</html>
