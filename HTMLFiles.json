@@ -30,6 +30,10 @@
     "name": "Card.html",
     "path": ".\\Animated Cards\\Card.html"
   },
+  "Animated Circles": {
+    "name": "Circles.html",
+    "path": ".\\Animated Circles\\Circles.html"
+  },
   "Animated Heart": {
     "name": "an.html",
     "path": ".\\Animated Heart\\an.html"
@@ -55,7 +59,7 @@
     "path": ".\\App\\Web.html"
   },
   "Assignment": {
-    "name": "Assignment.html",
+    "name": "assignment.html",
     "path": ".\\Assignment\\assignment.html"
   },
   "CV": {
@@ -77,6 +81,10 @@
   "Background Design": {
     "name": "bac.html",
     "path": ".\\Background Design\\bac.html"
+  },
+  "Background JS": {
+    "name": "Main.html",
+    "path": ".\\Background JS\\Main.html"
   },
   "Background Square": {
     "name": "Square.html",
@@ -145,6 +153,10 @@
   "Card Border Glow": {
     "name": "Card.html",
     "path": ".\\Card Border Glow\\Card.html"
+  },
+  "Card Curvy": {
+    "name": "Card.html",
+    "path": ".\\Card Curvy\\Card.html"
   },
   "Card Hover": {
     "name": "Card.html",
@@ -242,6 +254,10 @@
   "Double Drop": {
     "name": "Double.html",
     "path": ".\\Double Drop\\Double.html"
+  },
+  "Drag and Drop": {
+    "name": "Drag.html",
+    "path": ".\\Drag and Drop\\Drag.html"
   },
   "Dropdown": {
     "name": "Drop.html",
@@ -616,6 +632,10 @@
     "name": "Notification.html",
     "path": ".\\Push Notification\\Notification.html"
   },
+  "Puzzle Solve": {
+    "name": "Puzzle.html",
+    "path": ".\\Puzzle Solve\\Puzzle.html"
+  },
   "Radar": {
     "name": "ra.html",
     "path": ".\\Radar\\ra.html"
@@ -679,6 +699,10 @@
   "Scroll Anime": {
     "name": "Scroll.html",
     "path": ".\\Scroll Anime\\Scroll.html"
+  },
+  "Scroll Bubble": {
+    "name": "Scroll.html",
+    "path": ".\\Scroll Bubble\\Scroll.html"
   },
   "Scroll Cards": {
     "name": "Card.html",

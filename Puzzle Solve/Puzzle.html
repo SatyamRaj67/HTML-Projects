@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Solve.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section>
+      <h2>Scroll Down</h2>
+      <div class="image-container"></div>
+    </section>
+  </body>
+  <script>
+    let imageUrl = "img.jpg";
+    let container = document.querySelector(".image-container");
+    let sliceWidth = 20;
+    let sliceHeight = 20;
+    let rows = 20;
+    let cols = 20;
+    let slices = [];
+
+    for (let row = 0; row < rows; row++) {
+      for (let col = 0; col < cols; col++) {
+        let span = document.createElement("span");
+        span.classList.add("image-slice");
+        span.style.top = `${row * sliceHeight}px`;
+        span.style.left = `${col * sliceHeight}px`;
+        span.style.width = `${sliceWidth}px`;
+        span.style.height = `${sliceHeight}px`;
+        span.style.backgroundImage = `url(${imageUrl})`;
+        span.style.backgroundPosition = `-${col * sliceWidth}px -${
+          row * sliceHeight
+        }px`;
+        container.appendChild(span);
+        slices.push(span);
+      }
+    }
+
+    window.addEventListener("scroll", () => {
+      let scrollPosition = window.scrollY;
+      slices.forEach((slice, index) => {
+        if (scrollPosition >= index * 3/5) {
+          slice.style.transform = `translate(0,0) rotate(0deg)`;
+        } else {
+          slice.style.transform = `translate(${Math.random() * 100 - 50}vw, ${
+            Math.random() * 100 - 50
+          }vh) rotate(${Math.random() * 360}deg)`;
+        }
+      });
+    });
+  </script>
+</html>
