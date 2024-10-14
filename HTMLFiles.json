@@ -195,6 +195,10 @@
     "name": "Counter.html",
     "path": ".\\Character Counter\\Counter.html"
   },
+  "Check Box": {
+    "name": "Check.html",
+    "path": ".\\Check Box\\Check.html"
+  },
   "Circle Card": {
     "name": "card.html",
     "path": ".\\Circle Card\\card.html"
