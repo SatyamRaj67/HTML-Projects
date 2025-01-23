@@ -700,6 +700,10 @@
     "name": "ro.html",
     "path": ".\\Rotator\\ro.html"
   },
+  "Sanskriti": {
+    "name": "Employment.html",
+    "path": ".\\Sanskriti\\Employment.html"
+  },
   "Scratch It!": {
     "name": "scratch.html",
     "path": ".\\Scratch It!\\scratch.html"
