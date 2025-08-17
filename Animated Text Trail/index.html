@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="styles.css"
+    />
+  </head>
+  <body>
+    <div class="cursor"></div>
+  </body>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+    integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      let cursor = document.querySelector(".cursor");
+
+      let textContent = "SATYAM IS OVERPOWERED";
+
+      for (let i = 0; i < textContent.length; i++) {
+        let span = document.createElement("span");
+        span.classList.add("text");
+        span.style.setProperty("--i", i + 1);
+        span.style.left = i * 0.6 + "em";
+        span.textContent = textContent[i];
+        span.style.filter = `hue-rotate(${i * 10}deg)`;
+        cursor.appendChild(span);
+      }
+
+      // Mousemove event to animate the text with GSAP
+      document.addEventListener("mousemove", (e) => {
+        gsap.to(".text", {
+          x: e.clientX,
+          y: e.clientY,
+          stagger: 0.05,
+        });
+      });
+    });
+  </script>
+</html>

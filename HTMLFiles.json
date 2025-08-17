@@ -42,6 +42,10 @@
     "name": "Animated.html",
     "path": ".\\Animated Progress Bar\\Animated.html"
   },
+  "Animated Text Trail": {
+    "name": "index.html",
+    "path": ".\\Animated Text Trail\\index.html"
+  },
   "AnimeJS Playes": {
     "name": "js.html",
     "path": ".\\AnimeJS Playes\\js.html"
@@ -427,6 +431,10 @@
     "name": "index.html",
     "path": ".\\Image Slider Js\\index.html"
   },
+  "Image Slider Responsive": {
+    "name": "index.html",
+    "path": ".\\Image Slider Responsive\\index.html"
+  },
   "Image Slider Slide": {
     "name": "Image.html",
     "path": ".\\Image Slider Slide\\Image.html"
@@ -495,6 +503,10 @@
     "name": "Call.html",
     "path": ".\\IPhone Call\\Call.html"
   },
+  "Isometric Box": {
+    "name": "index.html",
+    "path": ".\\Isometric Box\\index.html"
+  },
   "Just keep rotating": {
     "name": "l.html",
     "path": ".\\Just keep rotating\\l.html"
@@ -542,6 +554,10 @@
   "Memory Game": {
     "name": "Game.html",
     "path": ".\\Memory Game\\Game.html"
+  },
+  "Menu Toggle": {
+    "name": "index.html",
+    "path": ".\\Menu Toggle\\index.html"
   },
   "MOuse lOoks Covid-I9": {
     "name": "corona.html",

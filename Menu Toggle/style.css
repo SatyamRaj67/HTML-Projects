@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #2e373e;
+}
+
+.toggle{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.toggle span{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(45deg);
+    transition: 0.5s;
+}
+
+.toggle.active span{
+    transform: rotate(135deg);
+    transition-delay: 0.5s;
+}
+
+.toggle span::before{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 3px;
+    background: #fff;
+    border-radius: 3px;
+    transition: 0.5s;
+}
+
+.toggle.active span::before{
+    transform: rotate(-270deg);
+    transition-delay: 1s;
+}
+
+.toggle span::after{
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    border-radius: 3px;
+    transition: 0.5s;
+    transform: translateY(-12px);
+    box-shadow: 0 24px #fff;
+}
+
+.toggle.active span::after{
+    width: 40px;
+    transform: translateY(0);
+    box-shadow: 0 0 #fff;
+}

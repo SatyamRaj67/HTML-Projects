@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1"
+    />
+    <title>Isometric Cube — Mouse Perspective</title>
+    <style>
+      :root {
+        --size: 180px;
+        --front: #4a8cff;
+        --top: #7fb0ff;
+        --right: #2c6be6;
+        --bg: #0f1724;
+      }
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        background: linear-gradient(180deg, var(--bg) 0%, #071021 100%);
+        font-family: Inter, system-ui, Segoe UI, Roboto, Arial;
+      }
+      .stage {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* scene */
+      .scene {
+        width: 420px;
+        height: 360px;
+        perspective: 1100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* cube wrapper */
+      .cube-wrap {
+        width: var(--size);
+        height: var(--size);
+        position: relative;
+        transform-style: preserve-3d;
+        transition: transform 0.2s ease-out;
+      }
+
+      /* cube faces */
+      .cube {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+      }
+      .face {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        border: 1px solid rgba(0, 0, 0, 0.12);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.85);
+        text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+      }
+      .face.front {
+        background: var(--front);
+        transform: translateZ(calc(var(--size) / 2));
+      }
+      .face.back {
+        background: #1d3be6;
+        transform: rotateY(180deg) translateZ(calc(var(--size) / 2));
+      }
+      .face.right {
+        background: var(--right);
+        transform: rotateY(90deg) translateZ(calc(var(--size) / 2));
+      }
+      .face.left {
+        background: #0b2e8a;
+        transform: rotateY(-90deg) translateZ(calc(var(--size) / 2));
+      }
+      .face.top {
+        background: var(--top);
+        transform: rotateX(90deg) translateZ(calc(var(--size) / 2));
+      }
+      .face.bottom {
+        background: #1034b2;
+        transform: rotateX(-90deg) translateZ(calc(var(--size) / 2));
+      }
+
+      .shadow {
+        position: absolute;
+        left: 50%;
+        top: 72%;
+        width: 220px;
+        height: 22px;
+        background: radial-gradient(
+          closest-side,
+          rgba(0, 0, 0, 0.45),
+          transparent
+        );
+        transform: translateX(-50%);
+        filter: blur(8px);
+        opacity: 0.7;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="stage">
+      <div class="scene">
+        <div
+          class="cube-wrap"
+          id="wrap"
+        >
+          <div class="cube">
+            <div class="face top">TOP</div>
+            <div class="face front">FRONT</div>
+            <div class="face right">RIGHT</div>
+            <div class="face left">LEFT</div>
+            <div class="face back">BACK</div>
+            <div class="face bottom">BOTTOM</div>
+          </div>
+          <div class="shadow"></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        const wrap = document.getElementById("wrap");
+        let rotX = 30,
+          rotY = -30; // base isometric angle
+        const maxTilt = 8; // degrees
+
+        window.addEventListener("mousemove", (e) => {
+          const { innerWidth: w, innerHeight: h } = window;
+          const offsetX = (e.clientX / w - 0.5) * 2; // -1 to 1
+          const offsetY = (e.clientY / h - 0.5) * 2;
+          const tiltX = rotX - offsetY * maxTilt;
+          const tiltY = rotY + offsetX * maxTilt;
+          wrap.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+        });
+
+        // initialize position
+        wrap.style.transform = `rotateX(${rotX}deg) rotateY(${rotY}deg)`;
+      })();
+    </script>
+  </body>
+</html>

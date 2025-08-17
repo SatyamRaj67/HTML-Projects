@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="styles.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="slider">
+        <div
+          class="slides"
+          style="--img: url('img1.jpg')"
+        >
+          <div class="content">
+            <h2>Slide 01</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+              sunt nisi voluptatum error fugiat veniam quis, iusto similique
+            </p>
+          </div>
+        </div>
+        <div
+          class="slides"
+          style="--img: url('img2.jpg')"
+        >
+          <div class="content">
+            <h2>Slide 02</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+              sunt nisi voluptatum error fugiat veniam quis, iusto similique
+            </p>
+          </div>
+        </div>
+        <div
+          class="slides"
+          style="--img: url('img3.jpg')"
+        >
+          <div class="content">
+            <h2>Slide 03</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+              sunt nisi voluptatum error fugiat veniam quis, iusto similique
+            </p>
+          </div>
+        </div>
+        <div
+          class="slides"
+          style="--img: url('img4.jpg')"
+        >
+          <div class="content">
+            <h2>Slide 04</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+              sunt nisi voluptatum error fugiat veniam quis, iusto similique
+            </p>
+          </div>
+        </div>
+        <div
+          class="slides"
+          style="--img: url('img5.jpg')"
+        >
+          <div class="content">
+            <h2>Slide 05</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+              sunt nisi voluptatum error fugiat veniam quis, iusto similique
+            </p>
+          </div>
+        </div>
+        <div
+          class="slides"
+          style="--img: url('img6.jpg')"
+        >
+          <div class="content">
+            <h2>Slide 06</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+              sunt nisi voluptatum error fugiat veniam quis, iusto similique
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="buttons">
+        <span class="prev"></span>
+        <span class="next"></span>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    let next = document.querySelector(".next");
+    let prev = document.querySelector(".prev");
+    let slider = document.querySelector(".slider");
+
+    next.addEventListener("click", () => {
+      let slides = document.querySelectorAll(".slides");
+      slider.appendChild(slides[0]);
+    });
+
+    prev.addEventListener("click", () => {
+      let slides = document.querySelectorAll(".slides");
+      slider.prepend(slides[slides.length - 1]);
+    });
+  </script>
+</html>
