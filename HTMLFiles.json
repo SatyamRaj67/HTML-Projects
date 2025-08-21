@@ -387,6 +387,10 @@
     "name": "Heart.html",
     "path": ".\\Heart Throw\\Heart.html"
   },
+  "Hexagon Background": {
+    "name": "index.html",
+    "path": ".\\Hexagon Background\\index.html"
+  },
   "Hinge Animation": {
     "name": "hinge.html",
     "path": ".\\Hinge Animation\\hinge.html"
@@ -550,6 +554,10 @@
   "Magnetic Hover": {
     "name": "Magnetic.html",
     "path": ".\\Magnetic Hover\\Magnetic.html"
+  },
+  "Matrix Background": {
+    "name": "index.html",
+    "path": ".\\Matrix Background\\index.html"
   },
   "Memory Game": {
     "name": "Game.html",
