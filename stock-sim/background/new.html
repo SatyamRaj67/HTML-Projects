@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Enhanced Space Rays - Improved</title>
+    <style>
+      :root {
+        --ink: 255, 255, 255;
+      }
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        background: #090b10;
+        overflow: hidden;
+        cursor: crosshair;
+        font-family: 'Courier New', monospace;
+      }
+      canvas {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+      .help {
+        position: fixed;
+        bottom: 10px;
+        left: 10px;
+        font-family: monospace;
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 12px;
+        pointer-events: none;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        line-height: 1.4;
+      }
+      .controls {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        font-family: monospace;
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 11px;
+        pointer-events: none;
+        text-align: right;
+        text-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+      }
+      .fps {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        font-family: monospace;
+        color: rgba(0, 255, 100, 0.7);
+        font-size: 11px;
+        pointer-events: none;
+        text-shadow: 0 0 8px rgba(0, 255, 100, 0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="space"></canvas>
+    <div class="fps" id="fps">FPS: --</div>
+    <div class="help">
+      [SPACE] Pause | [R] Regenerate | [D] Diagonals | [B] Breathe<br>
+      [P] Parallax | [N] Nebula | [S] Shooting Stars | [C] Click Nova<br>
+      [T] Trail | [G] Galaxies | [A] Aurora | [W] Wormholes | [V] Void
+    </div>
+    <div class="controls">
+      Effects: <span id="effects-status">All Active</span><br>
+      Stars: <span id="star-count">0</span><br>
+      Quality: <span id="quality">High</span>
+    </div>
+
+    <script>
+      (() => {
+        const canvas = document.getElementById("space");
+        const ctx = canvas.getContext("2d", {
+          alpha: false,
+          desynchronized: true,
+        });
+
+        // --- ENHANCED CONFIGURATION ---
+        const CONFIG = {
+          // Star Generation
+          MIN_STARS: 400,
+          MAX_STARS: 1200,
+          TARGET_AREA_PER_STAR: 40000,
+          MIN_SEP: 20,
+
+          // Star Appearance & Motion
+          STAR_COLORS: [
+            "255, 255, 255",    // White
+            "200, 220, 255",    // Pale Blue
+            "255, 240, 220",    // Faint Yellow
+            "255, 200, 200",    // Soft Red
+            "200, 255, 200",    // Soft Green
+            "255, 220, 180",    // Warm Orange
+          ],
+          RAY_GAP: 1,
+          PARALLAX_STRENGTH: 1.2,
+
+          // Effects
+          ENABLE_DIAGONALS: true,
+          ENABLE_BREATHE: true,
+          ENABLE_PARALLAX: true,
+          ENABLE_NEBULA: true,
+          ENABLE_SHOOTING_STARS: true,
+          ENABLE_CLICK_NOVA: true,
+          ENABLE_MOUSE_TRAIL: true,
+          ENABLE_GALAXIES: true,
+          ENABLE_AURORA: true,
+          ENABLE_WORMHOLES: false,
+          ENABLE_VOID_DISTORTION: false,
+
+          // Enhanced Effect Config
+          SHOOTING_STAR_CHANCE: 0.001,
+          SHOOTING_STAR_SPEED: 18,
+          SHOOTING_STAR_FADE_RATE: 0.94,
+          
+          NOVA_PARTICLES: 120,
+          NOVA_LIFESPAN: 2.0,
+          NOVA_SHOCKWAVE_SPEED: 400,
+          NOVA_CORE_LIFESPAN_RATIO: 0.2,
+          NOVA_SHAPE_POINTS: 16,
+          
+          TRAIL_PARTICLES: 40,
+          TRAIL_LIFESPAN: 0.6,
+
+          // New Effects
+          GALAXY_COUNT: 3,
+          GALAXY_ROTATION_SPEED: 0.1,
+          AURORA_WAVE_COUNT: 4,
+          AURORA_INTENSITY: 0.3,
+          WORMHOLE_COUNT: 1,
+          WORMHOLE_ROTATION_SPEED: 0.5,
+          VOID_STRENGTH: 0.1,
+
+          // Performance
+          QUALITY_HIGH: true,
+          FPS_TARGET: 60,
+        };
+
+        let cssW = 0, cssH = 0, dpr = 1;
+        let stars = [];
+        let shootingStars = [];
+        let novas = [];
+        let trail = [];
+        let galaxies = [];
+        let aurora = [];
+        let wormholes = [];
+        let nebulaCanvas = null;
+        let running = true;
+        let lastTime = 0;
+        let frameCount = 0;
+        let lastFPSTime = 0;
+        let currentFPS = 0;
+
+        // Enhanced mouse tracking
+        let mouse = { 
+          x: 0, y: 0, dx: 0, dy: 0, 
+          prevX: 0, prevY: 0, 
+          velocity: 0, angle: 0 
+        };
+
+        const rand = (a, b) => a + Math.random() * (b - a);
+        const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+        const lerp = (a, b, t) => a + (b - a) * t;
+        const smoothstep = (t) => t * t * (3 - 2 * t);
+
+        // --- INITIALIZATION ---
+
+        function resize() {
+          cssW = window.innerWidth;
+          cssH = window.innerHeight;
+          dpr = Math.max(1, Math.min(2, window.devicePixelRatio || 1));
+          canvas.width = Math.floor(cssW * dpr);
+          canvas.height = Math.floor(cssH * dpr);
+
+          generateStars();
+          if (CONFIG.ENABLE_NEBULA) generateNebula();
+          if (CONFIG.ENABLE_GALAXIES) generateGalaxies();
+          if (CONFIG.ENABLE_AURORA) generateAurora();
+          if (CONFIG.ENABLE_WORMHOLES) generateWormholes();
+        }
+
+        function generateStars() {
+          const target = clamp(
+            Math.round((cssW * cssH) / CONFIG.TARGET_AREA_PER_STAR),
+            CONFIG.MIN_STARS,
+            CONFIG.MAX_STARS
+          );
+          const pts = [];
+          let attempts = 0, maxAttempts = target * 50;
+
+          while (pts.length < target && attempts++ < maxAttempts) {
+            const x = Math.random() * cssW;
+            const y = Math.random() * cssH;
+            let ok = true;
+            for (let i = 0; i < pts.length; i++) {
+              const dx = pts[i].x - x, dy = pts[i].y - y;
+              if (dx * dx + dy * dy < CONFIG.MIN_SEP * CONFIG.MIN_SEP) {
+                ok = false;
+                break;
+              }
+            }
+            if (ok) pts.push({ x, y });
+          }
+
+          stars = pts.map((p) => {
+            const depth = Math.pow(Math.random(), 1.8);
+            const len = clamp(1 + Math.round(depth * 6), 1, 8);
+            const starType = Math.random();
+            return {
+              x: p.x, y: p.y, px: p.x, py: p.y,
+              depth, len,
+              color: CONFIG.STAR_COLORS[Math.floor(Math.random() * CONFIG.STAR_COLORS.length)],
+              alpha: 0.4 + 0.5 * depth,
+              wobble: rand(0.5, 1.5),
+              twinkle: rand(1.5, 6),
+              phase: rand(0, Math.PI * 2),
+              vx: rand(-0.03, 0.03),
+              vy: rand(-0.03, 0.03),
+              type: starType < 0.05 ? 'pulsar' : starType < 0.15 ? 'giant' : 'normal',
+              pulsarSpeed: rand(2, 8),
+              temperature: rand(3000, 40000), // Kelvin for realistic color
+            };
+          });
+
+          document.getElementById('star-count').textContent = stars.length;
+        }
+
+        function generateNebula() {
+          nebulaCanvas = document.createElement("canvas");
+          nebulaCanvas.width = canvas.width;
+          nebulaCanvas.height = canvas.height;
+          const nebCtx = nebulaCanvas.getContext("2d");
+          nebCtx.globalCompositeOperation = "lighter";
+
+          const numClouds = Math.floor(rand(20, 35));
+          for (let i = 0; i < numClouds; i++) {
+            const x = rand(-nebulaCanvas.width * 0.2, nebulaCanvas.width * 1.2);
+            const y = rand(-nebulaCanvas.height * 0.2, nebulaCanvas.height * 1.2);
+            const r1 = rand(80, 300) * dpr;
+            const r2 = rand(r1, nebulaCanvas.width * 0.6);
+
+            const grad = nebCtx.createRadialGradient(x, y, r1, x, y, r2);
+            const hue = rand(180, 320);
+            const intensity = rand(0.03, 0.2);
+            grad.addColorStop(0, `hsla(${hue}, ${rand(40, 80)}%, ${rand(20, 60)}%, ${intensity})`);
+            grad.addColorStop(0.7, `hsla(${hue}, ${rand(30, 70)}%, ${rand(15, 45)}%, ${intensity * 0.3})`);
+            grad.addColorStop(1, `hsla(${hue}, 50%, 20%, 0)`);
+
+            nebCtx.fillStyle = grad;
+            nebCtx.fillRect(0, 0, nebulaCanvas.width, nebulaCanvas.height);
+          }
+        }
+
+        function generateGalaxies() {
+          galaxies = [];
+          for (let i = 0; i < CONFIG.GALAXY_COUNT; i++) {
+            galaxies.push({
+              x: rand(cssW * 0.2, cssW * 0.8),
+              y: rand(cssH * 0.2, cssH * 0.8),
+              rotation: rand(0, Math.PI * 2),
+              arms: Math.floor(rand(2, 5)),
+              size: rand(100, 300),
+              particles: [],
+            });
+          }
+
+          galaxies.forEach(galaxy => {
+            for (let i = 0; i < 150; i++) {
+              const arm = Math.floor(rand(0, galaxy.arms));
+              const armAngle = (arm / galaxy.arms) * Math.PI * 2;
+              const distance = Math.pow(Math.random(), 0.7) * galaxy.size;
+              const angle = armAngle + distance * 0.01 + rand(-0.3, 0.3);
+              
+              galaxy.particles.push({
+                distance,
+                angle,
+                brightness: rand(0.1, 0.8),
+                color: rand(0, galaxy.arms) / galaxy.arms,
+              });
+            }
+          });
+        }
+
+        function generateAurora() {
+          aurora = [];
+          for (let i = 0; i < CONFIG.AURORA_WAVE_COUNT; i++) {
+            aurora.push({
+              y: rand(cssH * 0.1, cssH * 0.4),
+              amplitude: rand(30, 80),
+              frequency: rand(0.002, 0.008),
+              phase: rand(0, Math.PI * 2),
+              speed: rand(0.3, 1.2),
+              color: rand(80, 180), // Green to blue spectrum
+              width: rand(40, 120),
+            });
+          }
+        }
+
+        function generateWormholes() {
+          wormholes = [];
+          for (let i = 0; i < CONFIG.WORMHOLE_COUNT; i++) {
+            wormholes.push({
+              x: rand(cssW * 0.3, cssW * 0.7),
+              y: rand(cssH * 0.3, cssH * 0.7),
+              rotation: 0,
+              size: rand(50, 150),
+              intensity: rand(0.5, 1.0),
+            });
+          }
+        }
+
+        // --- ENHANCED EVENT LISTENERS ---
+
+        window.addEventListener("resize", resize, { passive: true });
+        window.addEventListener("keydown", (e) => {
+          const k = e.key.toLowerCase();
+          if (e.code === "Space") {
+            running = !running;
+            if (running) lastTime = performance.now();
+          } else if (k === "d") {
+            CONFIG.ENABLE_DIAGONALS = !CONFIG.ENABLE_DIAGONALS;
+          } else if (k === "b") {
+            CONFIG.ENABLE_BREATHE = !CONFIG.ENABLE_BREATHE;
+          } else if (k === "r") {
+            generateStars();
+            if (CONFIG.ENABLE_NEBULA) generateNebula();
+            if (CONFIG.ENABLE_GALAXIES) generateGalaxies();
+          } else if (k === "p") {
+            CONFIG.ENABLE_PARALLAX = !CONFIG.ENABLE_PARALLAX;
+          } else if (k === "n") {
+            CONFIG.ENABLE_NEBULA = !CONFIG.ENABLE_NEBULA;
+            if (CONFIG.ENABLE_NEBULA) generateNebula();
+          } else if (k === "s") {
+            CONFIG.ENABLE_SHOOTING_STARS = !CONFIG.ENABLE_SHOOTING_STARS;
+          } else if (k === "c") {
+            CONFIG.ENABLE_CLICK_NOVA = !CONFIG.ENABLE_CLICK_NOVA;
+          } else if (k === "t") {
+            CONFIG.ENABLE_MOUSE_TRAIL = !CONFIG.ENABLE_MOUSE_TRAIL;
+          } else if (k === "g") {
+            CONFIG.ENABLE_GALAXIES = !CONFIG.ENABLE_GALAXIES;
+            if (CONFIG.ENABLE_GALAXIES) generateGalaxies();
+          } else if (k === "a") {
+            CONFIG.ENABLE_AURORA = !CONFIG.ENABLE_AURORA;
+            if (CONFIG.ENABLE_AURORA) generateAurora();
+          } else if (k === "w") {
+            CONFIG.ENABLE_WORMHOLES = !CONFIG.ENABLE_WORMHOLES;
+            if (CONFIG.ENABLE_WORMHOLES) generateWormholes();
+          } else if (k === "v") {
+            CONFIG.ENABLE_VOID_DISTORTION = !CONFIG.ENABLE_VOID_DISTORTION;
+          }
+          updateUI();
+        });
+
+        window.addEventListener("mousemove", (e) => {
+          mouse.prevX = mouse.x;
+          mouse.prevY = mouse.y;
+          mouse.x = e.clientX;
+          mouse.y = e.clientY;
+          
+          const dx = mouse.x - mouse.prevX;
+          const dy = mouse.y - mouse.prevY;
+          mouse.velocity = Math.sqrt(dx * dx + dy * dy);
+          mouse.angle = Math.atan2(dy, dx);
+        }, { passive: true });
+
+        window.addEventListener("click", (e) => {
+          if (CONFIG.ENABLE_CLICK_NOVA) {
+            createNova(e.clientX, e.clientY);
+          }
+        });
+
+        // --- ENHANCED EFFECTS ---
+
+        function createNova(x, y) {
+          const nova = {
+            x, y, life: 1,
+            hue: rand(0, 360),
+            particles: [],
+            shapeRadii: Array.from({ length: CONFIG.NOVA_SHAPE_POINTS }, () => rand(0.7, 1.3)),
+            rings: Math.floor(rand(2, 5)),
+          };
+
+          for (let i = 0; i < CONFIG.NOVA_PARTICLES; i++) {
+            const angle = rand(0, Math.PI * 2);
+            const speed = rand(30, 350) * (0.5 + Math.random() * 1.5);
+            nova.particles.push({
+              vx: Math.cos(angle) * speed,
+              vy: Math.sin(angle) * speed,
+              size: rand(1, 3),
+              life: rand(0.8, 1.2),
+            });
+          }
+          novas.push(nova);
+        }
+
+        function createTrailParticle() {
+          if (trail.length < CONFIG.TRAIL_PARTICLES && mouse.velocity > 2) {
+            const intensity = Math.min(mouse.velocity / 50, 1);
+            trail.push({
+              x: mouse.x + rand(-3, 3),
+              y: mouse.y + rand(-3, 3),
+              life: 1,
+              vx: rand(-8, 8) + Math.cos(mouse.angle) * mouse.velocity * 0.1,
+              vy: rand(-8, 8) + Math.sin(mouse.angle) * mouse.velocity * 0.1,
+              color: CONFIG.STAR_COLORS[Math.floor(Math.random() * CONFIG.STAR_COLORS.length)],
+              size: 1 + intensity * 2,
+            });
+          }
+        }
+
+        function updateUI() {
+          const activeEffects = [];
+          if (CONFIG.ENABLE_DIAGONALS) activeEffects.push('Diagonals');
+          if (CONFIG.ENABLE_BREATHE) activeEffects.push('Breathe');
+          if (CONFIG.ENABLE_PARALLAX) activeEffects.push('Parallax');
+          if (CONFIG.ENABLE_NEBULA) activeEffects.push('Nebula');
+          if (CONFIG.ENABLE_SHOOTING_STARS) activeEffects.push('Shooting Stars');
+          if (CONFIG.ENABLE_CLICK_NOVA) activeEffects.push('Nova');
+          if (CONFIG.ENABLE_MOUSE_TRAIL) activeEffects.push('Trail');
+          if (CONFIG.ENABLE_GALAXIES) activeEffects.push('Galaxies');
+          if (CONFIG.ENABLE_AURORA) activeEffects.push('Aurora');
+          if (CONFIG.ENABLE_WORMHOLES) activeEffects.push('Wormholes');
+          if (CONFIG.ENABLE_VOID_DISTORTION) activeEffects.push('Void');
+
+          document.getElementById('effects-status').textContent = 
+            activeEffects.length > 0 ? `${activeEffects.length} Active` : 'None';
+          document.getElementById('quality').textContent = 
+            CONFIG.QUALITY_HIGH ? 'High' : 'Low';
+        }
+
+        // --- ENHANCED DRAWING ---
+
+        function clear() {
+          ctx.globalAlpha = 1;
+          ctx.globalCompositeOperation = "source-over";
+          
+          // Dynamic background gradient based on time
+          const time = lastTime * 0.0001;
+          const gradient = ctx.createRadialGradient(
+            canvas.width * 0.5, canvas.height * 0.5, 0,
+            canvas.width * 0.5, canvas.height * 0.5, Math.max(canvas.width, canvas.height)
+          );
+          
+          const r1 = Math.floor(9 + 6 * Math.sin(time * 0.3));
+          const g1 = Math.floor(11 + 8 * Math.sin(time * 0.5));
+          const b1 = Math.floor(16 + 10 * Math.sin(time * 0.7));
+          
+          gradient.addColorStop(0, `rgb(${r1}, ${g1}, ${b1})`);
+          gradient.addColorStop(1, `rgb(${Math.floor(r1 * 0.7)}, ${Math.floor(g1 * 0.8)}, ${Math.floor(b1 * 0.9)})`);
+          
+          ctx.fillStyle = gradient;
+          ctx.fillRect(0, 0, canvas.width, canvas.height);
+        }
+
+        function drawStars(t) {
+          const halfW = cssW / 2, halfH = cssH / 2;
+          let targetDx = CONFIG.ENABLE_PARALLAX ? 
+            ((mouse.x - halfW) / halfW) * CONFIG.PARALLAX_STRENGTH : 0;
+          let targetDy = CONFIG.ENABLE_PARALLAX ? 
+            ((mouse.y - halfH) / halfH) * CONFIG.PARALLAX_STRENGTH : 0;
+          
+          mouse.dx += (targetDx - mouse.dx) * 0.08;
+          mouse.dy += (targetDy - mouse.dy) * 0.08;
+
+          const time = t * 0.001;
+
+          for (const s of stars) {
+            // Enhanced star movement
+            s.x += s.vx * (1 + s.depth * 0.5);
+            s.y += s.vy * (1 + s.depth * 0.5);
+            if (s.x < -50) s.x += cssW + 100;
+            if (s.x > cssW + 50) s.x -= cssW + 100;
+            if (s.y < -50) s.y += cssH + 100;
+            if (s.y > cssH + 50) s.y -= cssH + 100;
+
+            // Enhanced parallax with void distortion
+            const parallaxFactor = s.depth * s.depth * 1.5;
+            let px = s.x - mouse.dx * 200 * parallaxFactor;
+            let py = s.y - mouse.dy * 200 * parallaxFactor;
+
+            // Void distortion effect
+            if (CONFIG.ENABLE_VOID_DISTORTION) {
+              const distToMouse = Math.sqrt((px - mouse.x) ** 2 + (py - mouse.y) ** 2);
+              const voidRadius = 150;
+              if (distToMouse < voidRadius) {
+                const distortionFactor = (1 - distToMouse / voidRadius) * CONFIG.VOID_STRENGTH;
+                const angle = Math.atan2(py - mouse.y, px - mouse.x);
+                px += Math.cos(angle) * distortionFactor * 50;
+                py += Math.sin(angle) * distortionFactor * 50;
+              }
+            }
+
+            s.px = px;
+            s.py = py;
+
+            const cx = Math.round(s.px * dpr);
+            const cy = Math.round(s.py * dpr);
+
+            if (cx < -50 || cx > canvas.width + 50 || cy < -50 || cy > canvas.height + 50) continue;
+
+            // Enhanced effects calculation
+            const breathePhase = Math.sin(time * s.wobble + s.phase);
+            let twinkleVal = Math.sin(time * s.twinkle + s.phase);
+            
+            // Special star types
+            if (s.type === 'pulsar') {
+              twinkleVal = Math.sin(time * s.pulsarSpeed) * 0.5 + 0.5;
+            } else if (s.type === 'giant') {
+              twinkleVal = 0.8 + 0.2 * Math.sin(time * 0.5);
+            }
+
+            let cardPhase = CONFIG.ENABLE_BREATHE ? 1 + 0.3 * breathePhase : 1;
+            let diagPhase = CONFIG.ENABLE_BREATHE ? 1 + 0.3 * Math.sin(breathePhase - Math.PI / 2) : 1;
+
+            const baseAlpha = s.alpha * (0.6 + 0.4 * twinkleVal);
+            const finalAlpha = clamp(baseAlpha * ((cardPhase + diagPhase) / 2), 0, 1);
+
+            // Enhanced color based on temperature
+            let color = s.color;
+            if (s.temperature < 3500) color = "255, 200, 150"; // Red dwarf
+            else if (s.temperature > 10000) color = "150, 200, 255"; // Blue giant
+
+            ctx.fillStyle = `rgba(${color}, ${finalAlpha.toFixed(3)})`;
+
+            // Enhanced star rendering with bloom effect
+            const starSize = s.type === 'giant' ? 2 : 1;
+            ctx.fillRect(cx - starSize/2, cy - starSize/2, starSize, starSize);
+
+            // Enhanced rays
+            const cardLen = Math.max(1, Math.round(s.len * cardPhase));
+            const gap = CONFIG.RAY_GAP;
+            
+            // Horizontal and vertical rays
+            ctx.fillRect(cx + 1 + gap, cy, cardLen, starSize);
+            ctx.fillRect(cx - gap - cardLen, cy, cardLen, starSize);
+            ctx.fillRect(cx, cy + 1 + gap, starSize, cardLen);
+            ctx.fillRect(cx, cy - gap - cardLen, starSize, cardLen);
+
+            // Enhanced diagonal rays
+            if (CONFIG.ENABLE_DIAGONALS && s.len > 2) {
+              const diagLen = Math.max(1, Math.floor(s.len * 0.7 * diagPhase));
+              const diagAlpha = finalAlpha * 0.6;
+              ctx.fillStyle = `rgba(${color}, ${diagAlpha.toFixed(3)})`;
+              for (let step = 1 + gap; step <= gap + diagLen; step++) {
+                ctx.fillRect(cx + step, cy + step, starSize, starSize);
+                ctx.fillRect(cx + step, cy - step, starSize, starSize);
+                ctx.fillRect(cx - step, cy + step, starSize, starSize);
+                ctx.fillRect(cx - step, cy - step, starSize, starSize);
+              }
+            }
+          }
+        }
+
+        function drawEnhancedEffects(delta, t) {
+          ctx.globalCompositeOperation = "lighter";
+
+          // --- GALAXIES ---
+          if (CONFIG.ENABLE_GALAXIES) {
+            galaxies.forEach(galaxy => {
+              galaxy.rotation += CONFIG.GALAXY_ROTATION_SPEED * delta;
+              
+              ctx.save();
+              ctx.translate(galaxy.x * dpr, galaxy.y * dpr);
+              ctx.rotate(galaxy.rotation);
+              
+              galaxy.particles.forEach(particle => {
+                const angle = particle.angle + particle.distance * 0.005;
+                const x = Math.cos(angle) * particle.distance * dpr;
+                const y = Math.sin(angle) * particle.distance * dpr * 0.3; // Flatten the galaxy
+                
+                const hue = 180 + particle.color * 60; // Blue to purple spectrum
+                const alpha = particle.brightness * (1 - particle.distance / galaxy.size);
+                
+                ctx.fillStyle = `hsla(${hue}, 70%, 60%, ${alpha * 0.6})`;
+                ctx.fillRect(x - 1, y - 1, 2, 2);
+              });
+              
+              ctx.restore();
+            });
+          }
+
+          // --- AURORA ---
+          if (CONFIG.ENABLE_AURORA) {
+            aurora.forEach(wave => {
+              wave.phase += wave.speed * delta;
+              
+              const gradient = ctx.createLinearGradient(0, wave.y * dpr, 0, (wave.y + wave.width) * dpr);
+              gradient.addColorStop(0, `hsla(${wave.color}, 80%, 60%, ${CONFIG.AURORA_INTENSITY})`);
+              gradient.addColorStop(0.5, `hsla(${wave.color}, 70%, 50%, ${CONFIG.AURORA_INTENSITY * 0.7})`);
+              gradient.addColorStop(1, `hsla(${wave.color}, 60%, 40%, 0)`);
+              
+              ctx.fillStyle = gradient;
+              ctx.beginPath();
+              ctx.moveTo(0, wave.y * dpr);
+              
+              for (let x = 0; x <= cssW; x += 5) {
+                const waveHeight = Math.sin(x * wave.frequency + wave.phase) * wave.amplitude;
+                const y = (wave.y + waveHeight) * dpr;
+                ctx.lineTo(x * dpr, y);
+              }
+              
+              ctx.lineTo(cssW * dpr, (wave.y + wave.width) * dpr);
+              ctx.lineTo(0, (wave.y + wave.width) * dpr);
+              ctx.closePath();
+              ctx.fill();
+            });
+          }
+
+          // --- WORMHOLES ---
+          if (CONFIG.ENABLE_WORMHOLES) {
+            wormholes.forEach(wormhole => {
+              wormhole.rotation += CONFIG.WORMHOLE_ROTATION_SPEED * delta;
+              
+              const centerX = wormhole.x * dpr;
+              const centerY = wormhole.y * dpr;
+              const size = wormhole.size * dpr;
+              
+              // Draw multiple rings
+              for (let ring = 0; ring < 8; ring++) {
+                const ringRadius = size * (0.2 + ring * 0.1);
+                const ringAlpha = wormhole.intensity * (1 - ring * 0.12);
+                const ringRotation = wormhole.rotation + ring * 0.3;
+                
+                ctx.strokeStyle = `hsla(${280 + ring * 10}, 80%, 70%, ${ringAlpha})`;
+                ctx.lineWidth = 2;
+                ctx.beginPath();
+                ctx.arc(centerX, centerY, ringRadius, 0, Math.PI * 2);
+                ctx.stroke();
+              }
+              
+              // Central void
+              const voidGrad = ctx.createRadialGradient(centerX, centerY, 0, centerX, centerY, size * 0.3);
+              voidGrad.addColorStop(0, `rgba(0, 0, 0, ${wormhole.intensity})`);
+              voidGrad.addColorStop(1, `rgba(0, 0, 0, 0)`);
+              ctx.fillStyle = voidGrad;
+              ctx.beginPath();
+              ctx.arc(centerX, centerY, size * 0.3, 0, Math.PI * 2);
+              ctx.fill();
+            });
+          }
+
+          // --- ENHANCED MOUSE TRAIL ---
+          if (CONFIG.ENABLE_MOUSE_TRAIL) {
+            createTrailParticle();
+          }
+          for (let i = trail.length - 1; i >= 0; i--) {
+            const p = trail[i];
+            p.life -= delta / CONFIG.TRAIL_LIFESPAN;
+            if (p.life <= 0) {
+              trail.splice(i, 1);
+              continue;
+            }
+            p.x += p.vx * delta;
+            p.y += p.vy * delta;
+            p.vx *= 0.98; // Friction
+            p.vy *= 0.98;
+            
+            const alpha = p.life * 0.8;
+            ctx.fillStyle = `rgba(${p.color}, ${alpha})`;
+            const size = p.size * p.life;
+            ctx.fillRect((p.x - size/2) * dpr, (p.y - size/2) * dpr, size * dpr, size * dpr);
+            
+            // Add a glow effect
+            if (size > 1) {
+              ctx.fillStyle = `rgba(${p.color}, ${alpha * 0.3})`;
+              const glowSize = size * 2;
+              ctx.fillRect((p.x - glowSize/2) * dpr, (p.y - glowSize/2) * dpr, glowSize * dpr, glowSize * dpr);
+            }
+          }
+
+          // --- ENHANCED CLICK NOVA ---
+          for (let i = novas.length - 1; i >= 0; i--) {
+            const n = novas[i];
+            n.life -= delta / CONFIG.NOVA_LIFESPAN;
+            if (n.life <= 0) {
+              novas.splice(i, 1);
+              continue;
+            }
+
+            const progress = 1 - n.life;
+            const alpha = n.life * n.life;
+
+            // --- Multiple Shockwave Rings ---
+            const baseRadius = progress * CONFIG.NOVA_SHOCKWAVE_SPEED;
+            for (let ring = 0; ring < n.rings; ring++) {
+              const ringProgress = Math.max(0, progress - ring * 0.1);
+              const ringRadius = ringProgress * CONFIG.NOVA_SHOCKWAVE_SPEED * (1 + ring * 0.2);
+              const ringAlpha = alpha * (1 - ring * 0.2);
+              
+              if (ringProgress > 0) {
+                ctx.strokeStyle = `hsla(${n.hue + ring * 30}, 100%, ${80 - ring * 10}%, ${ringAlpha * 0.8})`;
+                ctx.lineWidth = (3 - ring * 0.3) * dpr;
+                ctx.beginPath();
+                
+                const angleStep = (Math.PI * 2) / CONFIG.NOVA_SHAPE_POINTS;
+                for (let j = 0; j < CONFIG.NOVA_SHAPE_POINTS; j++) {
+                  const angle = j * angleStep;
+                  const nextAngle = (j + 1) * angleStep;
+                  const shapeIndex = (j + ring) % CONFIG.NOVA_SHAPE_POINTS;
+                  
+                  const r1 = ringRadius * n.shapeRadii[shapeIndex];
+                  const p1x = (n.x + Math.cos(angle) * r1) * dpr;
+                  const p1y = (n.y + Math.sin(angle) * r1) * dpr;
+                  
+                  const nextShapeIndex = ((j + 1) + ring) % CONFIG.NOVA_SHAPE_POINTS;
+                  const r2 = ringRadius * n.shapeRadii[nextShapeIndex];
+                  const p2x = (n.x + Math.cos(nextAngle) * r2) * dpr;
+                  const p2y = (n.y + Math.sin(nextAngle) * r2) * dpr;
+                  
+                  const midX = (p1x + p2x) / 2;
+                  const midY = (p1y + p2y) / 2;
+
+                  if (j === 0) ctx.moveTo(midX, midY);
+                  else ctx.quadraticCurveTo(p1x, p1y, midX, midY);
+                }
+                ctx.closePath();
+                ctx.stroke();
+              }
+            }
+
+            // --- Enhanced Core Flash ---
+            const coreProgress = clamp(progress / CONFIG.NOVA_CORE_LIFESPAN_RATIO, 0, 1);
+            if (coreProgress < 1) {
+              const eased = smoothstep(coreProgress);
+              const coreRadius = (30 + 200 * eased) * dpr;
+              const coreAlpha = Math.pow(1 - coreProgress, 1.2);
+
+              // Multiple core layers for better effect
+              for (let layer = 0; layer < 3; layer++) {
+                const layerRadius = coreRadius * (1 - layer * 0.3);
+                const layerAlpha = coreAlpha * (1 - layer * 0.4);
+                
+                const grad = ctx.createRadialGradient(
+                  n.x * dpr, n.y * dpr, 0,
+                  n.x * dpr, n.y * dpr, layerRadius
+                );
+                grad.addColorStop(0, `hsla(${n.hue}, 100%, ${95 - layer * 10}%, ${layerAlpha})`);
+                grad.addColorStop(0.7, `hsla(${n.hue}, 100%, ${80 - layer * 10}%, ${layerAlpha * 0.5})`);
+                grad.addColorStop(1, `hsla(${n.hue}, 100%, 70%, 0)`);
+                
+                ctx.fillStyle = grad;
+                ctx.beginPath();
+                ctx.arc(n.x * dpr, n.y * dpr, layerRadius, 0, Math.PI * 2);
+                ctx.fill();
+              }
+            }
+
+            // --- Enhanced Particles ---
+            for (let j = 0; j < n.particles.length; j++) {
+              const p = n.particles[j];
+              const particleLife = Math.min(p.life, alpha);
+              const px = (n.x + p.vx * progress) * dpr;
+              const py = (n.y + p.vy * progress) * dpr;
+              
+              const hue = n.hue + (j % 5) * 15; // Vary particle colors
+              ctx.fillStyle = `hsla(${hue}, 100%, 75%, ${particleLife})`;
+              const size = p.size * particleLife * dpr;
+              ctx.fillRect(px - size/2, py - size/2, size, size);
+            }
+          }
+
+          // --- ENHANCED SHOOTING STARS ---
+          if (CONFIG.ENABLE_SHOOTING_STARS && Math.random() < CONFIG.SHOOTING_STAR_CHANCE) {
+            const edge = Math.floor(Math.random() * 4);
+            let startX, startY, angle;
+            
+            switch(edge) {
+              case 0: // Top
+                startX = rand(0, canvas.width);
+                startY = 0;
+                angle = rand(Math.PI * 0.25, Math.PI * 0.75);
+                break;
+              case 1: // Right
+                startX = canvas.width;
+                startY = rand(0, canvas.height);
+                angle = rand(Math.PI * 0.75, Math.PI * 1.25);
+                break;
+              case 2: // Bottom
+                startX = rand(0, canvas.width);
+                startY = canvas.height;
+                angle = rand(Math.PI * 1.25, Math.PI * 1.75);
+                break;
+              case 3: // Left
+                startX = 0;
+                startY = rand(0, canvas.height);
+                angle = rand(-Math.PI * 0.25, Math.PI * 0.25);
+                break;
+            }
+            
+            shootingStars.push({
+              x: startX,
+              y: startY,
+              len: rand(80, 200) * dpr,
+              angle: angle,
+              speed: rand(CONFIG.SHOOTING_STAR_SPEED * 0.7, CONFIG.SHOOTING_STAR_SPEED * 1.8) * dpr,
+              alpha: rand(0.6, 1),
+              hue: rand(0, 60), // Warm colors
+              size: rand(1, 3),
+            });
+          }
+
+          for (let i = shootingStars.length - 1; i >= 0; i--) {
+            const s = shootingStars[i];
+            const vx = Math.cos(s.angle) * s.speed;
+            const vy = Math.sin(s.angle) * s.speed;
+
+            // Enhanced gradient trail
+            const grad = ctx.createLinearGradient(
+              s.x, s.y,
+              s.x - vx * (s.len / s.speed), s.y - vy * (s.len / s.speed)
+            );
+            
+            grad.addColorStop(0, `hsla(${s.hue}, 100%, 90%, ${s.alpha})`);
+            grad.addColorStop(0.3, `hsla(${s.hue}, 100%, 70%, ${s.alpha * 0.8})`);
+            grad.addColorStop(0.7, `hsla(${s.hue}, 80%, 50%, ${s.alpha * 0.4})`);
+            grad.addColorStop(1, `hsla(${s.hue}, 60%, 30%, 0)`);
+
+            ctx.strokeStyle = grad;
+            ctx.lineWidth = s.size * dpr;
+            ctx.beginPath();
+            ctx.moveTo(s.x, s.y);
+            ctx.lineTo(s.x + vx, s.y + vy);
+            ctx.stroke();
+
+            s.x += vx;
+            s.y += vy;
+            s.alpha *= CONFIG.SHOOTING_STAR_FADE_RATE;
+
+            if (s.alpha < 0.01 || s.x < -200 || s.x > canvas.width + 200 || 
+                s.y < -200 || s.y > canvas.height + 200) {
+              shootingStars.splice(i, 1);
+            }
+          }
+
+          ctx.globalCompositeOperation = "source-over";
+        }
+
+        function updateFPS(t) {
+          frameCount++;
+          if (t - lastFPSTime >= 1000) {
+            currentFPS = Math.round(frameCount * 1000 / (t - lastFPSTime));
+            frameCount = 0;
+            lastFPSTime = t;
+            document.getElementById('fps').textContent = `FPS: ${currentFPS}`;
+            
+            // Auto quality adjustment
+            if (currentFPS < 30 && CONFIG.QUALITY_HIGH) {
+              CONFIG.QUALITY_HIGH = false;
+              CONFIG.MAX_STARS = Math.min(CONFIG.MAX_STARS, 600);
+              updateUI();
+            } else if (currentFPS > 50 && !CONFIG.QUALITY_HIGH) {
+              CONFIG.QUALITY_HIGH = true;
+              CONFIG.MAX_STARS = 1200;
+              updateUI();
+            }
+          }
+        }
+
+        function draw(t) {
+          if (!running) {
+            requestAnimationFrame(draw);
+            return;
+          }
+
+          const delta = (t - lastTime) / 1000;
+          lastTime = t;
+
+          updateFPS(t);
+          clear();
+
+          // Draw nebula with enhanced animation
+          if (CONFIG.ENABLE_NEBULA && nebulaCanvas) {
+            ctx.globalAlpha = 0.4 + 0.3 * Math.sin(t * 0.0001) + 0.2 * Math.sin(t * 0.0003);
+            ctx.drawImage(nebulaCanvas, 0, 0);
+            ctx.globalAlpha = 1;
+          }
+
+          drawStars(t);
+          drawEnhancedEffects(delta, t);
+
+          requestAnimationFrame(draw);
+        }
+
+        // --- INITIALIZATION ---
+        resize();
+        lastTime = performance.now();
+        lastFPSTime = lastTime;
+        generateStars();
+        if (CONFIG.ENABLE_NEBULA) generateNebula();
+        if (CONFIG.ENABLE_GALAXIES) generateGalaxies();
+        if (CONFIG.ENABLE_AURORA) generateAurora();
+        if (CONFIG.ENABLE_WORMHOLES) generateWormholes();
+        updateUI();
+        requestAnimationFrame(draw);
+      })();
+    </script>
+  </body>
+</html>

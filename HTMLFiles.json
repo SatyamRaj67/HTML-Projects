@@ -551,6 +551,10 @@
     "name": "Love.html",
     "path": ".\\Love Face Balls\\Love.html"
   },
+  "Magnetic Field Lines": {
+    "name": "index.html",
+    "path": ".\\Magnetic Field Lines\\index.html"
+  },
   "Magnetic Hover": {
     "name": "Magnetic.html",
     "path": ".\\Magnetic Hover\\Magnetic.html"
@@ -639,6 +643,10 @@
   "Picture Gallery": {
     "name": "Picture.html",
     "path": ".\\Picture Gallery\\Picture.html"
+  },
+  "Pixel Dust Effect": {
+    "name": "index.html",
+    "path": ".\\Pixel Dust Effect\\index.html"
   },
   "Planets": {
     "name": "planets.html",
@@ -748,6 +756,10 @@
     "name": "search.html",
     "path": ".\\Search Box\\search.html"
   },
+  "Sending Signal": {
+    "name": "index.html",
+    "path": ".\\Sending Signal\\index.html"
+  },
   "Shoe Buy": {
     "name": "shoe.html",
     "path": ".\\Shoe Buy\\shoe.html"
@@ -763,6 +775,10 @@
   "Smart Cursor": {
     "name": "Cursor.html",
     "path": ".\\Smart Cursor\\Cursor.html"
+  },
+  "Smoke the button": {
+    "name": "index.html",
+    "path": ".\\Smoke the button\\index.html"
   },
   "Smoke the words": {
     "name": "smoke.html",

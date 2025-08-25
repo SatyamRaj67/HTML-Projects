@@ -385,7 +385,7 @@ span {
 h2.status {
   font-size: 1em;
   font-weight: 200;
-  color: #f00;
+  color: #FF6161;
 }
 
 .card-info-wrapper {
@@ -474,17 +474,16 @@ h2.status {
 }
 
 .progress-wrap:hover::after {
-  opacity: 0;
+  transform: scale(1.2);
 }
 
 .progress-wrap::before {
   position: absolute;
-  content: '🡱'; /* Unicode for upward arrow */
+  content: '🡱';
   text-align: center;
   line-height: 46px;
   font-size: 24px;
   opacity: 0;
-  background-image: linear-gradient(298deg, #da2c4d, #f8ab37);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -537,7 +536,7 @@ a.best:hover::after {
 }
 
 a.no {
-  background: #f00;
+  background: #FF6161;
 }
 
 /* -- ↓ ↓ ↓ some responsiveness ↓ ↓ ↓ -- */
@@ -575,5 +574,12 @@ a.no {
 @media (max-width: 650px) {
   .card {
     width: 100%;
+  }
+
+  .button{
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
   }
 }

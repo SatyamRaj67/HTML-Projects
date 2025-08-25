@@ -31,9 +31,12 @@
           <div class="container">
             <div class="face">
               <div class="content">
-                <h4>You can be an imposter</h4>
-                <p>Take a moment to validate</p>
-                <input type="text" placeholder="Front" />
+                <form onsubmit="return false;">
+                  <h4>You can be an impostor</h4>
+                  <p>Take a moment to validate</p>
+                  <input type="text" placeholder="Front" />
+                  <input type="submit" value="Submit">
+                </form>
               </div>
             </div>
           </div>
@@ -78,7 +81,6 @@
     };
 
     svg.onclick = function(e){
-      e.preventDefault();
       if (svg.style.animationPlayState === "paused") {
         svg.style.animationPlayState = "running";
       } else {
