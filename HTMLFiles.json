@@ -785,6 +785,10 @@
     "name": "Side.html",
     "path": ".\\Sidebar\\Side.html"
   },
+  "Sidebar Responsive": {
+    "name": "index.html",
+    "path": ".\\Sidebar Responsive\\index.html"
+  },
   "Slide Login": {
     "name": "s.html",
     "path": ".\\Slide Login\\s.html"
