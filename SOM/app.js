@@ -5,26 +5,32 @@ function toggleSidebar() {
   sidebar.classList.toggle("close");
   toggleButton.classList.toggle("rotate");
 
-  closeAllSubMenus();
+  localStorage.setItem(
+    "sidebarState",
+    sidebar.classList.contains("close") ? "closed" : "open"
+  );
 }
+function restoreSidebarState() {
+  const savedState = localStorage.getItem("sidebarState");
 
-function toggleSubMenu(button) {
-  if (!button.nextElementSibling.classList.contains("show")) {
-    closeAllSubMenus();
+  if (savedState === "closed") {
+    // Temporarily disable transitions
+    sidebar.style.transition = "none";
+    toggleButton.style.transition = "none";
+
+    // Apply the closed state
+    sidebar.classList.add("close");
+    toggleButton.classList.add("rotate");
+
+    // Re-enable transitions after a brief delay
+    setTimeout(() => {
+      sidebar.style.transition = "";
+      toggleButton.style.transition = "";
+    }, 10);
+  } else {
+    sidebar.classList.remove("close");
+    toggleButton.classList.remove("rotate");
   }
-
-  button.nextElementSibling.classList.toggle("show");
-  button.classList.toggle("rotate");
-
-  if (sidebar.classList.contains("close")) {
-    sidebar.classList.toggle("close");
-    toggleButton.classList.toggle("rotate");
-  }
 }
 
-function closeAllSubMenus() {
-  Array.from(sidebar.getElementsByClassName("show")).forEach((ul) => {
-    ul.classList.remove("show");
-    ul.previousElementSibling.classList.remove("rotate");
-  });
-}
+restoreSidebarState();
