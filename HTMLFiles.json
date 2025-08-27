@@ -28,38 +28,31 @@
   },
   "Animated Cards": {
     "name": "Card.html",
-    "path": ".\\Animated Cards\\Card.html",
-    "class": "best"
+    "path": ".\\Animated Cards\\Card.html"
   },
   "Animated Circles": {
     "name": "Circles.html",
-    "path": ".\\Animated Circles\\Circles.html",
-    "class": "best"
+    "path": ".\\Animated Circles\\Circles.html"
   },
   "Animated Heart": {
     "name": "an.html",
-    "path": ".\\Animated Heart\\an.html",
-    "class": "best"
+    "path": ".\\Animated Heart\\an.html"
   },
   "Animated Progress Bar": {
     "name": "Animated.html",
-    "path": ".\\Animated Progress Bar\\Animated.html",
-    "class": "best"
+    "path": ".\\Animated Progress Bar\\Animated.html"
   },
   "Animated Text Trail": {
     "name": "index.html",
-    "path": ".\\Animated Text Trail\\index.html",
-    "class": "best"
+    "path": ".\\Animated Text Trail\\index.html"
   },
   "AnimeJS Playes": {
     "name": "js.html",
-    "path": ".\\AnimeJS Playes\\js.html",
-    "class": "best"
+    "path": ".\\AnimeJS Playes\\js.html"
   },
   "AnimeJS Web": {
     "name": "Web.html",
-    "path": ".\\AnimeJS Web\\Web.html",
-    "class": "best"
+    "path": ".\\AnimeJS Web\\Web.html"
   },
   "Another Assignment": {
     "name": "index.html",
@@ -67,8 +60,7 @@
   },
   "App": {
     "name": "Web.html",
-    "path": ".\\App\\Web.html",
-    "class": "best"
+    "path": ".\\App\\Web.html"
   },
   "Assignment": {
     "name": "assignment.html",
@@ -84,8 +76,7 @@
   },
   "Ayurvedic Website": {
     "name": "index.html",
-    "path": ".\\Ayurvedic Website\\index.html",
-    "class": "best"
+    "path": ".\\Ayurvedic Website\\index.html"
   },
   "Background Button": {
     "name": "Button.html",
@@ -129,8 +120,7 @@
   },
   "Border Effect": {
     "name": "Border.html",
-    "path": ".\\Border Effect\\Border.html",
-    "class": "best"
+    "path": ".\\Border Effect\\Border.html"
   },
   "Box Menu": {
     "name": "menu.html",
@@ -174,8 +164,7 @@
   },
   "Card Flow": {
     "name": "Card.html",
-    "path": ".\\Card Flow\\Card.html",
-    "class": "best"
+    "path": ".\\Card Flow\\Card.html"
   },
   "Card Hover": {
     "name": "Card.html",
@@ -333,8 +322,7 @@
   },
   "Fire Ecology": {
     "name": "Web.html",
-    "path": ".\\Fire Ecology\\Web.html",
-    "class": "best"
+    "path": ".\\Fire Ecology\\Web.html"
   },
   "Flex Image Gallery": {
     "name": "Image.html",
@@ -423,8 +411,7 @@
   },
   "Hover Login": {
     "name": "Hover.html",
-    "path": ".\\Hover Login\\Hover.html",
-    "class": "best"
+    "path": ".\\Hover Login\\Hover.html"
   },
   "Hover Trace": {
     "name": "hover.html",
@@ -453,7 +440,7 @@
   "Image Slider Responsive": {
     "name": "index.html",
     "path": ".\\Image Slider Responsive\\index.html",
-    "class":"best"
+    "class": "best"
   },
   "Image Slider Slide": {
     "name": "Image.html",
@@ -577,8 +564,7 @@
   },
   "Matrix Background": {
     "name": "index.html",
-    "path": ".\\Matrix Background\\index.html",
-    "class": "best"
+    "path": ".\\Matrix Background\\index.html"
   },
   "Memory Game": {
     "name": "Game.html",

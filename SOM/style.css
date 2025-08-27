@@ -164,16 +164,89 @@ main p {
   border: 1px solid var(--line-clr);
   border-radius: 1em;
   margin-bottom: 20px;
-  padding: min(3em, 15%);
+
+  padding: 20px;
 
   h2,
   p {
-    margin-top: 1em;
     color: var(--text-clr);
   }
 }
 
-@media (max-width: 768px) {
+.container ul{
+  list-style: square;
+  padding: 0 20px;
+}
+
+.container ul li{
+  color: #508364;
+}
+
+/* Campfire */
+
+.poster {
+  position: relative;
+  padding: 10px;
+
+  clip-path: polygon(
+    0 25px,
+    5% 15px,
+    10% 25px,
+    15% 15px,
+    20% 25px,
+    25% 15px,
+    30% 25px,
+    35% 15px,
+    40% 25px,
+    45% 15px,
+    50% 25px,
+    55% 15px,
+    60% 25px,
+    65% 15px,
+    70% 25px,
+    75% 15px,
+    80% 25px,
+    85% 15px,
+    90% 25px,
+    95% 15px,
+    100% 25px,
+    100% calc(100% - 25px),
+    95% calc(100% - 15px),
+    90% calc(100% - 25px),
+    85% calc(100% - 15px),
+    80% calc(100% - 25px),
+    75% calc(100% - 15px),
+    70% calc(100% - 25px),
+    65% calc(100% - 15px),
+    60% calc(100% - 25px),
+    55% calc(100% - 15px),
+    50% calc(100% - 25px),
+    45% calc(100% - 15px),
+    40% calc(100% - 25px),
+    35% calc(100% - 15px),
+    30% calc(100% - 25px),
+    25% calc(100% - 15px),
+    20% calc(100% - 25px),
+    15% calc(100% - 15px),
+    10% calc(100% - 25px),
+    5% calc(100% - 15px),
+    0 calc(100% - 25px)
+  );
+}
+
+.poster .content {
+  position: relative;
+  padding: 40px 20px;
+  background: #fff;
+
+  h4,
+  p {
+    margin: 0;
+    color: var(--base-clr);
+  }
+}
+
+@media (max-width: 600px) {
   body {
     grid-template-columns: 1fr;
   }
@@ -244,7 +317,7 @@ main p {
         display: inline-flex;
       }
 
-      a{
+      a {
         box-sizing: border-box;
         padding: 1em;
         width: auto;
