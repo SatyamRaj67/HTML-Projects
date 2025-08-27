@@ -12,6 +12,7 @@
 * {
   margin: 0;
   padding: 0;
+  transition: all 0.2s;
 }
 
 html {
@@ -21,7 +22,6 @@ html {
 
 body {
   min-height: 100vh;
-  min-width: 100dvw;
   background-color: var(--base-clr);
   color: var(--text-clr);
   display: grid;
@@ -67,6 +67,7 @@ body {
 
 #sidebar ul li.active a {
   color: var(--accent-clr);
+  background: var(--hover-clr);
 }
 
 #sidebar ul li.active a svg {
@@ -282,5 +283,9 @@ main p {
         justify-content: center;
       }
     }
+  }
+
+  #sidebar.close{
+    width: 100%;
   }
 }
