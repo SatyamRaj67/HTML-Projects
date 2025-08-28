@@ -1,0 +1,132 @@
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+}
+
+.card-container .card {
+  width: 250px;
+  min-height: 450px;
+  flex: 1 1 318px;
+  border: 1px solid var(--line-clr);
+  border-radius: 1rem;
+}
+
+.card-container .card .card-info {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  padding-bottom: 0rem;
+  min-height: 200px;
+}
+
+.card-container .card .card-info .imgBx {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.card-container .card .imgBx img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 0.5rem;
+}
+
+.card-container .card .devlogs {
+  padding: 2rem;
+}
+
+.card-container .card .devlogs .devlog {
+  border: 1px solid var(--line-clr);
+  border-radius: 1rem;
+  margin: 1rem 0;
+  padding: 1rem;
+}
+
+.card-container .card .devlogs .devlog:hover {
+  background: var(--hover-clr);
+}
+
+.card-container .card .devlog .imgBx img {
+  max-height: 200px;
+}
+
+.card-container .card .content {
+  padding: 0;
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    margin-top: 0.5rem;
+  }
+  p {
+    margin-top: 0.5rem;
+    flex: 1;
+  }
+}
+
+button {
+  width: 100%;
+  padding: 0.5em 1em ;
+  background: var(--base-clr);
+  color: var(--text-clr);
+}
+
+.form {
+  border: 1px solid var(--line-clr);
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  border: 1px solid var(--line-clr);
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  background: var(--hover-clr);
+  color: #fff;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  button {
+    flex: 1;
+  }
+
+  button:first-child {
+    border-top-left-radius: 0.5rem;
+  }
+  button:last-child {
+    border-top-right-radius: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-container .card .card-info {
+    flex-direction: column;
+  }
+
+  .card-container .card .imgBx {
+    width: 100%;
+  }
+
+  .card-container .card .imgBx img {
+    width: 100%;
+  }
+
+  .card-container .card .devlogs {
+    padding: 0.5rem;
+  }
+}
