@@ -7,7 +7,6 @@
 
 .card-container .card {
   width: 250px;
-  min-height: 450px;
   flex: 1 1 200px;
   border: 1px solid var(--line-clr);
   border-radius: 1rem;
@@ -24,7 +23,6 @@
 .card-container .card .card-info .imgBx {
   width: 200px;
   height: 200px;
-  overflow: hidden;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
@@ -37,24 +35,16 @@
   border-radius: 0.5rem;
 }
 
-.card-container .card .devlogs {
-  padding: 2rem;
+.card-container .card .devlogs{
+  h2, h3, p{
+    margin: 1rem;
+  }
 }
 
 .card-container .card .devlogs .devlog {
-  border: 1px solid var(--line-clr);
-  border-radius: 1rem;
-  margin: 1rem 0;
-  padding: 1rem;
+  border-top: 1px solid var(--line-clr);
 }
 
-.card-container .card .devlogs .devlog:hover {
-  background: var(--hover-clr);
-}
-
-.card-container .card .devlog .imgBx img {
-  max-height: 200px;
-}
 
 .card-container .card .content {
   padding: 0;
@@ -114,14 +104,9 @@ textarea {
 }
 
 @media (max-width: 768px) {
-  .card-container .card .imgBx {
-    width: 100%;
+  .card-container .card .card-info {
+    align-items: center;
   }
-
-  .card-container .card .imgBx img {
-    width: 100%;
-  }
-
   .card-container .card .devlogs {
     padding: 0.5rem;
   }
