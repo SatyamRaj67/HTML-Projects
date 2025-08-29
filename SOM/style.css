@@ -186,7 +186,7 @@ main p {
   }
 
   .container video {
-    flex-basis: 45%; /* Slightly larger on medium screens */
+    flex-basis: 45%; 
     max-width: 45%;
   }
 }
@@ -231,7 +231,7 @@ main p {
 
     > ul {
       padding: 0;
-      display: grid;
+      display: flex;
       grid-auto-columns: 60px;
       grid-auto-flow: column;
       align-items: center;
@@ -239,12 +239,12 @@ main p {
     }
 
     ul li {
+      flex: 1;
       height: 100%;
     }
 
     ul a,
     ul .dropdown-btn {
-      width: 60px;
       height: 60px;
       padding: 0;
       border-radius: 0;

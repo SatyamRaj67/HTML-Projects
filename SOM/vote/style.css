@@ -8,7 +8,7 @@
 .card-container .card {
   width: 250px;
   min-height: 450px;
-  flex: 1 1 318px;
+  flex: 1 1 200px;
   border: 1px solid var(--line-clr);
   border-radius: 1rem;
 }
@@ -74,7 +74,7 @@
 
 button {
   width: 100%;
-  padding: 0.5em 1em ;
+  padding: 0.5em 1em;
   background: var(--base-clr);
   color: var(--text-clr);
 }
@@ -114,10 +114,6 @@ textarea {
 }
 
 @media (max-width: 768px) {
-  .card-container .card .card-info {
-    flex-direction: column;
-  }
-
   .card-container .card .imgBx {
     width: 100%;
   }
@@ -128,5 +124,11 @@ textarea {
 
   .card-container .card .devlogs {
     padding: 0.5rem;
+  }
+}
+
+@media (max-width: 1115px) {
+  .card-container .card .card-info {
+    flex-direction: column;
   }
 }
