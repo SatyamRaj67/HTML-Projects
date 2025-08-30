@@ -60,7 +60,7 @@
   border: 1px solid var(--line-clr);
   border-radius: 1em;
   margin-bottom: 1em;
-  width: min(800px, 80vw);
+  width: min(500px, 80vw);
 }
 
 .card .info {

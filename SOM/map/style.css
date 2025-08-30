@@ -1,0 +1,91 @@
+main {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+    background-color: #3d97cb;
+}
+
+/* Hide Leaflet attribution for custom maps */
+.leaflet-control-attribution {
+  display: none;
+}
+
+/* Custom marker styling */
+.custom-marker {
+  width: 16px;
+  height: 16px;
+  background: var(--accent-clr, #007acc);
+  border: 3px solid var(--base-clr);
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.custom-marker:hover {
+  transform: scale(1.3);
+  background: #ff6b35;
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.4);
+}
+
+/* Custom popup styling */
+.leaflet-popup-content-wrapper {
+  background: var(--base-clr);
+  border-radius: 0.5rem;
+  border: 1px solid var(--line-clr);
+}
+
+.leaflet-popup-content {
+  margin: 1rem;
+  color: var(--text-clr);
+}
+
+.leaflet-popup-tip {
+  background: var(--base-clr);
+  border: 1px solid var(--line-clr);
+}
+
+.leaflet-popup-close-button {
+  color: var(--text-clr);
+}
+
+.project-popup h3 {
+  margin: 0 0 0.5rem 0;
+  color: #007acc;
+  font-size: 1.1rem;
+}
+
+.project-popup .creator {
+  color: #000;
+  opacity: 0.8;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-popup .description {
+  color: #000;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 0.8rem;
+}
+
+.project-popup .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.project-popup .tag {
+  background: var(--base-clr, #007acc);
+  color: white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
