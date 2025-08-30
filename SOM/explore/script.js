@@ -2,7 +2,7 @@ class ExploreTabManager {
   constructor() {
     this.contentContainer = document.getElementById("content-container");
     this.tabs = document.querySelectorAll(".explore-nav a[data-tab]");
-    this.currentTab = "devlogs";
+    this.currentTab = "gallery";
     this.contentCache = new Map();
 
     this.init();

@@ -10,6 +10,10 @@
       rel="stylesheet"
       href="../style.css"
     />
+    <link
+      rel="stylesheet"
+      href="style.css"
+    />
     <title>Summer of Making</title>
     <script
       type="text/javascript"
@@ -137,6 +141,63 @@
         </li>
       </ul>
     </nav>
-    <main></main>
+    <main>
+      <h1>Shop</h1>
+      <button>View My Orders</button>
+      <div class="region-card">
+        <h3>🌏 Choose Your Region</h3>
+        <p>Prices and Availability Vary by Region</p>
+        <select
+          name="region"
+          id="region"
+        >
+          <option value="in">India</option>
+          <option value="eu">Europe + UK</option>
+          <option value="us">United States</option>
+          <option value="ca">Canada</option>
+          <option value="au">Australia</option>
+          <option value="all">Rest of the World</option>
+        </select>
+      </div>
+
+      <h2>🛍️ Shop Items</h2>
+      <p>Physical Items, digital rewards, and more</p>
+
+      <div class="card-container">
+        <!-- Start of the card -->
+        <div class="card">
+          <div class="title">
+            <h3>Lottery Ticket</h3>
+            <div class="imgBx">
+              <img
+                src="https://summer.hackclub.com/shell.avif"
+                alt="Coin"
+              />
+              <span>10</span>
+            </div>
+          </div>
+          <p>
+            Put in shells for a pot. Each ticket gives you a even shot at the
+            pool. Winner drawn August 31st
+          </p>
+          <div class="imgBx">
+            <img
+              src="https://summer.hackclub.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NTEwMjYsInB1ciI6ImJsb2JfaWQifX0=--ebde64457fa1fc4c731a19f7818a24e84f11c909/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJnaWYiLCJyZXNpemVfdG9fbGltaXQiOlsyNTYsMjU2XX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--5e8298f6ac6e446ef80cdd0e2d5e3737d26c5a35/ticket2-4x.gif"
+              alt="Lottery Ticket"
+            />
+          </div>
+          <button class="buy-btn">
+            Buy For
+            <div class="imgBx">
+              <img
+                src="https://summer.hackclub.com/shell.avif"
+                alt="Coin"
+              />
+            </div>
+            <span>10 shells!</span>
+          </button>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
