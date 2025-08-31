@@ -7,7 +7,7 @@
   font-family: "Poppins", sans-serif;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -71,6 +71,17 @@ section {
   border-radius: 100px;
   z-index: 0;
   position: absolute;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-40px) scale(1.4);
+  }
 }
 
 .title {
@@ -84,25 +95,66 @@ section {
   align-self: center;
   height: 100%;
   z-index: 1000;
+  animation: fadeInUp 1.5s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .title > p {
   margin: 0;
   line-height: 10rem;
   width: auto;
+  animation: slideInFromSide 1s ease-out both;
 }
 
 .title > p:nth-child(1) {
   align-self: flex-start;
+  animation-delay: 0.2s;
+  animation-name: slideInLeft;
 }
 
 .title > p:nth-child(2) {
   color: var(--primaryButton);
   align-self: flex-end;
+  animation-delay: 0.4s;
+  animation-name: slideInRight;
 }
 
 .title > p:nth-child(3) {
   align-self: flex-end;
+  animation-delay: 0.6s;
+  animation-name: slideInRight;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .material-icons {
@@ -122,11 +174,25 @@ section {
   height: 50px;
   width: 160px;
   z-index: 9999;
+  animation: buttonSlideIn 1s ease-out both;
+}
+
+@keyframes buttonSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 button {
   height: 50px;
   width: 160px;
+  position: relative;
+  overflow: hidden;
   clip-path: path(
     "M 0 25 C 0 -5, -5 0, 80 0 S 160 -5, 160 25, 165 50 80 50, 0 55, 0 25"
   );
@@ -144,6 +210,35 @@ button {
   position: absolute;
   transform: translateY(0px);
   transition: all 0.2s ease;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
 }
 
 .button > span {
@@ -165,14 +260,25 @@ button {
   transform: translateY(5px);
 }
 
+.button:hover button::before {
+  left: 100%;
+}
+
+.button:active button::after {
+  width: 300px;
+  height: 300px;
+}
+
 .button.first {
   top: 12%;
   right: 15%;
+  animation-delay: 0.8s;
 }
 
 .button.sec {
   bottom: 13%;
   right: 11%;
+  animation-delay: 1s;
 }
 
 .button.sec > button {
@@ -188,6 +294,7 @@ button {
 .button.third {
   bottom: 25%;
   left: 15%;
+  animation-delay: 1.2s;
 }
 
 .button.third > button {
@@ -319,10 +426,32 @@ button {
   position: relative;
   width: 300px;
   transition: transform 0.3s ease;
+  animation: cardSlideUp 0.6s ease-out both;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:nth-child(odd) {
+  animation-delay: calc(var(--card-index, 0) * 0.1s);
+}
+
+.card:nth-child(even) {
+  animation-delay: calc(var(--card-index, 0) * 0.1s + 0.05s);
+}
+
+@keyframes cardSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px) rotateX(15deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotateX(0deg);
+  }
 }
 
 .card:hover {
-  transform: scale(1.05);
+  transform: translateY(-10px) scale(1.05) rotateX(5deg);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 .card:hover::before {
@@ -370,6 +499,11 @@ button {
   padding: 10px;
   position: absolute;
   z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.card:hover .card-content {
+  transform: translateY(-2px);
 }
 
 /* -- ↓ ↓ ↓ extra card content styles ↓ ↓ ↓ -- */
@@ -385,7 +519,7 @@ span {
 h2.status {
   font-size: 1em;
   font-weight: 200;
-  color: #FF6161;
+  color: #ff6161;
 }
 
 .card-info-wrapper {
@@ -458,7 +592,7 @@ h2.status {
 
 .progress-wrap::after {
   position: absolute;
-  content: '🡱'; /* Unicode for upward arrow */
+  content: "🡱"; /* Unicode for upward arrow */
   text-align: center;
   line-height: 46px;
   font-size: 24px;
@@ -479,7 +613,7 @@ h2.status {
 
 .progress-wrap::before {
   position: absolute;
-  content: '🡱';
+  content: "🡱";
   text-align: center;
   line-height: 46px;
   font-size: 24px;
@@ -536,7 +670,7 @@ a.best:hover::after {
 }
 
 a.no {
-  background: #FF6161;
+  background: #ff6161;
 }
 
 /* -- ↓ ↓ ↓ some responsiveness ↓ ↓ ↓ -- */
@@ -576,7 +710,7 @@ a.no {
     width: 100%;
   }
 
-  .button{
+  .button {
     display: none;
     visibility: hidden;
     opacity: 0;

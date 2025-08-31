@@ -86,13 +86,11 @@ class ProjectMap {
   }
 
   init() {
-    // Define the bounds of your custom map image
     this.imageBounds = [
       [-90, -180],
       [90, 180],
     ];
 
-    // Initialize the map with restricted bounds
     this.map = L.map("map", {
       crs: L.CRS.Simple,
       minZoom: 2,
@@ -116,9 +114,8 @@ class ProjectMap {
   }
 
   createProjectMarker() {
-    // Generate random coordinates within the image bounds (with some padding)
-    const lat = (Math.random() - 0.5) * 160; // -80 to 80 (padding from edges)
-    const lng = (Math.random() - 0.5) * 320; // -160 to 160 (padding from edges)
+    const lat = (Math.random() - 0.5) * 160; 
+    const lng = (Math.random() - 0.5) * 320; 
 
     // Generate project data
     const projectData = this.generateProjectData();
