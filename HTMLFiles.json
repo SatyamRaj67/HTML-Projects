@@ -215,6 +215,10 @@
     "name": "cir.html",
     "path": ".\\Circles revolving Circles\\cir.html"
   },
+  "Circular Progress Bar": {
+    "name": "index.html",
+    "path": ".\\Circular Progress Bar\\index.html"
+  },
   "Clock": {
     "name": "Clock.html",
     "path": ".\\Clock\\Clock.html"
@@ -723,6 +727,10 @@
     "name": "Responsive.html",
     "path": ".\\Responsive Nav\\Responsive.html"
   },
+  "Results Responsive": {
+    "name": "index.html",
+    "path": ".\\Results Responsive\\index.html"
+  },
   "Ribbon Card": {
     "name": "Card.html",
     "path": ".\\Ribbon Card\\Card.html"
@@ -853,6 +861,10 @@
   "Tic Tac Toe": {
     "name": "Tic.html",
     "path": ".\\Tic Tac Toe\\Tic.html"
+  },
+   "Timeline Horizontal": {
+    "name": "index.html",
+    "path": ".\\Timeline Horizontal\\index.html"
   },
   "Tour Web": {
     "name": "tour.html",
