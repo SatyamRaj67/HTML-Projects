@@ -1,0 +1,254 @@
+/* === CSS Variables: Global Colors === */
+:root {
+  /* Effect Controls */
+  --spot-hsl: 190 90% 60%; /* cyan-ish */
+  --spot-alpha: 0.7; /* brightness of highlight */
+  --spot-fade: 18vmin; /* radius / falloff of the spotlight */
+  --bw: 3px; /* border width (the lit ring thickness) */
+  --mx: -9999; /* mouse x (px) - set by JS */
+  --my: -9999; /* mouse y (px) - set by JS */
+
+  /* Theme */
+  --bg: hsl(220 15% 7%);
+  --panel: hsl(220 15% 10%);
+  --text: hsl(210 15% 92%);
+  --muted: hsl(210 10% 65% / 0.85);
+  --border-base: hsl(210 10% 28% / 0.6);
+}
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Header Styles */
+header {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-base);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.brand-badge {
+  width: 8px;
+  height: 8px;
+  background: hsl(var(--spot-hsl));
+  border-radius: 50%;
+}
+
+.links {
+  display: flex;
+  gap: 2rem;
+}
+
+.links a {
+  text-decoration: none;
+  color: var(--muted);
+  transition: color 0.3s;
+}
+
+.links a:hover {
+  color: var(--text);
+}
+
+.cta {
+  padding: 0.5rem 1rem;
+  background: var(--panel);
+  color: var(--text);
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+/* Hero Section */
+.hero {
+  padding: 4rem 0;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: var(--muted);
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.btn.primary {
+  background: hsl(var(--spot-hsl));
+  color: white;
+}
+
+.btn:not(.primary) {
+  background: var(--panel);
+  color: var(--text);
+}
+
+.hero-visual {
+  height: 300px;
+  background: var(--panel);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hint {
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* Section Styles */
+.section {
+  padding: 4rem 0;
+}
+
+.section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.lead {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--muted);
+  margin-bottom: 3rem;
+}
+
+/* Grid Styles */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.card {
+  background: var(--panel);
+  padding: 1.5rem;
+  border-radius: 8px;
+  position: relative;
+  min-height: 120px;
+}
+
+.card h3 {
+  margin: 0 0 6px;
+  font-size: 1.1rem;
+}
+
+.card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.num {
+  position: absolute;
+  bottom: 10px;
+  right: 12px;
+  font-weight: 800;
+  color: hsl(0 0% 100% / 0.75);
+  font-size: 1.6rem;
+}
+
+/* === Spotlight on BORDERS === */
+.glow-border {
+  position: relative;
+}
+
+.glow-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+
+  background: radial-gradient(
+    circle at calc(var(--mx) * 1px) calc(var(--my) * 1px),
+    hsl(var(--spot-hsl) / var(--spot-alpha)) 0%,
+    transparent var(--spot-fade)
+  );
+  background-attachment: fixed;
+
+  padding: var(--bw);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+}
+
+.glow-border::after {
+  content: none;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --spot-alpha: 0.55;
+  }
+}
