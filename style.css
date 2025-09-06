@@ -4,7 +4,7 @@
 
 /* === CSS Variables: Global Colors === */
 :root {
-  --bg-color: #141414;
+  --bg-color: #05060f;
   --card-color: #1a1924; /* Make the card colour dark almost black bluish purple */
   --text: #fff;
 }
@@ -34,7 +34,7 @@ body {
   font-family: Untitled Sans, system-ui, -apple-system, BlinkMacSystemFont,
     Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue,
     sans-serif;
-  background: #05060f
+  background: var(--bg-color)
     linear-gradient(0deg, rgba(216, 236, 248, 0.06), rgba(152, 192, 239, 0.06));
 
   font-size: max(calc(var(--_size) * 0.03), 10px);
@@ -79,12 +79,6 @@ span {
 
 h2 {
   font-family: "Hubot-Sans", sans-serif;
-}
-
-h2,
-p {
-  margin: 0;
-  padding: 0;
 }
 
 h2 a {
@@ -1264,7 +1258,7 @@ p {
 }
 
 .card {
-  background-color: rgba(255, 255, 255, 0.1);
+  /* background-color: rgba(255, 255, 255, 0.1); */
   border-radius: 10px;
   cursor: pointer;
   display: flex;
@@ -1423,18 +1417,6 @@ a.no {
   }
 }
 
-/* === Copyright Statement Styles === */
-.copyrightText {
-  position: relative;
-  bottom: 0px;
-  width: 100%;
-  background: var(--bg-color);
-  padding-top: 1rem;
-  text-align: center;
-  color: var(--text);
-  border-top: 1px solid rgba(255, 255, 255, 0.25);
-}
-
 /* === Progress Wrapper Styles === */
 
 .progress-wrap {
@@ -1516,6 +1498,83 @@ a.no {
 }
 
 /* Reaarangement later */
-svg.design-svg{
-  width: 80%;
+.design-svg {
+  width: 80vw;
+  background: linear-gradient(135deg, #0a0e1a 0%, #1a1f3a 50%, #2a2f4a 100%);
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Update SVG elements for bluish-black theme */
+.design-svg .background {
+  fill: #1e2749 !important;
+}
+
+.design-svg .frame {
+  fill: #4a90e2 !important;
+  stroke: #6bb6ff;
+  stroke-width: 1;
+}
+
+.design-svg .draw {
+  fill: #8db4e8 !important;
+}
+
+.design-svg .content-group path {
+  fill: #6bb6ff !important;
+}
+
+/* Page backgrounds */
+.design-svg .page-sidebar .background,
+.design-svg .page-center .background,
+.design-svg .page-form .background,
+.design-svg .page-slider .background,
+.design-svg .page-hero .background {
+  fill: #2a3454 !important;
+}
+
+/* Content elements */
+.design-svg #content path,
+.design-svg #content-1 path,
+.design-svg #form-content path,
+.design-svg #Images-Content path,
+.design-svg #Headline-Content path {
+  fill: #7aa3d4 !important;
+}
+
+/* Special elements */
+.design-svg .check-mark {
+  fill: #00ff88 !important;
+}
+
+.design-svg .button {
+  fill: #4a90e2 !important;
+}
+
+.design-svg .field,
+.design-svg .field-two {
+  fill: #3d5a7f !important;
+}
+
+.design-svg .field-content {
+  fill: #ffffff !important;
+}
+
+/* Line at bottom */
+.design-svg #line {
+  stroke: #4a90e2 !important;
+  stroke-width: 5;
+}
+
+/* Animation for hover effect */
+.design-svg:hover {
+  transform: translateY(-2px);
+  transition: transform 0.3s ease;
+  box-shadow: 0 12px 40px rgba(74, 144, 226, 0.2);
+}
+
+/* Glowing effect for interactive elements */
+.design-svg .page:hover .background {
+  fill: #344869 !important;
+  transition: fill 0.3s ease;
 }
