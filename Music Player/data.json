@@ -1,0 +1,46 @@
+{
+  "songs": [
+    {
+      "title": "Fireworks",
+      "artists": ["@Hannah"],
+      "cover_img": "imgs/fireworks.png",
+      "music": "music/fireworks.mp3",
+      "accent_color": "#282f75"
+    },
+    {
+      "title": "River Flows in You",
+      "artists": ["@One For Freedom"],
+      "cover_img": "imgs/River_Flows.jpeg",
+      "music": "music/River_Flows.mp3",
+      "accent_color": "#41403e"
+    },
+    {
+      "title": "NEVER FORGETTING",
+      "artists": ["@Youssef", "@Pankun"],
+      "cover_img": "imgs/youssef.png",
+      "music": "music/Never_Forgetting.mp3",
+      "accent_color": "#190b2f"
+    },
+    {
+      "title": "Overtale_Finale",
+      "artists": ["@JustZvan"],
+      "cover_img": "imgs/undertale.jpg",
+      "music": "music/Finale.mp3",
+      "accent_color": "#111"
+    },
+    {
+      "title": "SPLAT",
+      "artists": ["@Gizzy"],
+      "cover_img": "imgs/splat.jpg",
+      "music": "music/splat.mp3",
+      "accent_color": "#e590ee"
+    },
+    {
+      "title": "Give A Little",
+      "artists": ["@ChessPotato"],
+      "cover_img": "imgs/cg5.jpeg",
+      "music": "music/Give_a_little.mp3",
+      "accent_color": "#6f4d36"
+    }
+  ]
+}
