@@ -1,761 +1,611 @@
 {
   "+ Box": {
     "name": "+.html",
-    "path": ".\\+ Box\\+.html",
-    "tags": ["design", "box", "ui"]
+    "path": ".\\+ Box\\+.html"
   },
   "2024 Countdown": {
     "name": "2024.html",
-    "path": ".\\2024 Countdown\\2024.html",
-    "tags": ["animation", "countdown", "time"]
+    "path": ".\\2024 Countdown\\2024.html"
   },
   "9 Apps": {
     "name": "9.html",
-    "path": ".\\9 Apps\\9.html",
-    "tags": ["grid", "app", "layout"]
+    "path": ".\\9 Apps\\9.html"
   },
   "A building Picture": {
     "name": "build.html",
     "path": ".\\A building Picture\\build.html",
     "img": "warning-icon.svg",
     "status": "Currently not working : (",
-    "class": "no",
-    "tags": ["image", "building", "picture"]
+    "class": "no"
   },
   "Account Valid": {
     "name": "a.html",
-    "path": ".\\Account Valid\\a.html",
-    "tags": ["form", "validation", "ui"]
+    "path": ".\\Account Valid\\a.html"
   },
   "Aeroplane Getsetfly": {
     "name": "aero.html",
-    "path": ".\\Aeroplane Getsetfly\\aero.html",
-    "tags": ["animation", "aeroplane", "travel"]
+    "path": ".\\Aeroplane Getsetfly\\aero.html"
   },
   "Animated Cards": {
     "name": "Card.html",
-    "path": ".\\Animated Cards\\Card.html",
-    "tags": ["animation", "card", "ui"]
+    "path": ".\\Animated Cards\\Card.html"
   },
   "Animated Circles": {
     "name": "Circles.html",
-    "path": ".\\Animated Circles\\Circles.html",
-    "tags": ["animation", "circle", "geometry"]
+    "path": ".\\Animated Circles\\Circles.html"
   },
   "Animated Heart": {
     "name": "an.html",
-    "path": ".\\Animated Heart\\an.html",
-    "tags": ["animation", "heart", "love"]
+    "path": ".\\Animated Heart\\an.html"
   },
   "Animated Progress Bar": {
     "name": "Animated.html",
-    "path": ".\\Animated Progress Bar\\Animated.html",
-    "tags": ["animation", "progress", "ui"]
+    "path": ".\\Animated Progress Bar\\Animated.html"
   },
   "Animated Text Trail": {
     "name": "index.html",
-    "path": ".\\Animated Text Trail\\index.html",
-    "tags": ["animation", "text", "trail"]
+    "path": ".\\Animated Text Trail\\index.html"
   },
   "AnimeJS Playes": {
     "name": "js.html",
-    "path": ".\\AnimeJS Playes\\js.html",
-    "tags": ["animation", "anime", "player"]
+    "path": ".\\AnimeJS Playes\\js.html"
   },
   "AnimeJS Web": {
     "name": "Web.html",
-    "path": ".\\AnimeJS Web\\Web.html",
-    "tags": ["animation", "anime", "website"]
+    "path": ".\\AnimeJS Web\\Web.html"
   },
   "Another Assignment": {
     "name": "index.html",
-    "path": ".\\Another Assignment\\index.html",
-    "tags": ["layout", "assignment", "project"]
+    "path": ".\\Another Assignment\\index.html"
   },
   "App": {
     "name": "Web.html",
-    "path": ".\\App\\Web.html",
-    "tags": ["app", "web", "ui"]
+    "path": ".\\App\\Web.html"
   },
   "Assignment": {
     "name": "assignment.html",
-    "path": ".\\Assignment\\assignment.html",
-    "tags": ["layout", "assignment", "project"]
+    "path": ".\\Assignment\\assignment.html"
   },
   "CV": {
     "name": "CV.html",
-    "path": ".\\App\\cv\\CV.html",
-    "tags": ["cv", "resume", "profile"]
+    "path": ".\\App\\cv\\CV.html"
   },
   "Audio Player": {
     "name": "au.html",
-    "path": ".\\Audio Player\\au.html",
-    "tags": ["media", "audio", "player"]
+    "path": ".\\Audio Player\\au.html"
   },
   "Ayurvedic Website": {
     "name": "index.html",
-    "path": ".\\Ayurvedic Website\\index.html",
-    "tags": ["website", "ayurveda", "health"]
+    "path": ".\\Ayurvedic Website\\index.html"
   },
   "Background Button": {
     "name": "Button.html",
-    "path": ".\\Background Button\\Button.html",
-    "tags": ["background", "button", "ui"]
+    "path": ".\\Background Button\\Button.html"
   },
   "Background Design": {
     "name": "bac.html",
-    "path": ".\\Background Design\\bac.html",
-    "tags": ["background", "design", "pattern"]
+    "path": ".\\Background Design\\bac.html"
   },
   "Background JS": {
     "name": "Main.html",
-    "path": ".\\Background JS\\Main.html",
-    "tags": ["background", "javascript", "interactive"]
+    "path": ".\\Background JS\\Main.html"
   },
   "Background Square": {
     "name": "Square.html",
-    "path": ".\\Background Square\\Square.html",
-    "tags": ["background", "square", "geometry"]
+    "path": ".\\Background Square\\Square.html"
   },
   "Balance the ball": {
     "name": "Balance.html",
-    "path": ".\\Balance the ball\\Balance.html",
-    "tags": ["game", "ball", "physics"]
+    "path": ".\\Balance the ball\\Balance.html"
   },
   "Better Nav": {
     "name": "nav.html",
-    "path": ".\\Better Nav\\nav.html",
-    "tags": ["navigation", "ui", "menu"]
+    "path": ".\\Better Nav\\nav.html"
   },
   "Bg-Icon Change": {
     "name": "Bg.html",
-    "path": ".\\Bg-Icon Change\\Bg.html",
-    "tags": ["background", "icon", "toggle"]
+    "path": ".\\Bg-Icon Change\\Bg.html"
   },
   "BGMI": {
     "name": "bgmi.html",
-    "path": ".\\BGMI\\bgmi.html",
-    "tags": ["game", "website", "bgmi"]
+    "path": ".\\BGMI\\bgmi.html"
   },
   "Bike Web": {
     "name": "b.html",
-    "path": ".\\Bike Web\\b.html",
-    "tags": ["website", "bike", "vehicle"]
+    "path": ".\\Bike Web\\b.html"
   },
   "Book": {
     "name": "Bo.html",
-    "path": ".\\Book\\Bo.html",
-    "tags": ["design", "book", "reading"]
+    "path": ".\\Book\\Bo.html"
   },
   "Border Effect": {
     "name": "Border.html",
-    "path": ".\\Border Effect\\Border.html",
-    "tags": ["effect", "border", "ui"]
+    "path": ".\\Border Effect\\Border.html"
   },
   "Box Menu": {
     "name": "menu.html",
-    "path": ".\\Box Menu\\menu.html",
-    "tags": ["menu", "box", "navigation"]
+    "path": ".\\Box Menu\\menu.html"
   },
   "Breaking Image in 4": {
     "name": "Break.html",
-    "path": ".\\Breaking Image in 4\\Break.html",
-    "tags": ["effect", "image", "split"]
+    "path": ".\\Breaking Image in 4\\Break.html"
   },
   "Bubbles!": {
     "name": "Bub.html",
-    "path": ".\\Bubbles!\\Bub.html",
-    "tags": ["animation", "bubbles", "particle"]
+    "path": ".\\Bubbles!\\Bub.html"
   },
   "Button": {
     "name": "b.html",
-    "path": ".\\Button\\b.html",
-    "tags": ["button", "ui", "interactive"]
+    "path": ".\\Button\\b.html"
   },
   "Button Corner": {
     "name": "Button.html",
-    "path": ".\\Button Corner\\Button.html",
-    "tags": ["button", "corner", "ui"]
+    "path": ".\\Button Corner\\Button.html"
   },
   "Button Ripple": {
     "name": "ripple.html",
-    "path": ".\\Button Ripple\\ripple.html",
-    "tags": ["button", "ripple", "effect"]
+    "path": ".\\Button Ripple\\ripple.html"
   },
   "Calander": {
     "name": "cal.html",
-    "path": ".\\Calander\\cal.html",
-    "tags": ["calendar", "date", "ui"]
+    "path": ".\\Calander\\cal.html"
   },
   "Calculator": {
     "name": "calculator.html",
-    "path": ".\\Calculator\\calculator.html",
-    "tags": ["calculator", "math", "tool"]
+    "path": ".\\Calculator\\calculator.html"
   },
   "Card Border Glow": {
     "name": "Card.html",
-    "path": ".\\Card Border Glow\\Card.html",
-    "tags": ["card", "glow", "effect"]
+    "path": ".\\Card Border Glow\\Card.html"
   },
   "Card Curvy": {
     "name": "Card.html",
-    "path": ".\\Card Curvy\\Card.html",
-    "tags": ["card", "curve", "design"]
+    "path": ".\\Card Curvy\\Card.html"
   },
   "Card Flow": {
     "name": "Card.html",
-    "path": ".\\Card Flow\\Card.html",
-    "tags": ["card", "flow", "animation"]
+    "path": ".\\Card Flow\\Card.html"
   },
   "Card Hover": {
     "name": "Card.html",
-    "path": ".\\Card Hover\\Card.html",
-    "tags": ["card", "hover", "interaction"]
+    "path": ".\\Card Hover\\Card.html"
   },
   "Card Profile": {
     "name": "Card.html",
     "path": ".\\Card Profile\\Card.html",
-    "class": "best",
-    "tags": ["card", "profile", "ui"]
+    "class": "best"
   },
   "Card Tabs": {
     "name": "Card.html",
-    "path": ".\\Card Tabs\\Card.html",
-    "tags": ["card", "tabs", "navigation"]
+    "path": ".\\Card Tabs\\Card.html"
   },
   "Card with Ribbion": {
     "name": "ca.html",
-    "path": ".\\Card with Ribbion\\ca.html",
-    "tags": ["card", "ribbon", "design"]
+    "path": ".\\Card with Ribbion\\ca.html"
   },
   "Cards": {
     "name": "card.html",
-    "path": ".\\Cards\\card.html",
-    "tags": ["card", "ui", "layout"]
+    "path": ".\\Cards\\card.html"
   },
   "Change Background": {
     "name": "ch.html",
-    "path": ".\\Change Background\\ch.html",
-    "tags": ["background", "toggle", "interactive"]
+    "path": ".\\Change Background\\ch.html"
   },
   "Changing Buttons": {
     "name": "l.html",
-    "path": ".\\Changing Buttons\\l.html",
-    "tags": ["button", "animation", "toggle"]
+    "path": ".\\Changing Buttons\\l.html"
   },
   "Character Counter": {
     "name": "Counter.html",
-    "path": ".\\Character Counter\\Counter.html",
-    "tags": ["form", "counter", "text"]
+    "path": ".\\Character Counter\\Counter.html"
   },
   "Check Box": {
     "name": "Check.html",
-    "path": ".\\Check Box\\Check.html",
-    "tags": ["form", "checkbox", "ui"]
+    "path": ".\\Check Box\\Check.html"
   },
   "Circle Card": {
     "name": "card.html",
-    "path": ".\\Circle Card\\card.html",
-    "tags": ["card", "circle", "geometry"]
+    "path": ".\\Circle Card\\card.html"
   },
   "Circle Line Loading": {
     "name": "ci.html",
-    "path": ".\\Circle Line Loading\\ci.html",
-    "tags": ["loading", "circle", "animation"]
+    "path": ".\\Circle Line Loading\\ci.html"
   },
   "Circles revolving Circles": {
     "name": "cir.html",
-    "path": ".\\Circles revolving Circles\\cir.html",
-    "tags": ["animation", "circle", "rotation"]
+    "path": ".\\Circles revolving Circles\\cir.html"
   },
   "Circular Progress Bar": {
     "name": "index.html",
-    "path": ".\\Circular Progress Bar\\index.html",
-    "tags": ["progress", "circle", "ui"]
+    "path": ".\\Circular Progress Bar\\index.html"
   },
   "Clock": {
     "name": "Clock.html",
-    "path": ".\\Clock\\Clock.html",
-    "tags": ["clock", "time", "ui"]
+    "path": ".\\Clock\\Clock.html"
   },
   "Clock Time": {
     "name": "clock.html",
-    "path": ".\\Clock Time\\clock.html",
-    "tags": ["clock", "time", "digital"]
+    "path": ".\\Clock Time\\clock.html"
   },
   "Coca-Cola Web": {
     "name": "cocacola.html",
     "path": ".\\Coca-Cola Web\\cocacola.html",
-    "class": "best",
-    "tags": ["website", "cocacola", "brand"]
+    "class": "best"
   },
   "Coffee Switch": {
     "name": "coffee.html",
-    "path": ".\\Coffee Switch\\coffee.html",
-    "tags": ["toggle", "coffee", "switch"]
+    "path": ".\\Coffee Switch\\coffee.html"
   },
   "Colourful Line": {
     "name": "Line.html",
-    "path": ".\\Colourful Line\\Line.html",
-    "tags": ["animation", "line", "colorful"]
+    "path": ".\\Colourful Line\\Line.html"
   },
   "Colourful Wheel": {
     "name": "Wheel.html",
-    "path": ".\\Colourful Wheel\\Wheel.html",
-    "tags": ["animation", "wheel", "colorful"]
+    "path": ".\\Colourful Wheel\\Wheel.html"
   },
   "Contact Form": {
     "name": "index.html",
-    "path": ".\\Contact Form\\index.html",
-    "tags": ["form", "contact", "ui"]
+    "path": ".\\Contact Form\\index.html"
   },
   "Cool Section": {
     "name": "Section.html",
-    "path": ".\\Cool Section\\Section.html",
-    "tags": ["layout", "section", "design"]
+    "path": ".\\Cool Section\\Section.html"
   },
   "Country change": {
     "name": "country.html",
-    "path": ".\\Country change\\country.html",
-    "tags": ["form", "country", "selector"]
+    "path": ".\\Country change\\country.html"
   },
   "CSS IS AWESOME": {
     "name": "css.html",
-    "path": ".\\CSS IS AWESOME\\css.html",
-    "tags": ["text", "css", "design"]
+    "path": ".\\CSS IS AWESOME\\css.html"
   },
   "Devices": {
     "name": "de.html",
-    "path": ".\\Devices\\de.html",
-    "tags": ["layout", "device", "responsive"]
+    "path": ".\\Devices\\de.html"
   },
   "Distortion": {
     "name": "Dist.html",
-    "path": ".\\Distortion\\Dist.html",
-    "tags": ["effect", "distortion", "visual"]
+    "path": ".\\Distortion\\Dist.html"
   },
   "Double Drop": {
     "name": "Double.html",
-    "path": ".\\Double Drop\\Double.html",
-    "tags": ["effect", "drop", "animation"]
+    "path": ".\\Double Drop\\Double.html"
   },
   "Drag and Drop": {
     "name": "Drag.html",
-    "path": ".\\Drag and Drop\\Drag.html",
-    "tags": ["interaction", "drag", "drop"]
+    "path": ".\\Drag and Drop\\Drag.html"
   },
   "Dropdown": {
     "name": "Drop.html",
-    "path": ".\\Dropdown\\Drop.html",
-    "tags": ["dropdown", "ui", "menu"]
+    "path": ".\\Dropdown\\Drop.html"
   },
   "Dropdown Navigation Bar": {
     "name": "drop.html",
-    "path": ".\\Dropdown Navigation Bar\\drop.html",
-    "tags": ["navigation", "dropdown", "menu"]
+    "path": ".\\Dropdown Navigation Bar\\drop.html"
   },
   "Dynamic Calender": {
     "name": "Dynamic.html",
-    "path": ".\\Dynamic Calender\\Dynamic.html",
-    "tags": ["calendar", "dynamic", "javascript"]
+    "path": ".\\Dynamic Calender\\Dynamic.html"
   },
   "Emoji Trail": {
     "name": "Emoji.html",
-    "path": ".\\Emoji Trail\\Emoji.html",
-    "tags": ["animation", "emoji", "trail"]
+    "path": ".\\Emoji Trail\\Emoji.html"
   },
   "Energy Ball": {
     "name": "Energy.html",
-    "path": ".\\Energy Ball\\Energy.html",
-    "tags": ["animation", "ball", "energy"]
+    "path": ".\\Energy Ball\\Energy.html"
   },
   "Draggable Thingy": {
     "name": "drag.html",
-    "path": ".\\Errors\\Draggable Thingy\\drag.html",
-    "tags": ["interaction", "drag", "error"]
+    "path": ".\\Errors\\Draggable Thingy\\drag.html"
   },
   "My Circling Text": {
     "name": "circle.html",
-    "path": ".\\Errors\\My Circling Text\\circle.html",
-    "tags": ["animation", "text", "circle"]
+    "path": ".\\Errors\\My Circling Text\\circle.html"
   },
   "Shooting Stars(Work)": {
     "name": "shoot.html",
-    "path": ".\\Errors\\Shooting Stars(Work)\\shoot.html",
-    "tags": ["animation", "stars", "shooting"]
+    "path": ".\\Errors\\Shooting Stars(Work)\\shoot.html"
   },
   "Solution Of Problems": {
     "name": "sol.html",
-    "path": ".\\Errors\\Solution Of Problems\\sol.html",
-    "tags": ["layout", "solution", "problem"]
+    "path": ".\\Errors\\Solution Of Problems\\sol.html"
   },
   "Eyes": {
     "name": "eye.html",
-    "path": ".\\Eyes\\eye.html",
-    "tags": ["animation", "eyes", "follow"]
+    "path": ".\\Eyes\\eye.html"
   },
   "Falling Leaves": {
     "name": "Falling.html",
-    "path": ".\\Falling Leaves\\Falling.html",
-    "tags": ["animation", "leaves", "falling"]
+    "path": ".\\Falling Leaves\\Falling.html"
   },
   "Fingerprint Scanner": {
     "name": "fingerprint.html",
-    "path": ".\\Fingerprint Scanner\\fingerprint.html",
-    "tags": ["animation", "fingerprint", "scanner"]
+    "path": ".\\Fingerprint Scanner\\fingerprint.html"
   },
   "Fire Ecology": {
     "name": "Web.html",
-    "path": ".\\Fire Ecology\\Web.html",
-    "tags": ["website", "ecology", "fire"]
+    "path": ".\\Fire Ecology\\Web.html"
   },
   "Flex Image Gallery": {
     "name": "Image.html",
-    "path": ".\\Flex Image Gallery\\Image.html",
-    "tags": ["gallery", "image", "flex"]
+    "path": ".\\Flex Image Gallery\\Image.html"
   },
   "Focus on Studies": {
     "name": "focus.html",
-    "path": ".\\Focus on Studies\\focus.html",
-    "tags": ["layout", "focus", "study"]
+    "path": ".\\Focus on Studies\\focus.html"
   },
   "Focus On Words": {
     "name": "Focus.html",
-    "path": ".\\Focus On Words\\Focus.html",
-    "tags": ["text", "focus", "words"]
+    "path": ".\\Focus On Words\\Focus.html"
   },
   "Folding Designs": {
     "name": "fold.html",
-    "path": ".\\Folding Designs\\fold.html",
-    "tags": ["animation", "fold", "design"]
+    "path": ".\\Folding Designs\\fold.html"
   },
   "Folding Image": {
     "name": "Folding.html",
-    "path": ".\\Folding Image\\Folding.html",
-    "tags": ["animation", "image", "fold"]
+    "path": ".\\Folding Image\\Folding.html"
   },
   "Food Web": {
     "name": "bl.html",
-    "path": ".\\Food Web\\bl.html",
-    "tags": ["website", "food", "restaurant"]
+    "path": ".\\Food Web\\bl.html"
   },
   "Gaming Web": {
     "name": "Game.html",
-    "path": ".\\Gaming Web\\Game.html",
-    "tags": ["website", "gaming", "game"]
+    "path": ".\\Gaming Web\\Game.html"
   },
   "Glassmorphin buttons": {
     "name": "glass.html",
-    "path": ".\\Glassmorphin buttons\\glass.html",
-    "tags": ["button", "glass", "morphism"]
+    "path": ".\\Glassmorphin buttons\\glass.html"
   },
   "Glowing Cards": {
     "name": "card.html",
-    "path": ".\\Glowing Cards\\card.html",
-    "tags": ["card", "glow", "effect"]
+    "path": ".\\Glowing Cards\\card.html"
   },
   "Glowing Cards 3D": {
     "name": "card.html",
-    "path": ".\\Glowing Cards 3D\\card.html",
-    "tags": ["card", "glow", "3d"]
+    "path": ".\\Glowing Cards 3D\\card.html"
   },
   "Grid": {
     "name": "Photo-Grid.html",
-    "path": ".\\Grid\\Photo-Grid.html",
-    "tags": ["grid", "photo", "layout"]
+    "path": ".\\Grid\\Photo-Grid.html"
   },
   "Hacked Text": {
     "name": "Text.html",
-    "path": ".\\Hacked Text\\Text.html",
-    "tags": ["text", "hacked", "animation"]
+    "path": ".\\Hacked Text\\Text.html"
   },
   "Hacking Text": {
     "name": "Hacking.html",
-    "path": ".\\Hacking Text\\Hacking.html",
-    "tags": ["text", "hacking", "animation"]
+    "path": ".\\Hacking Text\\Hacking.html"
   },
   "Halloween": {
     "name": "index.html",
-    "path": ".\\Halloween\\index.html",
-    "tags": ["theme", "halloween", "spooky"]
+    "path": ".\\Halloween\\index.html"
   },
   "Heart": {
     "name": "heart.html",
-    "path": ".\\Heart\\heart.html",
-    "tags": ["animation", "heart", "love"]
+    "path": ".\\Heart\\heart.html"
   },
   "Heart Throw": {
     "name": "Heart.html",
-    "path": ".\\Heart Throw\\Heart.html",
-    "tags": ["animation", "heart", "throw"]
+    "path": ".\\Heart Throw\\Heart.html"
   },
   "Hexagon Background": {
     "name": "index.html",
     "path": ".\\Hexagon Background\\index.html",
-    "class": "best",
-    "tags": ["background", "hexagon", "pattern"]
+    "class": "best"
   },
   "Hinge Animation": {
     "name": "hinge.html",
-    "path": ".\\Hinge Animation\\hinge.html",
-    "tags": ["animation", "hinge", "effect"]
+    "path": ".\\Hinge Animation\\hinge.html"
   },
   "Hole has surprise": {
     "name": "ho.html",
-    "path": ".\\Hole has surprise\\ho.html",
-    "tags": ["animation", "hole", "surprise"]
+    "path": ".\\Hole has surprise\\ho.html"
   },
   "Holi Offer": {
     "name": "Happy.html",
-    "path": ".\\Holi Offer\\Happy.html",
-    "tags": ["theme", "holi", "festival"]
+    "path": ".\\Holi Offer\\Happy.html"
   },
   "Hover Cubes": {
     "name": "Cubes.html",
-    "path": ".\\Hover Cubes\\Cubes.html",
-    "tags": ["hover", "cube", "3d"]
+    "path": ".\\Hover Cubes\\Cubes.html"
   },
   "Hover Login": {
     "name": "Hover.html",
-    "path": ".\\Hover Login\\Hover.html",
-    "tags": ["hover", "login", "form"]
+    "path": ".\\Hover Login\\Hover.html"
   },
   "Hover Trace": {
     "name": "hover.html",
-    "path": ".\\Hover Trace\\hover.html",
-    "tags": ["hover", "trace", "effect"]
+    "path": ".\\Hover Trace\\hover.html"
   },
   "Image Card": {
     "name": "Card.html",
-    "path": ".\\Image Card\\Card.html",
-    "tags": ["card", "image", "ui"]
+    "path": ".\\Image Card\\Card.html"
   },
   "Image Shadow": {
     "name": "Image.html",
-    "path": ".\\Image Shadow\\Image.html",
-    "tags": ["image", "shadow", "effect"]
+    "path": ".\\Image Shadow\\Image.html"
   },
   "Image Slide": {
     "name": "index.html",
-    "path": ".\\Image Slide\\index.html",
-    "tags": ["image", "slide", "animation"]
+    "path": ".\\Image Slide\\index.html"
   },
   "Image Slider": {
     "name": "Slider.html",
-    "path": ".\\Image Slider\\Slider.html",
-    "tags": ["slider", "image", "carousel"]
+    "path": ".\\Image Slider\\Slider.html"
   },
   "Image Slider Js": {
     "name": "index.html",
-    "path": ".\\Image Slider Js\\index.html",
-    "tags": ["slider", "image", "javascript"]
+    "path": ".\\Image Slider Js\\index.html"
   },
   "Image Slider Responsive": {
     "name": "index.html",
     "path": ".\\Image Slider Responsive\\index.html",
-    "class": "best",
-    "tags": ["slider", "responsive", "image"]
+    "class": "best"
   },
   "Image Slider Slide": {
     "name": "Image.html",
-    "path": ".\\Image Slider Slide\\Image.html",
-    "tags": ["slider", "image", "slide"]
+    "path": ".\\Image Slider Slide\\Image.html"
   },
   "Independence Day": {
     "name": "India.html",
-    "path": ".\\Independence Day\\India.html",
-    "tags": ["theme", "independence", "patriotic"]
+    "path": ".\\Independence Day\\India.html"
   },
   "Infinite Line": {
     "name": "Line.html",
-    "path": ".\\Infinite Line\\Line.html",
-    "tags": ["animation", "line", "infinite"]
+    "path": ".\\Infinite Line\\Line.html"
   },
   "Infinity": {
     "name": "Infi.html",
-    "path": ".\\Infinity\\Infi.html",
-    "tags": ["animation", "infinity", "symbol"]
+    "path": ".\\Infinity\\Infi.html"
   },
   "Instagram": {
     "name": "in.html",
-    "path": ".\\Instagram\\in.html",
-    "tags": ["layout", "instagram", "social"]
+    "path": ".\\Instagram\\in.html"
   },
   "Intersecting Circle": {
     "name": "Circle.html",
-    "path": ".\\Intersecting Circle\\Circle.html",
-    "tags": ["animation", "circle", "intersect"]
+    "path": ".\\Intersecting Circle\\Circle.html"
   },
   "Intersection Magic": {
     "name": "Magic.html",
-    "path": ".\\Intersection Magic\\Magic.html",
-    "tags": ["animation", "intersection", "magic"]
+    "path": ".\\Intersection Magic\\Magic.html"
   },
   "Intro Text": {
     "name": "intro.html",
-    "path": ".\\Intro Text\\intro.html",
-    "tags": ["text", "intro", "animation"]
+    "path": ".\\Intro Text\\intro.html"
   },
   "Inv Border Profile": {
     "name": "profile.html",
-    "path": ".\\Inv Border Profile\\profile.html",
-    "tags": ["profile", "border", "invisible"]
+    "path": ".\\Inv Border Profile\\profile.html"
   },
   "IPhone Call": {
     "name": "Call.html",
-    "path": ".\\IPhone Call\\Call.html",
-    "tags": ["ui", "iphone", "call"]
+    "path": ".\\IPhone Call\\Call.html"
   },
   "Isometric Box": {
     "name": "index.html",
-    "path": ".\\Isometric Box\\index.html",
-    "tags": ["design", "isometric", "box"]
+    "path": ".\\Isometric Box\\index.html"
   },
   "Just keep rotating": {
     "name": "l.html",
-    "path": ".\\Just keep rotating\\l.html",
-    "tags": ["animation", "rotation", "continuous"]
+    "path": ".\\Just keep rotating\\l.html"
   },
   "Just Load It!": {
     "name": "load.html",
-    "path": ".\\Just Load It!\\load.html",
-    "tags": ["loading", "animation", "loader"]
+    "path": ".\\Just Load It!\\load.html"
   },
   "Levitating Bg": {
     "name": "Levitating.html",
-    "path": ".\\Levitating Bg\\Levitating.html",
-    "tags": ["background", "levitate", "floating"]
+    "path": ".\\Levitating Bg\\Levitating.html"
   },
   "Light and Night modes": {
     "name": "light.html",
-    "path": ".\\Light and Night modes\\light.html",
-    "tags": ["theme", "toggle", "mode"]
+    "path": ".\\Light and Night modes\\light.html"
   },
   "List of people": {
     "name": "li.html",
-    "path": ".\\List of people\\li.html",
-    "tags": ["list", "people", "ui"]
+    "path": ".\\List of people\\li.html"
   },
   "Loader": {
     "name": "lo.html",
-    "path": ".\\Loader\\lo.html",
-    "tags": ["loading", "loader", "animation"]
+    "path": ".\\Loader\\lo.html"
   },
   "Loading Page": {
     "name": "loading.html",
-    "path": ".\\Loading Page\\loading.html",
-    "tags": ["loading", "page", "animation"]
+    "path": ".\\Loading Page\\loading.html"
   },
   "Login": {
     "name": "login.html",
-    "path": ".\\Login\\login.html",
-    "tags": ["form", "login", "authentication"]
+    "path": ".\\Login\\login.html"
   },
   "Login and Loading": {
     "name": "lo.html",
-    "path": ".\\Login and Loading\\lo.html",
-    "tags": ["form", "login", "loading"]
+    "path": ".\\Login and Loading\\lo.html"
   },
   "Love Face Balls": {
     "name": "Love.html",
-    "path": ".\\Love Face Balls\\Love.html",
-    "tags": ["animation", "love", "ball"]
+    "path": ".\\Love Face Balls\\Love.html"
   },
   "Magnetic Field Lines": {
     "name": "index.html",
-    "path": ".\\Magnetic Field Lines\\index.html",
-    "tags": ["animation", "magnetic", "field"]
+    "path": ".\\Magnetic Field Lines\\index.html"
   },
   "Magnetic Hover": {
     "name": "Magnetic.html",
-    "path": ".\\Magnetic Hover\\Magnetic.html",
-    "tags": ["hover", "magnetic", "effect"]
+    "path": ".\\Magnetic Hover\\Magnetic.html"
   },
   "Matrix Background": {
     "name": "index.html",
-    "path": ".\\Matrix Background\\index.html",
-    "tags": ["background", "matrix", "digital"]
+    "path": ".\\Matrix Background\\index.html"
   },
   "Memory Game": {
     "name": "Game.html",
-    "path": ".\\Memory Game\\Game.html",
-    "tags": ["game", "memory", "interactive"]
+    "path": ".\\Memory Game\\Game.html"
   },
   "Menu Toggle": {
     "name": "index.html",
-    "path": ".\\Menu Toggle\\index.html",
-    "tags": ["menu", "toggle", "navigation"]
+    "path": ".\\Menu Toggle\\index.html"
   },
   "MOuse lOoks Covid-I9": {
     "name": "corona.html",
-    "path": ".\\MOuse lOoks Covid-I9\\corona.html",
-    "tags": ["animation", "mouse", "covid"]
+    "path": ".\\MOuse lOoks Covid-I9\\corona.html"
   },
   "Mouse Moves": {
     "name": "move.html",
-    "path": ".\\Mouse Moves\\move.html",
-    "tags": ["interaction", "mouse", "move"]
+    "path": ".\\Mouse Moves\\move.html"
   },
   "Mouse Moves Bg": {
     "name": "index.html",
-    "path": ".\\Mouse Moves Bg\\index.html",
-    "tags": ["background", "mouse", "interactive"]
+    "path": ".\\Mouse Moves Bg\\index.html"
   },
   "Mouse Moves Node": {
     "name": "mouse.html",
     "path": ".\\Mouse Moves Node\\mouse.html",
-    "class": "best",
-    "tags": ["interaction", "mouse", "node"]
+    "class": "best"
   },
   "Mouse Moves(advanced)": {
     "name": "mouses.html",
-    "path": ".\\Mouse Moves(advanced)\\mouses.html",
-    "tags": ["interaction", "mouse", "advanced"]
+    "path": ".\\Mouse Moves(advanced)\\mouses.html"
   },
   "Mouse Parallax": {
     "name": "index.html",
-    "path": ".\\Mouse Parallax\\index.html",
-    "tags": ["effect", "mouse", "parallax"]
+    "path": ".\\Mouse Parallax\\index.html"
   },
   "Mouse Super Advanced": {
     "name": "moves.html",
-    "path": ".\\Mouse Super Advanced\\moves.html",
-    "tags": ["interaction", "mouse", "advanced"]
+    "path": ".\\Mouse Super Advanced\\moves.html"
   },
   "Mouse Word moves": {
     "name": "mouse.html",
-    "path": ".\\Mouse Word moves\\mouse.html",
-    "tags": ["interaction", "mouse", "text"]
+    "path": ".\\Mouse Word moves\\mouse.html"
   },
   "My Profile Card": {
     "name": "profile.html",
-    "path": ".\\My Profile Card\\profile.html",
-    "tags": ["card", "profile", "personal"]
+    "path": ".\\My Profile Card\\profile.html"
   },
   "Nav Powered": {
     "name": "Nav.html",
-    "path": ".\\Nav Powered\\Nav.html",
-    "tags": ["navigation", "powered", "ui"]
+    "path": ".\\Nav Powered\\Nav.html"
   },
   "Nav with Circle": {
     "name": "Nav.html",
-    "path": ".\\Nav with Circle\\Nav.html",
-    "tags": ["navigation", "circle", "ui"]
+    "path": ".\\Nav with Circle\\Nav.html"
   },
   "Navbar Auto": {
     "name": "Nav.html",
-    "path": ".\\Navbar Auto\\Nav.html",
-    "tags": ["navigation", "auto", "responsive"]
+    "path": ".\\Navbar Auto\\Nav.html"
   },
   "Neon button": {
     "name": "neon.html",
-    "path": ".\\Neon button\\neon.html",
-    "tags": ["button", "neon", "glow"]
+    "path": ".\\Neon button\\neon.html"
   },
   "Nice Work": {
     "name": "nice.html",
-    "path": ".\\Nice Work\\nice.html",
-    "tags": ["text", "nice", "display"]
+    "path": ".\\Nice Work\\nice.html"
   },
   "Password Meter": {
     "name": "Password.html",

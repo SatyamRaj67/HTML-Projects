@@ -1,48 +1,34 @@
 class ExploreTabManager {
   constructor() {
     this.contentContainer = document.getElementById("content-container");
-    this.radioInputs = document.querySelectorAll(
-      'input[type="radio"][name="tabs"]'
-    );
-    this.currentTab = "devlogs"; // Default to first tab
+    this.tabs = document.querySelectorAll(".explore-nav a[data-tab]");
+    this.currentTab = "devlogs";
     this.contentCache = new Map();
 
     this.init();
   }
 
   init() {
-    // Add change listeners to radio inputs
-    this.radioInputs.forEach((radio) => {
-      radio.addEventListener("change", (e) => {
-        if (e.target.checked) {
-          const tabName = this.getTabNameFromRadio(e.target);
-          this.switchTab(tabName);
-        }
+    // Add click listeners to tabs
+    this.tabs.forEach((tab) => {
+      tab.addEventListener("click", (e) => {
+        e.preventDefault();
+        const tabName = tab.dataset.tab;
+        this.switchTab(tabName);
       });
     });
 
-    // Load default content for the checked radio
-    const checkedRadio = document.querySelector(
-      'input[type="radio"][name="tabs"]:checked'
-    );
-    if (checkedRadio) {
-      const tabName = this.getTabNameFromRadio(checkedRadio);
-      this.loadContent(tabName);
-    }
-  }
-
-  getTabNameFromRadio(radio) {
-    // Map radio IDs to tab names
-    const tabMap = {
-      "radio-1": "devlogs",
-      "radio-2": "following",
-      "radio-3": "gallery",
-    };
-    return tabMap[radio.id] || "devlogs";
+    // Load default content
+    this.loadContent(this.currentTab);
   }
 
   switchTab(tabName) {
     if (tabName === this.currentTab) return;
+
+    // Update active state
+    this.tabs.forEach((tab) => {
+      tab.classList.toggle("active", tab.dataset.tab === tabName);
+    });
 
     this.currentTab = tabName;
     this.loadContent(tabName);
@@ -74,11 +60,11 @@ class ExploreTabManager {
 
   async fetchHTMLContent(tabName) {
     const response = await fetch(`./content/${tabName}.html`);
-
+    
     if (!response.ok) {
       throw new Error(`Failed to load ${tabName}.html: ${response.status}`);
     }
-
+    
     return await response.text();
   }
 

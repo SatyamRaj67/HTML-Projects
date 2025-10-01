@@ -24,8 +24,8 @@
     padding: 1rem 2rem;
     border: 1px solid var(--line-clr);
     border-radius: 0.5rem;
-    background: var(--bg);
-    color: var(--fg);
+    background: var(--base-clr);
+    color: var(--text-clr);
     font-size: 1em;
   }
 }

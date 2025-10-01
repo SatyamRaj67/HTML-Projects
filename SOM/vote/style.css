@@ -2,7 +2,7 @@
   --banner-height: 220px;
 }
 
-main {
+main{
   display: flex;
   justify-content: center;
 }
@@ -16,8 +16,8 @@ main {
     [infoBx] auto
     [projectBx] auto
     [devlogBx] auto;
-    
-  max-width: 960px;
+
+  max-width: 1240px;
 }
 
 .project {
@@ -64,7 +64,7 @@ main {
 
 .infoBx {
   grid-row: infoBx;
-  background: var(--fg);
+  background: var(--text-clr);
   border-radius: 12px;
 }
 
@@ -83,7 +83,7 @@ main {
 
 .projectBx {
   grid-row: projectBx;
-  background: var(--fg);
+  background: var(--text-clr);
   padding: 20px;
   border-radius: 12px;
 
@@ -95,7 +95,7 @@ main {
 
 .devlogBx {
   grid-row: devlogBx;
-  background: var(--fg);
+  background: var(--text-clr);
   border-radius: 12px;
 
   h3,
@@ -103,15 +103,16 @@ main {
     color: var(--base-clr);
   }
 
-  img {
+  img{
     width: 100%;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
   }
 }
 
-.devlogBx .devlog-content {
+.devlogBx .devlog-content{
   padding: 12px;
 }
 
 /* HEART STUFF */
+
