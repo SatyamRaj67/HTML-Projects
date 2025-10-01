@@ -1,12 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 :root {
-  --base-clr: #11121a;
-  --line-clr: #42434a;
-  --hover-clr: #222533;
-  --text-clr: #e6e6ef;
-  --accent-clr: #5e63ff;
-  --secondary-text-clr: #b0b3c1;
+  /* 
+  --line-clr: oklch(38.454% 0.01192 279.325);
+  --muted-1: oklch(26.79% 0.02652 275.086);
+  --secondary-text-clr: oklch(76.872% 0.02023 276.242); */
+
+  --bg: oklch(0% 0 0);
+  --fg: oklch(100% 0 0);
+
+  /* Neutral accents produced using color-mix in OKLCH space */
+  --muted-1: color-mix(in oklch, var(--fg) 20%, var(--bg) 80%);
+  --muted-2: color-mix(in oklch, var(--fg) 40%, var(--bg) 60%);
+  --muted-3: color-mix(in oklch, var(--fg) 60%, var(--bg) 40%);
+  --muted-4: color-mix(in oklch, var(--fg) 80%, var(--bg) 20%);
+
+  --accent: oklch(58% 0.25 275);
+
+  --completed: oklch(55% 0.075 156); 
+  --incomplete: oklch(55% 0.075 10);
 }
 
 * {
@@ -22,8 +34,8 @@ html {
 
 body {
   min-height: 100vh;
-  background-color: var(--base-clr);
-  color: var(--text-clr);
+  background-color: var(--bg);
+  color: var(--fg);
   display: grid;
   grid-template-columns: auto 1fr;
 }
@@ -33,7 +45,7 @@ body {
   height: 100vh;
   width: 250px;
   padding: 5px 1em;
-  background: var(--base-clr);
+  background: var(--bg);
   border-right: 1px solid var(--line-clr);
 
   position: sticky;
@@ -66,12 +78,12 @@ body {
 }
 
 #sidebar ul li.active a {
-  color: var(--accent-clr);
-  background: var(--hover-clr);
+  color: var(--accent);
+  background: var(--muted-1);
 }
 
 #sidebar ul li.active a svg {
-  fill: var(--accent-clr);
+  fill: var(--accent);
 }
 
 #sidebar a,
@@ -80,7 +92,7 @@ body {
   border-radius: 0.5em;
   padding: 0.85em;
   text-decoration: none;
-  color: var(--text-clr);
+  color: var(--fg);
   display: flex;
   align-items: center;
   gap: 1em;
@@ -97,7 +109,7 @@ body {
 
 #sidebar svg {
   flex-shrink: 0;
-  fill: var(--text-clr);
+  fill: var(--fg);
 }
 
 #sidebar a span,
@@ -107,7 +119,7 @@ body {
 
 #sidebar a:hover,
 #sidebar .dropdown-btn:hover {
-  background: var(--hover-clr);
+  background: var(--muted-1);
 }
 
 #sidebar .sub-menu {
@@ -150,7 +162,7 @@ body {
 }
 
 #toggle-btn:hover {
-  background: var(--hover-clr);
+  background: var(--muted-1);
 }
 
 main {
@@ -175,7 +187,7 @@ main p {
 
   h2,
   p {
-    color: var(--text-clr);
+    color: var(--fg);
   }
 }
 
@@ -186,7 +198,7 @@ main p {
   }
 
   .container video {
-    flex-basis: 45%; 
+    flex-basis: 45%;
     max-width: 45%;
   }
 }
@@ -285,7 +297,7 @@ main p {
     }
   }
 
-  #sidebar.close{
+  #sidebar.close {
     width: 100%;
   }
 }

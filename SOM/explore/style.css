@@ -1,39 +1,83 @@
-.explore-nav {
+/* === TABS CSS === */
+.tabs {
   display: flex;
-  justify-content: space-evenly;
-  padding: 12px 16px;
-  border-bottom: 1px solid var(--line-clr);
+  position: relative;
+  justify-self: center;
+  background-color: var(--muted-1);
+  box-shadow: 0 0 1px 0 rgba(var(--accent), 0.15),
+    0 6px 12px 0 rgba(var(--accent), 0.15);
+  padding: 0.75rem;
+  border-radius: 99px;
+  max-width: max-content;
+  * {
+    z-index: 2;
+  }
+
+  svg{
+    padding-right: 0.25em;
+  }
 }
 
-.explore-nav a {
-  position: relative;
+input[type="radio"] {
+  display: none;
+}
+
+.tab {
   display: flex;
   align-items: center;
-  color: var(--text-clr);
-  text-decoration: none;
-  padding-bottom: 0.5em;
+  justify-content: center;
+  height: 54px;
+  width: 200px;
+  font-size: 1.25rem;
+  font-weight: 500;
+  border-radius: 99px;
+  cursor: pointer;
+  transition: color 0.15s ease-in;
 }
 
-.explore-nav a::before {
-  content: " ";
+.notification {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  margin-left: 0.75rem;
+  border-radius: 50%;
+  background-color: var(--accent);
+  transition: 0.15s ease-in;
+}
+input[type="radio"]:checked + label {
+	 color: var(--fg);
+}
+ input[type="radio"]:checked + label > .notification {
+	 background-color: var(--muted-2);
+	 color: var(--fg);
+}
+ input[id="radio-1"]:checked ~ .glider {
+	 transform: translateX(0);
+}
+ input[id="radio-2"]:checked ~ .glider {
+	 transform: translateX(100%);
+}
+ input[id="radio-3"]:checked ~ .glider {
+	 transform: translateX(200%);
+}
+
+.glider {
   position: absolute;
-  bottom: -2px;
-  width: 100%;
-  height: 2px;
-  background: var(--text-clr);
-  transform: scaleX(0);
-  transition: transform 0.5s ease-in-out;
-  transform-origin: right;
+  display: flex;
+  height: 54px;
+  width: 200px;
+  background-color: var(--bg);
+  z-index: 1;
+  border-radius: 99px;
+  transition: 0.25s ease-out;
 }
 
-.explore-nav a:hover::before,
-.explore-nav a.active::before {
-  transform: scaleX(1);
-  transform-origin: left;
-}
-
-.explore-nav a span {
-  margin-left: 0.5em;
+@media (max-width: 700px) {
+  .tabs {
+    transform: scale(0.6);
+  }
 }
 
 #content-container {
@@ -57,7 +101,7 @@
 
 /* DEVLOG CSS */
 .card {
-  border: 1px solid var(--line-clr);
+  border: 1px solid var(--muted-2);
   border-radius: 1em;
   margin-bottom: 1em;
   width: min(500px, 80vw);
@@ -109,8 +153,8 @@
 
   button {
     height: 40px;
-    background: var(--base-clr);
-    color: var(--text-clr);
+    background: var(--bg);
+    color: var(--fg);
     flex: 1;
   }
 
@@ -163,8 +207,8 @@
 }
 
 .card-container .card .header button {
-  background: var(--base-clr);
-  color: var(--text-clr);
+  background: var(--bg);
+  color: var(--fg);
   padding: 0.25em 2em;
 }
 

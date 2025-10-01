@@ -21,7 +21,7 @@ main {
   width: 16px;
   height: 16px;
   background: var(--accent-clr, #007acc);
-  border: 3px solid var(--base-clr);
+  border: 3px solid var(--bg);
   border-radius: 50%;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
@@ -36,23 +36,23 @@ main {
 
 /* Custom popup styling */
 .leaflet-popup-content-wrapper {
-  background: var(--base-clr);
+  background: var(--bg);
   border-radius: 0.5rem;
   border: 1px solid var(--line-clr);
 }
 
 .leaflet-popup-content {
   margin: 1rem;
-  color: var(--text-clr);
+  color: var(--fg);
 }
 
 .leaflet-popup-tip {
-  background: var(--base-clr);
+  background: var(--bg);
   border: 1px solid var(--line-clr);
 }
 
 .leaflet-popup-close-button {
-  color: var(--text-clr);
+  color: var(--fg);
 }
 
 .project-popup h3 {
@@ -82,7 +82,7 @@ main {
 }
 
 .project-popup .tag {
-  background: var(--base-clr, #007acc);
+  background: var(--bg, #007acc);
   color: white;
   padding: 0.2rem 0.5rem;
   border-radius: 0.3rem;
