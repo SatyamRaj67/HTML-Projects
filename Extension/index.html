@@ -21,7 +21,7 @@
       href="imgs/logo.png"
     />
   </head>
-  <body class="dark">
+  <body>
     <section>
       <div class="app">
         <div class="hero">
@@ -62,14 +62,14 @@
                 <h1>Music Player</h1>
                 <p>Control your music playback from here</p>
                 <div class="imgBx">
-                  <input
-                    type="checkbox"
-                    id="play-pause-btn"
-                  />
                   <img
                     id="song-img"
                     src="imgs/Anti-citizen.png"
                     alt="Song 1"
+                  />
+                  <input
+                    type="checkbox"
+                    id="play-pause-btn"
                   />
                   <label for="play-pause-btn">
                     <svg
@@ -415,7 +415,7 @@
   <script src="lib/vibrant.min.js"></script>
   <script>
     // === ONLY FOR UI ===
-    for (var i = 0; i < 200; i++) {
+    for (var i = 0; i < 400; i++) {
       span = document.createElement("span");
       document.getElementsByTagName("section")[0].appendChild(span);
     }

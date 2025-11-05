@@ -91,6 +91,7 @@ section > span {
   background-color: #181818;
   transition: 1.5s;
   z-index: 1;
+  transition: 0s;
 }
 
 section > span:hover {
@@ -817,7 +818,6 @@ img#song-img {
 }
 
 /* === Dialog Styles === */
-/* === Dialog Styles === */
 dialog {
   position: fixed;
   left: 50%;
@@ -838,11 +838,11 @@ dialog::backdrop {
   background: rgba(0, 0, 0, 0.5);
 }
 
-dialog .inputBox{
+dialog .inputBox {
   width: 100%;
 }
 
-dialog input[type="file"]{
+dialog input[type="file"] {
   width: 100%;
   padding: 0.5em;
   border: 2px solid var(--fg);
@@ -857,7 +857,7 @@ dialog input[type="file"]::file-selector-button {
   color: var(--fg);
   background: color-mix(in oklch, var(--accent), var(--bg) 20%);
   padding: 0.5em 1em;
-  border : 2px solid var(--fg);
+  border: 2px solid var(--fg);
   border-radius: 0.5em;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -866,6 +866,11 @@ dialog input[type="file"]::file-selector-button {
 dialog input[type="file"]::file-selector-button:hover {
   background: color-mix(in oklch, var(--accent), var(--bg) 30%);
   letter-spacing: 0.05em;
+}
+
+dialog h2 {
+  text-align: center;
+  margin-bottom: 0.5em;
 }
 
 .dialog-buttons {
@@ -884,7 +889,6 @@ dialog input[type="file"]::file-selector-button:hover {
   transform: scale(1.1);
   letter-spacing: 0.1em;
 }
-
 
 @media screen and (max-width: 800px) {
   .hero {

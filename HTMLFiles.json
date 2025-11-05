@@ -312,6 +312,11 @@
     "name": "sol.html",
     "path": ".\\Errors\\Solution Of Problems\\sol.html"
   },
+  "Extension":{
+    "name": "index.html",
+    "path": ".\\Extension\\index.html",
+    "class": "best"
+  },
   "Eyes": {
     "name": "eye.html",
     "path": ".\\Eyes\\eye.html"

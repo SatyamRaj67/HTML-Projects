@@ -394,3 +394,4 @@ form.addEventListener("submit", (event) => {
   renderSongItem(newSong, newIndex);
   closeDialog();
 });
+
