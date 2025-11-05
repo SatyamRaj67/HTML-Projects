@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <meta
+      name="description"
+      content="A music player web app for demonstration of the Chrome extension music player"
+    />
+    <title>Music Player</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="index.css"
+    />
+    <link
+      rel="icon"
+      href="imgs/logo.png"
+    />
+  </head>
+  <body class="dark">
+    <section>
+      <div class="app">
+        <div class="hero">
+          <h2>
+            Music Player <br />
+            - Demo 🎵 -
+          </h2>
+          <p>
+            This is a demonstration of the Chrome extension music player as a
+            standalone website
+          </p>
+          <div class="links">
+            <button>
+              <a
+                href="https://github.com/SatyamRaj67/SOM_Extension"
+                target="_blank"
+                >Github</a
+              >
+            </button>
+            <button>
+              <a
+                href="https://summer.hackclub.com/projects/13276"
+                target="_blank"
+                >SOM</a
+              >
+            </button>
+          </div>
+        </div>
+        <main>
+          <!-- === Border Canvas Visualizer === -->
+          <canvas id="visualizer-canvas"></canvas>
+
+          <div class="container">
+            <div class="wrapper">
+              <!-- === Tab 1: Music Player === -->
+
+              <div class="tab">
+                <h1>Music Player</h1>
+                <p>Control your music playback from here</p>
+                <div class="imgBx">
+                  <input
+                    type="checkbox"
+                    id="play-pause-btn"
+                  />
+                  <img
+                    id="song-img"
+                    src="imgs/Anti-citizen.png"
+                    alt="Song 1"
+                  />
+                  <label for="play-pause-btn">
+                    <svg
+                      class="unchecked"
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24px"
+                      viewBox="0 -960 960 960"
+                      width="24px"
+                      fill="var(--fg)"
+                    >
+                      <path
+                        d="M320-200v-560l440 280-440 280Zm80-280Zm0 134 210-134-210-134v268Z"
+                      />
+                    </svg>
+
+                    <svg
+                      class="checked"
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24px"
+                      viewBox="0 -960 960 960"
+                      width="24px"
+                      fill="var(--fg)"
+                    >
+                      <path
+                        d="M520-200v-560h240v560H520Zm-320 0v-560h240v560H200Zm400-80h80v-400h-80v400Zm-320 0h80v-400h-80v400Zm0-400v400-400Zm320 0v400-400Z"
+                      />
+                    </svg>
+                  </label>
+                </div>
+
+                <!-- === Song Info === -->
+                <div class="song-info">
+                  <div>
+                    <h2 id="song-title">Song Title</h2>
+                    <p id="song-artist">Artist Name</p>
+                  </div>
+                  <div class="volume-control">
+                    <button id="volume-btn">
+                      <svg
+                        class="volume-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="24px"
+                        viewBox="0 -960 960 960"
+                        width="24px"
+                        fill="#e3e3e3"
+                      >
+                        <path
+                          d="M560-131v-82q90-26 145-100t55-168q0-94-55-168T560-749v-82q124 28 202 125.5T840-481q0 127-78 224.5T560-131ZM120-360v-240h160l200-200v640L280-360H120Zm440 40v-322q47 22 73.5 66t26.5 96q0 51-26.5 94.5T560-320ZM400-606l-86 86H200v80h114l86 86v-252ZM300-480Z"
+                        />
+                      </svg>
+                    </button>
+                    <div class="volume-slider-container">
+                      <input
+                        type="range"
+                        id="volume-slider"
+                        min="0"
+                        max="1"
+                        step="0.01"
+                        value="1"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- === Tab 2: Playlists === -->
+
+              <div class="tab">
+                <h1>Playlist</h1>
+                <div class="inputBox">
+                  <input
+                    type="text"
+                    id="search-input"
+                    required
+                  />
+
+                  <span>Search Songs</span>
+                </div>
+                <ul
+                  class="playlist"
+                  id="playlist-container"
+                >
+                  <!-- Playlist items will be dynamically added here -->
+
+                  <li
+                    class="playlist-item"
+                    id="add-song-btn"
+                  >
+                    <img
+                      src="add.svg"
+                      alt="Add Button"
+                    />
+                    <div>
+                      <h3>Have Songs?</h3>
+                      <p>Click Here</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- === Tab 3: About Section  === -->
+
+              <div class="tab">
+                <h1>About</h1>
+                <div
+                  class="about"
+                  id="about-container"
+                >
+                  <div class="about-section">
+                    <h2>Satyam Raj</h2>
+                    <hr />
+                    <p>
+                      I am a small indie developer, passionate about creating
+                      new stuff, and enthusiastic about learning new
+                      technologies.
+                    </p>
+                    <div class="links">
+                      <a
+                        href="https://satyamraj67.github.io/HTML-Projects"
+                        target="_blank"
+                      >
+                        Portfolio
+                      </a>
+                      <a
+                        href="https://github.com/SatyamRaj67/"
+                        target="_blank"
+                      >
+                        GitHub
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="about-section">
+                    <h2>Project Dedication</h2>
+                    <hr />
+                    <p>
+                      This project is a dedication toward HackClub and their
+                      YSWS Event called
+                      <a
+                        href="https://carnival.hackclub.com/"
+                        target="_blank"
+                        >Carnival</a
+                      >.
+                    </p>
+                    <br />
+                    <p>
+                      Please support and donate to
+                      <a
+                        href="https://hackclub.com/donate/"
+                        target="_blank"
+                        >HackClub</a
+                      >, they are doing a great job empowering the youth.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- === Controls === -->
+          <div class="controls">
+            <div class="space">
+              <div class="imgBx">
+                <img
+                  id="controls-song-img"
+                  src="imgs/Anti-citizen.png"
+                  alt="Song 1"
+                />
+              </div>
+            </div>
+            <button id="prev-btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="var(--fg)"
+              >
+                <path
+                  d="M220-240v-480h80v480h-80Zm520 0L380-480l360-240v480Zm-80-240Zm0 90v-180l-136 90 136 90Z"
+                />
+              </svg>
+            </button>
+
+            <!-- The Timeline with the time, rendering of number is done by js -->
+            <span class="current-time">0:00</span>
+            <input
+              type="range"
+              min="0"
+              id="timeline"
+              value="0"
+            />
+            <span class="song-length">0:00</span>
+
+            <label for="play-pause-btn">
+              <svg
+                class="unchecked"
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="var(--fg)"
+              >
+                <path
+                  d="M320-200v-560l440 280-440 280Zm80-280Zm0 134 210-134-210-134v268Z"
+                />
+              </svg>
+
+              <svg
+                class="checked"
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="var(--fg)"
+              >
+                <path
+                  d="M520-200v-560h240v560H520Zm-320 0v-560h240v560H200Zm400-80h80v-400h-80v400Zm-320 0h80v-400h-80v400Zm0-400v400-400Zm320 0v400-400Z"
+                />
+              </svg>
+            </label>
+
+            <button id="next-btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="var(--fg)"
+              >
+                <path
+                  d="M660-240v-480h80v480h-80Zm-440 0v-480l360 240-360 240Zm80-240Zm0 90 136-90-136-90v180Z"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Navbar -->
+          <nav class="navbar">
+            <button id="player-tab-btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#e3e3e3"
+              >
+                <path
+                  d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"
+                />
+              </svg>
+            </button>
+
+            <button id="playlist-tab-btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#e3e3e3"
+              >
+                <path
+                  d="M120-320v-80h320v80H120Zm0-160v-80h480v80H120Zm0-160v-80h480v80H120Zm520 520v-320l240 160-240 160Z"
+                />
+              </svg>
+            </button>
+            <button id="about-view-btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#e3e3e3"
+              >
+                <path
+                  d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Zm0-108q96-86 158-147.5t98-107q36-45.5 50-81t14-70.5q0-60-40-100t-100-40q-47 0-87 26.5T518-680h-76q-15-41-55-67.5T300-774q-60 0-100 40t-40 100q0 35 14 70.5t50 81q36 45.5 98 107T480-228Zm0-273Z"
+                />
+              </svg>
+            </button>
+          </nav>
+        </main>
+      </div>
+    </section>
+
+    <!-- Dialog -->
+    <dialog id="dialog">
+      <form
+        action=""
+        id="dialog-form"
+      >
+        <h1>Add a New Song</h1>
+        <div class="inputBox">
+          <input
+            type="text"
+            id="new-song-title"
+            required
+          />
+          <span>Song Title</span>
+        </div>
+        <div class="inputBox">
+          <input
+            type="text"
+            id="new-song-artist"
+            required
+          />
+          <span>Song Artist </span>
+        </div>
+        <div class="inputBox">
+          <input
+            type="file"
+            id="new-song-file"
+            accept="audio/*"
+            required
+          />
+          <!-- <span>Song File</span> -->
+        </div>
+        <div class="inputBox">
+          <input
+            type="file"
+            id="new-song-image-file"
+            accept="image/*"
+            required
+          />
+          <!-- <span>Image File</span> -->
+        </div>
+
+        <div class="dialog-buttons">
+          <button
+            type="button"
+            id="cancel-btn"
+          >
+            Cancel
+          </button>
+          <button type="submit">Add Song</button>
+        </div>
+      </form>
+    </dialog>
+  </body>
+  <script
+    src="index.js"
+    defer
+  ></script>
+  <script src="lib/vibrant.min.js"></script>
+  <script>
+    // === ONLY FOR UI ===
+    for (var i = 0; i < 200; i++) {
+      span = document.createElement("span");
+      document.getElementsByTagName("section")[0].appendChild(span);
+    }
+  </script>
+</html>

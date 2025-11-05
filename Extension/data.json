@@ -1,0 +1,52 @@
+{
+  "songs": [
+    {
+      "title": "Life Alyx",
+      "artists": ["@Rowan - THE FOX!!"],
+      "cover_img": "imgs/Anti-citizen.png",
+      "music": "music/Life_Alyx-Anti-Citizen.mp3"
+    },
+    {
+      "title": "Fireworks",
+      "artists": ["@Hannah"],
+      "cover_img": "imgs/fireworks.png",
+      "music": "music/Fireworks.mp3"
+    },
+    {
+      "title": "River Flows in You",
+      "artists": ["@One For Freedom"],
+      "cover_img": "imgs/River_Flows.jpeg",
+      "music": "music/River_Flows.mp3"
+    },
+    {
+      "title": "NEVER FORGETTING",
+      "artists": ["@Youssef", "@Pankun"],
+      "cover_img": "imgs/youssef.png",
+      "music": "music/Never_Forgetting.mp3"
+    },
+    {
+      "title": "Undertale_Finale",
+      "artists": ["@JustZvan"],
+      "cover_img": "imgs/undertale.jpg",
+      "music": "music/Finale.mp3"
+    },
+    {
+      "title": "SPLAT",
+      "artists": ["@Gizzy"],
+      "cover_img": "imgs/splat.jpg",
+      "music": "music/splat.mp3"
+    },
+    {
+      "title": "Give A Little",
+      "artists": ["@ChessPotato"],
+      "cover_img": "imgs/cg5.jpeg",
+      "music": "music/Give_a_little.mp3"
+    },
+    {
+      "title": "I Hear a Symphony",
+      "artists": ["@Aris"],
+      "cover_img": "imgs/I_Hear_a_Symphony.jpeg",
+      "music": "music/I_Hear_a_Symphony.mp3"
+    }
+  ]
+}
